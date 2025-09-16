@@ -153,7 +153,7 @@ const Footer = () => {
         <div className="container mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-white/60 font-body text-sm">
-              © 2025 Great Logic. All rights reserved.
+              © 2025 Great Logic. All rights reserved. | Design and Developed by Rohido Media
             </p>
 
             <div className="flex space-x-6 text-sm">
