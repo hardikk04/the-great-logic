@@ -44,7 +44,7 @@ const Products = () => {
   }, []);
   return (
     <section className="philosophy w-full relative overflow-hidden sm:px-6 py-4">
-      <h2 className="text-white text-[4vw] max-sm:text-[8vw] max-md:text-[7vw] z-1 mix-blend-difference para">
+      <h2 className="text-white text-[4vw] max-sm:text-[8vw] max-md:text-[7vw] z-1 mix-blend-difference para px-6">
         Products
       </h2>
       <div className="absolute pointer-events-none h-full w-full z-0 flex justify-between items-start inset-0">

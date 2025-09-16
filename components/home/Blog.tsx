@@ -8,6 +8,7 @@ import Image from "next/image";
 const Blog = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const timelineRef = useRef<gsap.core.Timeline | null>(null);
 
   const blogPosts = [
     {
@@ -69,58 +70,73 @@ const Blog = () => {
 
   useEffect(() => {
     gsap.context(() => {
-      // Auto-scroll carousel
+      // Check if device is mobile
+      const isMobile = window.innerWidth < 768;
       const carousel = carouselRef.current;
 
-      if (carousel) {
-        gsap.to(carousel, {
-          x: () => -(carousel.scrollWidth - carousel.clientWidth),
+      if (carousel && !isMobile) {
+        // Calculate the total width of one set of cards
+        const cardWidth = 320; // w-80 = 320px
+        const cardSpacing = 32; // space-x-8 = 32px
+        const singleSetWidth = blogPosts.length * (cardWidth + cardSpacing);
+
+        // Auto-scroll carousel only on desktop
+        const tl = gsap.timeline({ repeat: -1 });
+        tl.to(carousel, {
+          x: -singleSetWidth,
           duration: 20,
           ease: "none",
-          repeat: -1,
-          modifiers: {
-            x: gsap.utils.unitize(
-              (x) =>
-                parseFloat(x) % (carousel.scrollWidth - carousel.clientWidth)
-            ),
-          },
-        });
+        }).set(carousel, { x: 0 });
 
-        // Pause on hover
+        // Store timeline reference for pause/resume
+        timelineRef.current = tl;
+
+        // Pause on hover (desktop only)
         carousel.addEventListener("mouseenter", () => {
-          gsap.globalTimeline.pause();
+          tl.pause();
         });
 
         carousel.addEventListener("mouseleave", () => {
-          gsap.globalTimeline.resume();
+          tl.resume();
         });
       }
     });
+
+    return () => {
+      // Cleanup timeline on unmount
+      if (timelineRef.current) {
+        timelineRef.current.kill();
+        timelineRef.current = null;
+      }
+    };
   });
 
   return (
     <section
       id="blog"
       ref={sectionRef}
-      className="bg-gradient-subtle overflow-hidden sm:px-6 py-4"
+      className="bg-gradient-subtle sm:px-6 py-4"
     >
       <div className="container mx-auto text-white">
         {/* Section Header */}
         <div className="mb-6">
-          <h2 className="text-white text-[4vw] max-sm:text-[8vw] max-md:text-[7vw] z-1 mix-blend-difference para">
+          <h2 className="px-6 text-white text-[4vw] max-sm:text-[8vw] max-md:text-[7vw] z-1 mix-blend-difference para">
             Blog & Media
           </h2>
         </div>
 
         {/* Horizontal Carousel */}
-        <div className="relative">
-          <div ref={carouselRef} className="flex space-x-8 pb-8">
-            {[...blogPosts, ...blogPosts].map((post, index) => (
+        <div className="relative overflow-hidden px-4 md:px-0">
+          <div
+            ref={carouselRef}
+            className="flex space-x-8 md:space-x-8 sm:space-x-6 max-sm:space-x-4 pb-8 md:overflow-visible overflow-x-auto scrollbar-hide md:pl-0 pl-4"
+          >
+            {[...blogPosts, ...blogPosts, ...blogPosts].map((post, index) => (
               <div
                 key={`${post.id}-${index}`}
                 className={`blog-card-${
                   index % blogPosts.length
-                } flex-shrink-0 w-80 bg-white/90 rounded-2xl shadow-medium border border-border overflow-hidden hover:shadow-strong transition-all duration-300 group cursor-pointer`}
+                } flex-shrink-0 w-80 md:w-80 sm:w-72 max-sm:w-64 bg-white/90 rounded-2xl shadow-medium border border-border overflow-hidden hover:shadow-strong transition-all duration-300 group cursor-pointer`}
               >
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden">

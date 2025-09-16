@@ -59,7 +59,7 @@ const Hero = () => {
       <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
         <h1
           ref={titleRef}
-          className="text-6xl md:text-7xl lg:text-8xl font-heading font-bold text-white mb-6"
+          className="text-4xl md:text-7xl lg:text-8xl font-heading font-bold text-white mb-6"
         >
           Revolutionizing
           <br />
@@ -70,7 +70,7 @@ const Hero = () => {
 
         <p
           ref={subtitleRef}
-          className="text-xl md:text-xl text-white my-12 max-w-3xl mx-auto font-body "
+          className="text-md md:text-xl text-white md:my-12 max-w-3xl mx-auto font-body "
         >
           From manual to digital, Great Logic brings innovation to retail with
           cutting-edge tag solutions that transform how stores operate.

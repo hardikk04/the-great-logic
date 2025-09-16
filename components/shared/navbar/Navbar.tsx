@@ -50,7 +50,7 @@ const Navbar = () => {
         isScrolled ? "backdrop-blur-md shadow-soft" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto sm:px-6 py-4">
+      <div className="container mx-auto sm:px-6 py-4 px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
