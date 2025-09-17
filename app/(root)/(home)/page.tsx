@@ -8,6 +8,7 @@ import Hero from "@/components/home/Hero";
 import Showreel from "@/components/home/Showreel";
 import Footer from "@/components/shared/footer/Footer";
 import Navbar from "@/components/shared/navbar/Navbar";
+import LightImage from "@/components/home/LightImage";
 
 export default function Home() {
   return (
@@ -15,8 +16,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Showreel />
-      {/* <Products /> */}
       <TimelineDemo />
+      <LightImage />
       <Electronic />
       <Features />
       <Blog />

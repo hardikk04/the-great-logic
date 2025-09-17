@@ -6,6 +6,7 @@ export function TimelineDemo() {
   const data = [
     {
       title: "Electronic Shelf Labels",
+      image:"https://c.imgcdn.me/0532eb39e56a64ac292c4a236387c54dee084e0b/lumastrobecom/lx-100-am-pic.png",
       content: (
         <div key={0}>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-lg dark:text-neutral-200">
@@ -34,6 +35,7 @@ export function TimelineDemo() {
     },
     {
       title: "LCD Electronic Price Tag",
+      image:"https://www.sparsadigital.in/wp-content/uploads/2022/11/ESL.png",
       content: (
         <div key={1}>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-lg dark:text-neutral-200">
@@ -62,6 +64,7 @@ export function TimelineDemo() {
     },
     {
       title: "Warehouse Warning Light",
+      image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0Ba-bzCbugiYpWMAfq2iOx3fwtK9pdlVGcQ&s",
       content: (
         <div key={2}>
           <p className="mb-4 text-xs font-normal text-neutral-800 md:text-lg dark:text-neutral-200">
