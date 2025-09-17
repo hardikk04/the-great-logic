@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import Plasma from "@/components/shared/Plasma";
+import Wrapper from "@/components/shared/Wrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,20 +24,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="fixed inset-0 z-0 bg-black">
-          <Plasma
-            color="#8b5cf6"
-            speed={0.8}
-            direction="forward"
-            scale={1.5}
-            opacity={0.4}
-            mouseInteractive={true}
-          />
-        </div>
+        {/* <div className="fixed inset-0 z-0 ">{ <Wrapper /> }</div> */}
         {children}
       </body>
     </html>

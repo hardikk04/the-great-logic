@@ -1,139 +1,28 @@
-"use client";
-import gsap from "gsap";
-import React, { useEffect, useRef, useState } from "react";
-import ProcessCard from "./ProcessCard";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import ProductDetails from "./ProductDetails";
 
 const Products = () => {
-  const pathRef = useRef(null);
-
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkDevice = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    checkDevice();
-    window.addEventListener("resize", checkDevice);
-
-    return () => window.removeEventListener("resize", checkDevice);
-  }, [isMobile]);
-
-  useEffect(() => {
-    const path = pathRef.current as SVGPathElement | null;
-
-    if (path) {
-      const length = path.getTotalLength();
-
-      gsap.set(path, {
-        strokeDasharray: length,
-        strokeDashoffset: length,
-      });
-
-      gsap.to(path, {
-        strokeDashoffset: 0,
-        scrollTrigger: {
-          trigger: ".philosophy",
-          start: "top 0%",
-          scrub: 1,
-        },
-      });
-    }
-  }, []);
   return (
-    <section className="philosophy w-full relative overflow-hidden sm:px-6 py-4">
-      <h2 className="text-white text-[4vw] max-sm:text-[8vw] max-md:text-[7vw] z-1 mix-blend-difference para px-6">
-        Products
-      </h2>
-      <div className="absolute pointer-events-none h-full w-full z-0 flex justify-between items-start inset-0">
-        {!isMobile ? (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="100%"
-            viewBox="0 0 1927 3376"
-            fill="none"
-            className="philosophy_line-svg"
-          >
-            <path
-              ref={pathRef}
-              d="M1914 13C1787.22 30.804 1706.44 101.235 1686.07 138.421C1624.72 250.43 1758.83 378.82 1719.31 545.945C1696.93 640.627 1630.78 695.813 1553.11 761.689C1290.65 984.322 1135.37 857.599 878.814 1054.14C789.583 1122.51 731.508 1196.71 522.672 1356.19C457.889 1405.65 410.875 1438.69 342.222 1447.29C227.519 1461.65 76.787 1404.76 28.8175 1284.27C-25.1072 1148.84 66.7009 972.921 185.524 915.104C412.294 804.762 798.607 1094.86 940.547 1399.34C978.633 1481.03 1026.91 1584.61 1007.03 1710.97C982.639 1865.98 876.459 1923.15 888.311 2041.79C900.174 2160.48 1051.61 2161.8 1064.01 2267.12C1078.5 2390.15 896.728 2446.48 912.055 2557.18C925.693 2655.62 1091.06 2766.88 1239.7 2715.4C1362.87 2672.73 1347.65 2474.56 1415.41 2470.89C1488.56 2466.91 1509.35 3027.12 1690.82 3209.58C1771.57 3290.76 1856.73 3337.06 1914 3363"
-              stroke="url(#paint0_linear_865_414)"
-              strokeWidth="25"
-              strokeMiterlimit="10"
-              strokeLinecap="round"
-            />
-            <defs>
-              <linearGradient
-                id="paint0_linear_865_414"
-                x1="963.5"
-                y1="13"
-                x2="963.5"
-                y2="3022.25"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#CECBDC" />
-                <stop offset="1" stopColor="#6F4BFF" />
-              </linearGradient>
-            </defs>
-          </svg>
-        ) : (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="100%"
-            viewBox="0 0 548 2959"
-            fill="none"
-            className="philosophy_line-svg"
-          >
-            <path
-              ref={pathRef}
-              d="M535.171 13C408.394 30.804 327.609 101.235 307.244 138.421C245.887 250.43 379.999 378.819 340.485 545.945C318.102 640.627 215.633 633 174.281 761.689C120.678 928.5 473.49 958.16 362.673 1156.83C206.678 1436.5 500.879 1394.5 435.673 1539.5C379.856 1663.62 73.4322 1493.35 37.1782 1676.5C-1.32181 1871 326.678 1976.5 120.678 2196C-23.9627 2332.13 -56.5 2602 234.5 2674C506.624 2741.33 416.524 2946 535.171 2946"
-              stroke="url(#paint0_linear_1213_886)"
-              strokeWidth="15"
-              strokeMiterlimit="10"
-              strokeLinecap="round"
-            ></path>
-            <defs>
-              <linearGradient
-                id="paint0_linear_1213_886"
-                x1="-415.326"
-                y1="13"
-                x2="-415.326"
-                y2="3022.24"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#CECBDC"></stop>
-                <stop offset="1" stopColor="#6F4BFF"></stop>
-              </linearGradient>
-            </defs>
-          </svg>
-        )}
+    <div className="products mih-h-screen w-full relative px-6 flex justify-between">
+      <div className="right w-1/2 sticky top-20 left-0 text-white h-fit">
+        <div className="w-[80%]">
+          <h2 className="text-[4vw] font-medium max-sm:text-[8vw] max-md:text-[7vw] z-1 mix-blend-difference para py-5 leading-none">{`We're building the future of digital tags.`}</h2>
+        </div>
       </div>
-      {/* <div className="blank h-[50vh] max-sm:h-[10vh] max-md:h-[0vh] max-lg:h-[0vh] max-xl:h-[0] w-full"></div> */}
-      <div className="h-[85vh]  max-sm:py-[4vw] w-full flex justify-end">
-        <ProcessCard
-          number={0o1}
-          title="Revolutionizing Price Tagging"
-          para="Ditch manual paper tags — our Electronic Shelf Labels bring instant updates, high-contrast displays, and wireless control. ESLs ensure accurate pricing, reduce errors, and give your store a modern, dynamic look while saving time and cost."
+      <div className="left w-[40%] h-full">
+        <ProductDetails
+          title="Electronic Shelf Labels"
+          para="Our digital shelf tags connect seamlessly with retail systems to deliver instant, wireless updates for pricing and product info. By reducing manual work and enabling centralized management"
+        />
+        <ProductDetails
+          title={"LCD Electronic Price Tag"}
+          para="LCD electronic price tags use TFT LCD display technology, which has better color display effect, high definition, high contrast and other characteristics."
+        />
+        <ProductDetails
+          title="Warehouse Warning Light"
+          para="Warehouse warning light is an intelligent product designed for warehousing and information early warning, to solve the problem of difficult finding and cumbersome operation"
         />
       </div>
-      <div className="h-[85vh]  max-sm:py-[4vw] w-full flex justify-start">
-        <ProcessCard
-          number={0o2}
-          title="Smarter Warehousing, Safer Operations"
-          para="Beautiful Design of all pages with the (newly) defined CI.
-                Highly optimized and prepared for development."
-        />
-      </div>
-      <div className="h-[85vh]  max-sm:py-[4vw] w-full flex justify-end">
-        <ProcessCard
-          number={0o3}
-          title="Smarter Warehousing, Safer Operations"
-          para="Enhance warehouse efficiency with intelligent warning lights and picking labels. From guiding staff with clear visual signals to improving safety and speed in picking operations, our solutions streamline logistics for maximum productivity."
-        />
-      </div>
-    </section>
+    </div>
   );
 };
 

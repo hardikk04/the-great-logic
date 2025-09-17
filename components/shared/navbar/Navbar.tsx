@@ -8,14 +8,34 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      const currentScrollY = window.scrollY;
+
+      // Set background blur after scrolling past 10px
+      setIsScrolled(currentScrollY > 10);
+
+      // Show/hide navbar based on scroll direction
+      if (currentScrollY < 10) {
+        // Always show navbar at the top
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY && !isMobileMenuOpen) {
+        // Scrolling down - hide navbar (but not when mobile menu is open)
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolling up - show navbar
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
     };
-    window.addEventListener("scroll", handleScroll);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY, isMobileMenuOpen]);
 
   const navItems = [
     {
@@ -46,9 +66,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 text-white ${
+      className={`fixed top-0 w-full z-50 text-white transition-transform duration-300 ease-in-out ${
         isScrolled ? "backdrop-blur-md shadow-soft" : "bg-transparent"
-      }`}
+      } ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
     >
       <div className="container mx-auto sm:px-6 py-4 px-6">
         <div className="flex items-center justify-between">

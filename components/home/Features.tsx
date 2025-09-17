@@ -29,7 +29,7 @@ export function Features() {
 
       <div className="grid gap-6 md:grid-cols-2">
         {/* Adaptability Card - Hidden on mobile */}
-        <Card className="hidden md:block liquid-glass border border-white/10 bg-white/5 backdrop-blur-xl">
+        <Card className=" md:block liquid-glass border border-white/10 bg-white/5 backdrop-blur-xl">
           <CardHeader>
             <p className="text-[11px] tracking-widest text-neutral-400">
               ADAPTABILITY
