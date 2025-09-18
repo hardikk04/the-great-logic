@@ -154,7 +154,7 @@ const Blog = () => {
 
                 {/* Content */}
                 <div className="p-6">
-                  <h3 className="text-xl font-heading font-semibold text-black mb-3 group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-xl font-heading font-semibold text-black mb-3  transition-colors duration-300">
                     {post.title}
                   </h3>
                   <p className="text-muted-foreground font-body text-sm leading-relaxed mb-4">

@@ -1,4 +1,6 @@
 "use client";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import { useScroll, useTransform, motion } from "motion/react";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
@@ -13,6 +15,65 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
+
+  useGSAP(() => {
+    gsap.fromTo(
+      ".tag-img-0",
+      {
+        filter: "grayscale(100%)",
+        stagger: 0.1,
+      },
+      {
+        filter: "grayscale(0%)",
+        scrollTrigger: {
+          scroller: "body",
+          trigger: ".tag-img-0",
+          start: "top 30%",
+          end: "top 30%",
+          scrub: 1,
+          // markers: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".tag-img-1",
+      {
+        filter: "grayscale(100%)",
+        stagger: 0.1,
+      },
+      {
+        filter: "grayscale(0%)",
+        scrollTrigger: {
+          scroller: "body",
+          trigger: ".tag-img-1",
+          start: "top 30%",
+          end: "top 30%",
+          scrub: 1,
+          // markers: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".tag-img-2",
+      {
+        filter: "grayscale(100%)",
+        stagger: 0.1,
+      },
+      {
+        filter: "grayscale(0%)",
+        scrollTrigger: {
+          scroller: "body",
+          trigger: ".tag-img-2",
+          start: "top 30%",
+          end: "top 30%",
+          scrub: 1,
+          // markers: true,
+        },
+      }
+    );
+  }, []);
 
   useEffect(() => {
     if (ref.current) {
@@ -30,8 +91,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div className="w-full bg-white dark:bg-black" ref={containerRef}>
-      <div className="py-20 px-4 md:px-6">
+    <div className="timeline-section w-full " ref={containerRef}>
+      <div className="py-20 pb-0 px-4 md:px-6">
         <h2 className="text-white text-[4vw] max-sm:text-[8vw] max-md:text-[7vw] z-1 mix-blend-difference para py-5">
           Products
         </h2>
@@ -52,7 +113,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                   height={20}
                   alt="logo"
                   priority
-                  className="h-8 w-8 rounded-full"
+                  className={`h-8 w-8 rounded-full tag-img-${index}`}
                 />
               </div>
               <h3 className="hidden md:block text-xl md:pl-20 md:text-4xl font-bold text-neutral-500 dark:text-neutral-500 ">
@@ -70,9 +131,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         ))}
         <div
           style={{
-            height: height + "px",
+            height: height + 80 + "px",
           }}
-          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
+          className="absolute md:left-8 left-8 -top-20 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
         >
           <motion.div
             style={{
