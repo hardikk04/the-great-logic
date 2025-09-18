@@ -9,10 +9,14 @@ import Showreel from "@/components/home/Showreel";
 import Footer from "@/components/shared/footer/Footer";
 import Navbar from "@/components/shared/navbar/Navbar";
 import LightImage from "@/components/home/LightImage";
+import Wrapper from "@/components/shared/Wrapper";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-black">
+      <div className="absolute top-0 inset-0 z-0 overflow-hidden">
+        {<Wrapper />}
+      </div>
       <Navbar />
       <Hero />
       <Showreel />

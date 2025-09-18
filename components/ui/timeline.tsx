@@ -28,8 +28,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         scrollTrigger: {
           scroller: "body",
           trigger: ".tag-img-0",
-          start: "top 30%",
-          end: "top 30%",
+          start: "top 40%",
+          end: "top 40%",
           scrub: 1,
           // markers: true,
         },
@@ -47,8 +47,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         scrollTrigger: {
           scroller: "body",
           trigger: ".tag-img-1",
-          start: "top 30%",
-          end: "top 30%",
+          start: "top 40%",
+          end: "top 40%",
           scrub: 1,
           // markers: true,
         },
@@ -66,8 +66,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         scrollTrigger: {
           scroller: "body",
           trigger: ".tag-img-2",
-          start: "top 30%",
-          end: "top 30%",
+          start: "top 45%",
+          end: "top 45%",
           scrub: 1,
           // markers: true,
         },
@@ -133,7 +133,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           style={{
             height: height + 80 + "px",
           }}
-          className="absolute md:left-8 left-8 -top-20 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
+          className="absolute md:left-8 left-8 -top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
         >
           <motion.div
             style={{
