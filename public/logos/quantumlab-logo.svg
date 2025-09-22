@@ -1,0 +1,5 @@
+<svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="60" fill="#DB2777"/>
+  <ellipse cx="25" cy="30" rx="12" ry="8" fill="white"/>
+  <text x="70" y="35" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="13" font-weight="bold">QuantumLab</text>
+</svg>

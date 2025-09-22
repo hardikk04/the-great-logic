@@ -69,58 +69,85 @@ const Blog = () => {
   ];
 
   useEffect(() => {
-    gsap.context(() => {
-      // Check if device is mobile
-      const isMobile = window.innerWidth < 768;
-      const carousel = carouselRef.current;
+    const section = sectionRef.current;
+    const carousel = carouselRef.current;
+    const isMobile = window.innerWidth < 768;
 
-      if (carousel && !isMobile) {
-        // Calculate the total width of one set of cards
-        const cardWidth = 320; // w-80 = 320px
-        const cardSpacing = 32; // space-x-8 = 32px
-        const singleSetWidth = blogPosts.length * (cardWidth + cardSpacing);
+    if (!section || !carousel || isMobile) return;
 
-        // Auto-scroll carousel only on desktop
-        const tl = gsap.timeline({ repeat: -1 });
-        tl.to(carousel, {
-          x: -singleSetWidth,
-          duration: 20,
-          ease: "none",
-        }).set(carousel, { x: 0 });
+    // Create Intersection Observer to detect when section comes into view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Section is visible, start auto-scroll
+            gsap.context(() => {
+              // Calculate the total width of one set of cards
+              const cardWidth = 320; // w-80 = 320px
+              const cardSpacing = 32; // space-x-8 = 32px
+              const singleSetWidth =
+                blogPosts.length * (cardWidth + cardSpacing);
 
-        // Store timeline reference for pause/resume
-        timelineRef.current = tl;
+              // Auto-scroll carousel only on desktop
+              const tl = gsap.timeline({ repeat: -1 });
+              tl.to(carousel, {
+                x: -singleSetWidth,
+                duration: 20,
+                ease: "none",
+              }).set(carousel, { x: 0 });
 
-        // Pause on hover (desktop only)
-        carousel.addEventListener("mouseenter", () => {
-          tl.pause();
+              // Store timeline reference for pause/resume
+              timelineRef.current = tl;
+
+              // Pause on hover (desktop only)
+              const handleMouseEnter = () => {
+                if (timelineRef.current) timelineRef.current.pause();
+              };
+
+              const handleMouseLeave = () => {
+                if (timelineRef.current) timelineRef.current.resume();
+              };
+
+              carousel.addEventListener("mouseenter", handleMouseEnter);
+              carousel.addEventListener("mouseleave", handleMouseLeave);
+            });
+          } else {
+            // Section is not visible, stop auto-scroll
+            if (timelineRef.current) {
+              timelineRef.current.kill();
+              timelineRef.current = null;
+            }
+          }
         });
-
-        carousel.addEventListener("mouseleave", () => {
-          tl.resume();
-        });
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of the section is visible
+        rootMargin: "0px 0px -100px 0px", // Start animation slightly before section is fully in view
       }
-    });
+    );
+
+    // Start observing the section
+    observer.observe(section);
 
     return () => {
-      // Cleanup timeline on unmount
+      // Cleanup observer and timeline on unmount
+      observer.disconnect();
       if (timelineRef.current) {
         timelineRef.current.kill();
         timelineRef.current = null;
       }
     };
-  });
+  }, [blogPosts.length]);
 
   return (
     <section
       id="blog"
       ref={sectionRef}
-      className="bg-gradient-subtle sm:px-6 py-4"
+      className="bg-gradient-subtle sm:px-6 py-4 pt-30"
     >
       <div className="container mx-auto text-black">
-        {/* Section Header */}
-        <div className="mb-6">
-          <h2 className="px-6 text-black text-[4vw] max-sm:text-[8vw] max-md:text-[7vw] z-1">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
             Blog & Media
           </h2>
         </div>
