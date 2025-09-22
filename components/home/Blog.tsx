@@ -117,10 +117,10 @@ const Blog = () => {
       ref={sectionRef}
       className="bg-gradient-subtle sm:px-6 py-4"
     >
-      <div className="container mx-auto text-white">
+      <div className="container mx-auto text-black">
         {/* Section Header */}
         <div className="mb-6">
-          <h2 className="px-6 text-white text-[4vw] max-sm:text-[8vw] max-md:text-[7vw] z-1 mix-blend-difference para">
+          <h2 className="px-6 text-black text-[4vw] max-sm:text-[8vw] max-md:text-[7vw] z-1">
             Blog & Media
           </h2>
         </div>

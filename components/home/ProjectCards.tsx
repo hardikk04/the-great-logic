@@ -47,14 +47,14 @@ const ProjectCards = ({
           opacity: 0,
         });
       }}
-      className={`project-elems project-elem-${index} max-sm:w-[45%] max-sm:border-none max-md:w-[45%] max-md:border-none w-1/3 max-sm:h-1/2 max-md:h-1/2 h-full shrink-0 p-[2vw] border-r border-white/30 relative z-[1]`}
+      className={`project-elems project-elem-${index} max-sm:w-[45%] max-sm:border-none max-md:w-[45%] max-md:border-none w-1/3 max-sm:h-1/2 max-md:h-1/2 h-full shrink-0 p-[2vw] border-r border-black/30 relative z-[1] text-white`}
     >
       <div className="relative z-[1]">
         <span>{number}</span>
         <h3 className="mt-[1vw]">{title}</h3>
         <p className="thin mt-[2vw] opacity-0">{para}</p>
       </div>
-      <div className="project-overlay absolute top-0 left-0 h-full w-full bg-black/60 pointer-events-none"></div>
+      <div className="project-overlay absolute top-0 left-0 h-full w-full bg-black/50 pointer-events-none"></div>
     </div>
   );
 };

@@ -93,7 +93,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   return (
     <div className="timeline-section w-full " ref={containerRef}>
       <div className="py-20 pb-0 px-4 md:px-6">
-        <h2 className="text-white text-[4vw] max-sm:text-[8vw] max-md:text-[7vw] z-1 mix-blend-difference para py-5">
+        <h2 className="text-black text-[4vw] max-sm:text-[8vw] max-md:text-[7vw] z-1 para py-5">
           Products
         </h2>
       </div>
@@ -105,7 +105,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             className="flex justify-start pt-10 md:pt-20 md:gap-20"
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
-              <div className="sticky-pointer h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
+              <div className="sticky-pointer h-10 absolute left-3 md:left-3 w-10 rounded-full bg-black dark:bg-white flex items-center justify-center">
                 {/* <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2"></div> */}
                 <Image
                   src={item.image}
@@ -116,13 +116,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                   className={`h-8 w-8 rounded-full tag-img-${index}`}
                 />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-4xl font-bold text-neutral-500 dark:text-neutral-500 ">
+              <h3 className="hidden md:block text-xl md:pl-20 md:text-4xl font-bold text-neutral-700 dark:text-neutral-500 ">
                 {item.title}
               </h3>
             </div>
 
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
+              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-700 dark:text-neutral-500">
                 {item.title}
               </h3>
               {item.content}{" "}
@@ -133,7 +133,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           style={{
             height: height + 80 + "px",
           }}
-          className="absolute md:left-8 left-8 -top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
+          className="absolute md:left-8 left-8 -top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-400 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
         >
           <motion.div
             style={{

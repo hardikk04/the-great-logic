@@ -23,7 +23,7 @@ export function Features() {
       id="features"
       className="container mx-auto px-6 py-16 sm:py-20 relative z-[1]"
     >
-      <h2 className="text-white text-[4vw] max-sm:text-[8vw] max-md:text-[7vw] z-1 mix-blend-difference para py-5">
+      <h2 className="text-[4vw] max-sm:text-[8vw] max-md:text-[7vw] z-1 para py-5">
         {content.title}
       </h2>
 
@@ -34,10 +34,10 @@ export function Features() {
             <p className="text-[11px] tracking-widest text-neutral-400">
               ADAPTABILITY
             </p>
-            <CardTitle className="mt-1 text-xl text-white">
+            <CardTitle className="mt-1 text-xl text-black">
               Seamless integration, truly intuitive.
             </CardTitle>
-            <p className="text-white/70">
+            <p className="text-black/70">
               Great Logic’s digital tags are designed to adapt to any retail
               environment. Whether you run a small boutique or a large
               supermarket chain, our solutions make operations smarter, faster,
@@ -66,10 +66,10 @@ export function Features() {
             <p className="text-[11px] tracking-widest text-neutral-400">
               CLIENT LOVE
             </p>
-            <CardTitle className="mt-1 text-xl text-white">
+            <CardTitle className="mt-1 text-xl text-black">
               {`Our solutions don’t just look innovative — they transform retail efficiency.`}
             </CardTitle>
-            <p className="text-white/60">
+            <p className="text-black/60">
               From reducing manual errors to saving time on price updates, our
               clients immediately feel the difference.
             </p>

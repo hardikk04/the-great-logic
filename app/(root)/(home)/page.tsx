@@ -13,7 +13,7 @@ import Wrapper from "@/components/shared/Wrapper";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-white">
       <div className="absolute top-0 inset-0 z-0 overflow-hidden">
         {<Wrapper />}
       </div>

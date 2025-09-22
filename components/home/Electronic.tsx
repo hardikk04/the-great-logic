@@ -29,10 +29,10 @@ const Electronic = () => {
   ]);
 
   return (
-    <section className="max-sm:hidden max-md:hidden home-projects relative text-white pt-[6vw]">
+    <section className="max-sm:hidden max-md:hidden home-projects relative text-black pt-[6vw]">
       <div className="project-title max-sm:py-[6vw] sm:px-6 py-4">
         <div className="project-head overflow-hidden">
-          <h2 className="text-white text-[4vw] max-sm:text-[8vw] max-md:text-[7vw] z-1 mix-blend-difference para">
+          <h2 className="text-black text-[4vw] max-sm:text-[8vw] max-md:text-[7vw] z-1 para">
             Electronic Tags
           </h2>
         </div>

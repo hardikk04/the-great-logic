@@ -1,46 +1,24 @@
 "use client";
-import Hyperspeed from "./Hyperspeed";
+import LiquidEther from "./LiquidEther";
 
 const Wrapper = () => {
   return (
-    <Hyperspeed
-      effectOptions={{
-        onSpeedUp: () => {},
-        onSlowDown: () => {},
-        distortion: "turbulentDistortion",
-        length: 400,
-        roadWidth: 20,
-        islandWidth: 2,
-        lanesPerRoad: 4,
-        fov: 70,
-        fovSpeedUp: 50,
-        speedUp: .5,
-        carLightsFade: 0.4,
-        totalSideLightSticks: 20,
-        lightPairsPerRoadWay: 40,
-        shoulderLinesWidthPercentage: 0.05,
-        brokenLinesWidthPercentage: 0.1,
-        brokenLinesLengthPercentage: 0.5,
-        lightStickWidth: [0.12, 0.5],
-        lightStickHeight: [1.3, 1.7],
-        movingAwaySpeed: [-30, -20],
-        movingCloserSpeed: [-50, -30],
-        carLightsLength: [400 * 0.03, 400 * 0.2],
-        carLightsRadius: [0.05, 0.14],
-        carWidthPercentage: [0.3, 0.5],
-        carShiftX: [-0.8, 0.8],
-        carFloorSeparation: [0, 5],
-        colors: {
-          roadColor: 0x080808,
-          islandColor: 0x0a0a0a,
-          background: 0x000000,
-          shoulderLines: 0xffffff,
-          brokenLines: 0xffffff,
-          leftCars: [0xd856bf, 0x6750a2, 0xc247ac],
-          rightCars: [0x03b3c3, 0x0e5ea5, 0x324555],
-          sticks: 0x03b3c3,
-        },
-      }}
+    <LiquidEther
+      colors={["#f8f9fa", "#e9ecef", "#dee2e6"]}
+      mouseForce={20}
+      cursorSize={100}
+      isViscous={false}
+      viscous={30}
+      iterationsViscous={32}
+      iterationsPoisson={32}
+      resolution={0.5}
+      isBounce={false}
+      autoDemo={true}
+      autoSpeed={0.5}
+      autoIntensity={2.2}
+      takeoverDuration={0.25}
+      autoResumeDelay={3000}
+      autoRampDuration={0.6}
     />
   );
 };

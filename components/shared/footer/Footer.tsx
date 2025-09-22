@@ -39,7 +39,7 @@ const Footer = () => {
   return (
     <footer
       id="contact"
-      className="bg-gradient-dark text-white relative z-[1] bg-black"
+      className="bg-gradient-light text-black relative z-[1] bg-gray-100"
     >
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-16">
@@ -49,22 +49,22 @@ const Footer = () => {
             <h3 className="text-2xl font-heading font-bold mb-6">
               Great Logic
             </h3>
-            <p className="text-white/80 font-body mb-6 leading-relaxed">
+            <p className="text-black/80 font-body mb-6 leading-relaxed">
               Revolutionizing retail with innovative digital tag solutions.
               Making stores smarter, more efficient, and future-ready.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-white/70">
+              <div className="flex items-center space-x-3 text-black/70">
                 <Mail className="w-4 h-4" />
                 <span className="font-body text-sm">hello@greatlogic.com</span>
               </div>
-              <div className="flex items-center space-x-3 text-white/70">
+              <div className="flex items-center space-x-3 text-black/70">
                 <Phone className="w-4 h-4" />
                 <span className="font-body text-sm">+91 82902 27562</span>
               </div>
-              <div className="flex items-center space-x-3 text-white/70">
+              <div className="flex items-center space-x-3 text-black/70">
                 <MapPin className="w-4 h-4" />
                 <span className="font-body text-sm">Jaipur, Rajasthan</span>
               </div>
@@ -81,7 +81,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-white/70 hover:text-white transition-colors duration-200 font-body text-sm"
+                    className="text-black/70 hover:text-black transition-colors duration-200 font-body text-sm"
                   >
                     {link.label}
                   </a>
@@ -98,7 +98,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-white/70 hover:text-white transition-colors duration-200 font-body text-sm"
+                    className="text-black/70 hover:text-black transition-colors duration-200 font-body text-sm"
                   >
                     {link.label}
                   </a>
@@ -115,7 +115,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-white/70 hover:text-white transition-colors duration-200 font-body text-sm"
+                    className="text-black/70 hover:text-black transition-colors duration-200 font-body text-sm"
                   >
                     {link.label}
                   </a>
@@ -125,7 +125,7 @@ const Footer = () => {
 
             {/* Social Media */}
             <div>
-              <h5 className="text-sm font-heading font-semibold mb-4 text-white/90">
+              <h5 className="text-sm font-heading font-semibold mb-4 text-black/90">
                 Follow Us
               </h5>
               <div className="flex space-x-4">
@@ -152,26 +152,27 @@ const Footer = () => {
       <div className="border-t border-white/20">
         <div className="container mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-white/60 font-body text-sm">
-              © 2025 Great Logic. All rights reserved. | Design and Developed by Rohido Media
+            <p className="text-black/60 font-body text-sm">
+              © 2025 Great Logic. All rights reserved. | Design and Developed by
+              Rohido Media
             </p>
 
             <div className="flex space-x-6 text-sm">
               <a
                 href="#"
-                className="text-white/60 hover:text-white transition-colors duration-200 font-body"
+                className="text-black/60 hover:text-black transition-colors duration-200 font-body"
               >
                 Privacy Policy
               </a>
               <a
                 href="#"
-                className="text-white/60 hover:text-white transition-colors duration-200 font-body"
+                className="text-black/60 hover:text-black transition-colors duration-200 font-body"
               >
                 Terms of Service
               </a>
               <a
                 href="#"
-                className="text-white/60 hover:text-white transition-colors duration-200 font-body"
+                className="text-black/60 hover:text-black transition-colors duration-200 font-body"
               >
                 Cookie Policy
               </a>
