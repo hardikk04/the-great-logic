@@ -90,13 +90,13 @@ const StickyCards = () => {
         return (
           <div className={`sticky-card sticky-card-${index + 1}`} key={index}>
             <div className="sticky-card-index">
-              <h2 className="text-[7rem] font-[600] tracking-[-0.35rem] leading-[1.1]">
+              <h2 className="text-[5rem] font-[600] tracking-[-0.35rem] leading-[1.1]">
                 {cardData.index}
               </h2>
             </div>
             <div className="sticky-card-content">
               <div className="sticky-card-content-wrapper">
-                <h2 className="sticky-card-header text-[4rem] font-[600] leading-[1.1]">
+                <h2 className="sticky-card-header text-[3rem] font-[600] leading-[1.1]">
                   {cardData.title}
                 </h2>
                 <div className="sticky-card-img">
