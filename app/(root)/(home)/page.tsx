@@ -9,7 +9,7 @@ import Navbar from "@/components/shared/navbar/Navbar";
 import Testimonial from "@/components/home/Testimonial";
 import Wrapper from "@/components/shared/Wrapper";
 import Workflow from "@/components/home/Workflow";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Loader from "@/components/Loader";
 import gsap from "gsap";
 import Product from "@/components/home/Product";
