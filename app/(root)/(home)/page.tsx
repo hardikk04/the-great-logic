@@ -14,6 +14,7 @@ import Loader from "@/components/Loader";
 import gsap from "gsap";
 import Product from "@/components/home/Product";
 import { useGSAP } from "@gsap/react";
+import Workflow2 from "@/components/home/Workflow2";
 
 export default function Home() {
   const [isLoading, setisLoading] = useState(true);
@@ -46,6 +47,7 @@ export default function Home() {
       <Product />
       {/* <Electronic /> */}
       <Workflow />
+      <Workflow2 />
       <Blog />
       <Testimonial />
       <CTABannerSection />
