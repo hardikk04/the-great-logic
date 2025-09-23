@@ -9,7 +9,7 @@ const Wrapper = () => {
       cursorSize={50} // smaller cursor area = more localized
       isViscous={true} // enable viscosity for slower fade
       viscous={80} // 🔼 higher = more sticky/slow
-      iterationsViscous={64} // smoother fading
+      iterationsViscous={8} // smoother fading
       iterationsPoisson={32}
       resolution={0.7} // a bit sharper
       isBounce={false}

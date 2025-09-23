@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import SmoothScroll from "@/components/shared/SmoothScroll";
 gsap.registerPlugin(ScrollTrigger);
 
 const geistSans = Geist({
@@ -30,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );

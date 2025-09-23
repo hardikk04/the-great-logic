@@ -8,32 +8,32 @@ import Footer from "@/components/shared/footer/Footer";
 import Navbar from "@/components/shared/navbar/Navbar";
 import Testimonial from "@/components/home/Testimonial";
 import Wrapper from "@/components/shared/Wrapper";
+import Workflow from "@/components/home/Workflow";
+import { useEffect, useState } from "react";
+import Loader from "@/components/Loader";
+import gsap from "gsap";
 import Product from "@/components/home/Product";
-import Electronic from "@/components/home/Electronic";
-// import { useEffect, useState } from "react";
-// import Loader from "@/components/Loader";
-// import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export default function Home() {
-  // const [isLoading, setisLoading] = useState(true);
+  const [isLoading, setisLoading] = useState(true);
+  useGSAP(() => {
+    const tl = gsap.timeline();
 
-  // useEffect(() => {
-  //   const tl = gsap.timeline();
+    tl.to(".loader-text span", {
+      opacity: 1,
+      stagger: {
+        amount: 0.8,
+      },
+    }).to(".loader", {
+      opacity: 0,
+      onComplete: () => {
+        setisLoading(false);
+      },
+    });
+  }, [isLoading]);
 
-  //   tl.to(".loader-text span", {
-  //     opacity: 1,
-  //     stagger: {
-  //       amount: 0.6,
-  //     },
-  //   }).to(".loader", {
-  //     opacity: 0,
-  //     onComplete: () => {
-  //       setisLoading(false);
-  //     },
-  //   });
-  // }, [isLoading]);
-
-  // if (isLoading) return <Loader />;
+  if (isLoading) return <Loader />;
 
   return (
     <main className="min-h-screen bg-white">
@@ -44,7 +44,8 @@ export default function Home() {
       <Hero />
       <Showreel />
       <Product />
-      <Electronic />
+      {/* <Electronic /> */}
+      <Workflow />
       <Blog />
       <Testimonial />
       <CTABannerSection />
