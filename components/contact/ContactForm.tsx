@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Send, CheckCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 interface FormData {
   name: string;
@@ -176,17 +176,17 @@ const ContactForm = () => {
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="h-12 px-8 text-base font-medium bg-black hover:bg-gray-800 text-white"
+            variant={"default"}
+            className="button hover:text-white duration-300 transition-all leading-0"
           >
             {isSubmitting ? (
               <div className="flex items-center space-x-2">
-                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                <div className="w-4 h-4 border-2 border-white relative z-[1] border-t-transparent rounded-full animate-spin" />
                 <span>Sending...</span>
               </div>
             ) : (
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 relative z-[1]">
                 <span>Send Message</span>
-                <Send className="h-4 w-4" />
               </div>
             )}
           </Button>

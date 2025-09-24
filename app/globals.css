@@ -159,3 +159,23 @@
     }
   }
 }
+
+.button {
+  position: relative;
+  overflow: hidden;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #12b2f8;
+  transition: all ease 0.4s;
+}
+
+.button:hover::after {
+  top: 0;
+}

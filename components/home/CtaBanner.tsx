@@ -1,5 +1,4 @@
 import React from "react";
-import { ArrowRight} from "lucide-react";
 import { Button } from "../ui/button";
 
 const CTABannerSection = () => {
@@ -25,9 +24,11 @@ const CTABannerSection = () => {
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant={"secondary"}>
-              Start Free Trial
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+            <Button
+              variant={"default"}
+              className="button hover:text-white duration-300 transition-all leading-0"
+            >
+              <p className="relative z-[1]">Start Free Trial</p>
             </Button>
           </div>
         </div>

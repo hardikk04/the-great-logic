@@ -47,9 +47,9 @@ const Navbar = () => {
       label: "Products",
       href: "#products",
       dropdown: [
-        { label: "Electronic Shelf Labels (ESL)", href: "#" },
-        { label: "Warehouse Warning Light & Picking Label", href: "#" },
-        { label: "Software Management App", href: "#" },
+        { label: "Electronic Shelf Labels (ESL)", href: "/product/esl" },
+        { label: "Warehouse Warning Light & Picking Label", href: "/product/warehouse" },
+        { label: "Software Management App", href: "/product/software" },
       ],
     },
     {
@@ -132,7 +132,10 @@ const Navbar = () => {
 
           {/* Contact Button */}
           <div className="hidden lg:block">
-            <Button variant={"secondary"}>Contact Us</Button>
+            <Button variant={"default"}
+             className="button hover:text-white duration-300 transition-all leading-0">
+              <p className="relative z-[1]">Contact Us</p>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
