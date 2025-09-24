@@ -46,7 +46,7 @@ const Testimonial = () => {
                   alt={logo.name}
                   width={120}
                   height={60}
-                  className="max-h-12 max-w-28 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
+                  className="max-h-12 max-w-28 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 "
                 />
               </div>
             ))}
@@ -61,7 +61,7 @@ const Testimonial = () => {
                   alt={logo.name}
                   width={120}
                   height={60}
-                  className="max-h-12 max-w-28 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
+                  className="max-h-12 max-w-28 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 "
                 />
               </div>
             ))}
@@ -88,7 +88,7 @@ const Testimonial = () => {
                   alt={logo.name}
                   width={120}
                   height={60}
-                  className="max-h-12 max-w-28 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
+                  className="max-h-12 max-w-28 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 "
                 />
               </div>
             ))}
@@ -103,7 +103,7 @@ const Testimonial = () => {
                   alt={logo.name}
                   width={120}
                   height={60}
-                  className="max-h-12 max-w-28 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
+                  className="max-h-12 max-w-28 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 "
                 />
               </div>
             ))}

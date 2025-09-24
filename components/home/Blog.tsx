@@ -1,14 +1,70 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
 import { Calendar, ArrowRight, User } from "lucide-react";
 import Image from "next/image";
+import { useState, useRef } from "react";
 
 const Blog = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
-  const timelineRef = useRef<gsap.core.Timeline | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  // Mouse drag handlers
+  const handleMouseDown = (e: React.MouseEvent) => {
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+
+    setIsDragging(true);
+    setStartX(e.pageX - carousel.offsetLeft);
+    setScrollLeft(carousel.scrollLeft);
+    carousel.style.cursor = "grabbing";
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+    const carousel = carouselRef.current;
+    if (carousel) carousel.style.cursor = "grab";
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    const carousel = carouselRef.current;
+    if (carousel) carousel.style.cursor = "grab";
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const carousel = carouselRef.current;
+    if (!isDragging || !carousel) return;
+
+    e.preventDefault();
+    const x = e.pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 2; // Scroll speed multiplier
+    carousel.scrollLeft = scrollLeft - walk;
+  };
+
+  // Touch handlers for mobile
+  const handleTouchStart = (e: React.TouchEvent) => {
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+
+    setIsDragging(true);
+    setStartX(e.touches[0].pageX - carousel.offsetLeft);
+    setScrollLeft(carousel.scrollLeft);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    const carousel = carouselRef.current;
+    if (!isDragging || !carousel) return;
+
+    const x = e.touches[0].pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 2;
+    carousel.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+  };
 
   const blogPosts = [
     {
@@ -68,81 +124,9 @@ const Blog = () => {
     },
   ];
 
-  useEffect(() => {
-    const section = sectionRef.current;
-    const carousel = carouselRef.current;
-    const isMobile = window.innerWidth < 768;
-
-    if (!section || !carousel || isMobile) return;
-
-    // Create Intersection Observer to detect when section comes into view
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // Section is visible, start auto-scroll
-            gsap.context(() => {
-              // Calculate the total width of one set of cards
-              const cardWidth = 320; // w-80 = 320px
-              const cardSpacing = 32; // space-x-8 = 32px
-              const singleSetWidth =
-                blogPosts.length * (cardWidth + cardSpacing);
-
-              // Auto-scroll carousel only on desktop
-              const tl = gsap.timeline({ repeat: -1 });
-              tl.to(carousel, {
-                x: -singleSetWidth,
-                duration: 20,
-                ease: "none",
-              }).set(carousel, { x: 0 });
-
-              // Store timeline reference for pause/resume
-              timelineRef.current = tl;
-
-              // Pause on hover (desktop only)
-              const handleMouseEnter = () => {
-                if (timelineRef.current) timelineRef.current.pause();
-              };
-
-              const handleMouseLeave = () => {
-                if (timelineRef.current) timelineRef.current.resume();
-              };
-
-              carousel.addEventListener("mouseenter", handleMouseEnter);
-              carousel.addEventListener("mouseleave", handleMouseLeave);
-            });
-          } else {
-            // Section is not visible, stop auto-scroll
-            if (timelineRef.current) {
-              timelineRef.current.kill();
-              timelineRef.current = null;
-            }
-          }
-        });
-      },
-      {
-        threshold: 0.3, // Trigger when 30% of the section is visible
-        rootMargin: "0px 0px -100px 0px", // Start animation slightly before section is fully in view
-      }
-    );
-
-    // Start observing the section
-    observer.observe(section);
-
-    return () => {
-      // Cleanup observer and timeline on unmount
-      observer.disconnect();
-      if (timelineRef.current) {
-        timelineRef.current.kill();
-        timelineRef.current = null;
-      }
-    };
-  }, [blogPosts.length]);
-
   return (
     <section
       id="blog"
-      ref={sectionRef}
       className="blog-section bg-gradient-subtle sm:px-6 py-4 pt-30"
     >
       <div className="container mx-auto text-black">
@@ -156,7 +140,17 @@ const Blog = () => {
         <div className="relative overflow-hidden px-4 md:px-0">
           <div
             ref={carouselRef}
-            className="flex space-x-8 md:space-x-8 sm:space-x-6 max-sm:space-x-4 pb-8 md:overflow-visible overflow-x-auto scrollbar-hide md:pl-0 pl-4"
+            className={`flex space-x-8 md:space-x-8 sm:space-x-6 max-sm:space-x-4 pb-8 overflow-x-auto scrollbar-hide pl-4 select-none ${
+              isDragging ? "cursor-grabbing" : "cursor-grab"
+            }`}
+            onMouseDown={handleMouseDown}
+            onMouseLeave={handleMouseLeave}
+            onMouseUp={handleMouseUp}
+            onMouseMove={handleMouseMove}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            style={{ userSelect: "none" }}
           >
             {[...blogPosts, ...blogPosts, ...blogPosts].map((post, index) => (
               <div

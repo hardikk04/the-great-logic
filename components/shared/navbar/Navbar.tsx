@@ -40,7 +40,7 @@ const Navbar = () => {
   const navItems = [
     {
       label: "Home",
-      href: "",
+      href: "/",
       dropdown: null,
     },
     {
@@ -59,7 +59,7 @@ const Navbar = () => {
     },
     {
       label: "Contact",
-      href: "",
+      href: "/contact",
       dropdown: null,
     },
   ];

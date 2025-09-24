@@ -142,7 +142,7 @@ const Workflow2 = () => {
             transform: `perspective(1000px) rotateX(${rotateStates[3].x}deg) rotateY(${rotateStates[3].y}deg) scale3d(1, 1, 1)`,
             transition: "all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s",
           }}
-          className="curve-card h-[40vh] w-[18%] shrink-0 absolute transform rotate-4 translate-x-[180%] translate-y-8"
+          className="curve-card h-[40vh] w-[18%] shrink-0 absolute transform rotate-4 translate-x-[180%] translate-y-4"
         >
           <div className="h-full w-full overflow-hidden bg-amber-500 rounded-lg shadow-lg">
             <Image
@@ -163,4 +163,3 @@ const Workflow2 = () => {
 };
 
 export default Workflow2;
-// manual crousal

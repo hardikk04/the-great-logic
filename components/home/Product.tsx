@@ -127,7 +127,7 @@ const Product = () => {
             alt="light"
             width={1000}
             height={1000}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover hover:scale-105 duration-300"
           ></Image>
         </div>
       </div>
@@ -140,7 +140,7 @@ const Product = () => {
             alt="light"
             width={1000}
             height={1000}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover hover:scale-105 duration-300"
           ></Image>
         </div>
         <ProcessCard
@@ -164,7 +164,7 @@ const Product = () => {
             alt="light"
             width={1000}
             height={1000}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover hover:scale-105 duration-300"
           ></Image>
         </div>
       </div>

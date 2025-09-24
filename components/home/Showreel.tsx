@@ -3,16 +3,19 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 
 const Showreel = () => {
   useGSAP(() => {
-    gsap.from("video", {
-      width: "90%",
+    gsap.from(".dashboard-img", {
+      transform:
+        "translateY(120px) scale(0.8) rotateX(60deg)",
+      ease: "power2.out",
       scrollTrigger: {
         scroller: "body",
-        trigger: ".showreel",
-        start: "top 70%",
+        trigger: ".dashboard-img",
+        start: "top 90%",
         end: "top 40%",
         // markers: true,
         scrub: 1,
@@ -21,14 +24,26 @@ const Showreel = () => {
   }, []);
   return (
     <div className="showreel h-screen w-full flex justify-center overflow-hidden relative z-[1]">
-      <video
-        className="h-full w-full object-cover"
-        src="https://framerusercontent.com/assets/Y3xoj8Z6bBOUIfAM4W69L3jwTU.webm"
-        autoPlay
-        muted
-        loop
-        playsInline
-      ></video>
+      <div className="w-[85%] h-full rounded-xl overflow-hidden relative flex justify-center items-end">
+        <Image
+          src={
+            "https://framerusercontent.com/images/e2bSBE2FGqkvwqDjSs5GYHchjWw.jpg"
+          }
+          alt="showreel"
+          width={1000}
+          height={1000}
+          className="dashboard-img w-[85%] h-[90%] rounded-t-xl relative z-[1]"
+        ></Image>
+        <Image
+          src={
+            "https://framerusercontent.com/images/uFd4uP6Hq41yXZpn8dV7vhg0.jpg"
+          }
+          alt="showreel"
+          width={1000}
+          height={1000}
+          className="w-full h-full object-cover absolute top-0 left-0"
+        ></Image>
+      </div>
     </div>
   );
 };
