@@ -113,7 +113,12 @@ const Product = () => {
           </svg>
         )}
       </div>
-      <div className="h-[85vh]  max-sm:py-[4vw] w-full flex justify-between items-center">
+      <div className="h-[85vh] max-sm:py-[4vw] w-full flex justify-between items-center relative z-[1]">
+        <ProcessCard
+          number={0o1}
+          title="Revolutionizing Price Tagging"
+          para="Ditch manual paper tags — our Electronic Shelf Labels bring instant updates, high-contrast displays, and wireless control. ESLs ensure accurate pricing, reduce errors, and give your store a modern, dynamic look while saving time and cost."
+        />
         <div className="rounded-lg overflow-hidden">
           <Image
             src={
@@ -125,19 +130,8 @@ const Product = () => {
             className="w-full h-full object-cover"
           ></Image>
         </div>
-        <ProcessCard
-          number={0o1}
-          title="Revolutionizing Price Tagging"
-          para="Ditch manual paper tags — our Electronic Shelf Labels bring instant updates, high-contrast displays, and wireless control. ESLs ensure accurate pricing, reduce errors, and give your store a modern, dynamic look while saving time and cost."
-        />
       </div>
-      <div className="h-[85vh]  max-sm:py-[4vw] w-full flex justify-between items-center">
-        <ProcessCard
-          number={0o2}
-          title="Smarter Warehousing, Safer Operations"
-          para="Beautiful Design of all pages with the (newly) defined CI.
-                Highly optimized and prepared for development."
-        />
+      <div className="h-[85vh] max-sm:py-[4vw] w-full flex justify-between items-center relative z-[1]">
         <div className="rounded-lg overflow-hidden">
           <Image
             src={
@@ -149,8 +143,19 @@ const Product = () => {
             className="w-full h-full object-cover"
           ></Image>
         </div>
+        <ProcessCard
+          number={0o2}
+          title="Smarter Warehousing, Safer Operations"
+          para="Beautiful Design of all pages with the (newly) defined CI.
+                Highly optimized and prepared for development."
+        />
       </div>
-      <div className="h-[85vh]  max-sm:py-[4vw] w-full flex justify-between items-center">
+      <div className="h-[85vh] max-sm:py-[4vw] w-full flex justify-between items-center relative z-[1]">
+        <ProcessCard
+          number={0o3}
+          title="Software for Warehouse Management"
+          para="Enhance warehouse efficiency with intelligent warning lights and picking labels. From guiding staff with clear visual signals to improving safety and speed in picking operations, our solutions streamline logistics for maximum productivity."
+        />
         <div className="rounded-lg overflow-hidden">
           <Image
             src={
@@ -162,11 +167,6 @@ const Product = () => {
             className="w-full h-full object-cover"
           ></Image>
         </div>
-        <ProcessCard
-          number={0o3}
-          title="Software for Warehouse Management"
-          para="Enhance warehouse efficiency with intelligent warning lights and picking labels. From guiding staff with clear visual signals to improving safety and speed in picking operations, our solutions streamline logistics for maximum productivity."
-        />
       </div>
     </section>
   );

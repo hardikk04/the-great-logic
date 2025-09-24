@@ -8,7 +8,6 @@ import Footer from "@/components/shared/footer/Footer";
 import Navbar from "@/components/shared/navbar/Navbar";
 import Testimonial from "@/components/home/Testimonial";
 import Wrapper from "@/components/shared/Wrapper";
-import Workflow from "@/components/home/Workflow";
 import { useState } from "react";
 import Loader from "@/components/Loader";
 import gsap from "gsap";
@@ -46,7 +45,6 @@ export default function Home() {
       <Showreel />
       <Product />
       {/* <Electronic /> */}
-      <Workflow />
       <Workflow2 />
       <Blog />
       <Testimonial />

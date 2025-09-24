@@ -7,7 +7,7 @@ const Workflow2 = () => {
   useGSAP(() => {
     gsap.from(".curve-card", {
       right: "-50%",
-      stagger: 0.1,
+      // stagger: 0.1,
       scrollTrigger: {
         scroller: "body",
         trigger: ".curve-card",
@@ -24,10 +24,10 @@ const Workflow2 = () => {
         WORKFLOW
       </h2>
       <div className="curve-wrapper w-full overflow-hidden flex justify-center items-center h-full relative z-[1]">
-        <div className="curve-card h-[40vh] w-[18%] bg-red-100 shrink-0 absolute transform -rotate-12 -translate-x-60 translate-y-8 rounded-lg shadow-lg"></div>
-        <div className="curve-card h-[40vh] w-[18%] bg-red-200 shrink-0 absolute transform -rotate-6 -translate-x-24 translate-y-4 rounded-lg shadow-lg"></div>
-        <div className="curve-card h-[40vh] w-[18%] bg-red-300 shrink-0 absolute transform rotate-6 translate-x-24 translate-y-4 rounded-lg shadow-lg"></div>
-        <div className="curve-card h-[40vh] w-[18%] bg-red-400 shrink-0 absolute transform rotate-12 translate-x-60 translate-y-8 rounded-lg shadow-lg"></div>
+        <div className="curve-card h-[40vh] w-[18%] bg-red-100 shrink-0 absolute transform -rotate-12 -translate-x-[180%] translate-y-12 rounded-lg shadow-lg"></div>
+        <div className="curve-card h-[40vh] w-[18%] bg-red-200 shrink-0 absolute transform -rotate-6 -translate-x-[60%] translate-y-0 rounded-lg shadow-lg"></div>
+        <div className="curve-card h-[40vh] w-[18%] bg-red-300 shrink-0 absolute transform rotate-0 translate-x-42 -translate-y-2 rounded-lg shadow-lg"></div>
+        <div className="curve-card h-[40vh] w-[18%] bg-red-400 shrink-0 absolute transform rotate-0 translate-x-[180%] translate-y-8 rounded-lg shadow-lg"></div>
       </div>
     </section>
   );
