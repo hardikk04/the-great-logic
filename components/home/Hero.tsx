@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative pointer-events-none pt-[10rem] pb-[6rem] flex items-center justify-center overflow-hidden bg-gradient-hero"
+      className="relative pointer-events-none pt-[10rem] flex items-center justify-center overflow-hidden bg-gradient-hero"
     >
       {/* Main Content */}
       <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">

@@ -12,8 +12,8 @@ const Workflow2 = () => {
       scrollTrigger: {
         scroller: "body",
         trigger: ".curve-card",
-        start: "top 70%",
-        end: "top 40%",
+        start: "top 90%",
+        end: "top 60%",
         // markers: true,
         scrub: 1,
       },
@@ -58,7 +58,7 @@ const Workflow2 = () => {
 
   return (
     <section className="h-screen w-full relative">
-      <h2 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl font-bold z-0">
+      <h2 className="absolute top-15 left-1/2 -translate-x-1/2 text-6xl font-bold z-0">
         WORKFLOW
       </h2>
       <div className="curve-wrapper w-full overflow-hidden flex justify-center items-center h-full relative z-[1]">
@@ -70,7 +70,7 @@ const Workflow2 = () => {
             transform: `perspective(1000px) rotateX(${rotateStates[0].x}deg) rotateY(${rotateStates[0].y}deg) scale3d(1, 1, 1)`,
             transition: "all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s",
           }}
-          className="curve-card h-[40vh] w-[18%] shrink-0 absolute transform -rotate-12 -translate-x-[180%] translate-y-12"
+          className="curve-card h-[40vh] w-[18%] shrink-0 absolute transform rotate-20 -translate-x-[200%] -translate-y-[30%]"
         >
           <div className="h-full w-full overflow-hidden bg-amber-200 rounded-lg shadow-lg">
             <Image
@@ -94,7 +94,7 @@ const Workflow2 = () => {
             transform: `perspective(1000px) rotateX(${rotateStates[1].x}deg) rotateY(${rotateStates[1].y}deg) scale3d(1, 1, 1)`,
             transition: "all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s",
           }}
-          className="curve-card h-[40vh] w-[18%] shrink-0 absolute transform -rotate-6 -translate-x-[60%] translate-y-0"
+          className="curve-card h-[40vh] w-[18%] shrink-0 absolute transform rotate-12 -translate-x-[80%] translate-y-[0%]"
         >
           <div className="h-full w-full overflow-hidden bg-amber-300 rounded-lg shadow-lg">
             <Image
@@ -118,7 +118,7 @@ const Workflow2 = () => {
             transform: `perspective(1000px) rotateX(${rotateStates[2].x}deg) rotateY(${rotateStates[2].y}deg) scale3d(1, 1, 1)`,
             transition: "all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s",
           }}
-          className="curve-card h-[40vh] w-[18%] shrink-0 absolute transform rotate-0 translate-x-42 -translate-y-2"
+          className="curve-card h-[40vh] w-[18%] shrink-0 absolute transform -rotate-12 translate-x-[55%] translate-y-[0%]"
         >
           <div className="h-full w-full overflow-hidden bg-amber-400 rounded-lg shadow-lg">
             <Image
@@ -142,7 +142,7 @@ const Workflow2 = () => {
             transform: `perspective(1000px) rotateX(${rotateStates[3].x}deg) rotateY(${rotateStates[3].y}deg) scale3d(1, 1, 1)`,
             transition: "all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s",
           }}
-          className="curve-card h-[40vh] w-[18%] shrink-0 absolute transform rotate-4 translate-x-[180%] translate-y-4"
+          className="curve-card h-[40vh] w-[18%] shrink-0 absolute transform -rotate-20 translate-x-[180%] -translate-y-[30%]"
         >
           <div className="h-full w-full overflow-hidden bg-amber-500 rounded-lg shadow-lg">
             <Image

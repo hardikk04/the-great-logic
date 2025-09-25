@@ -127,7 +127,7 @@ const Blog = () => {
   return (
     <section
       id="blog"
-      className="blog-section bg-gradient-subtle sm:px-6 py-4 pt-30"
+      className="blog-section sm:px-6 py-4 pt-30"
     >
       <div className="container mx-auto text-black">
         <div className="text-center mb-12">

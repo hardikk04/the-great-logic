@@ -35,7 +35,7 @@ const ESLPage = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-[10rem] pb-[6rem] flex items-center justify-center overflow-hidden">
+      <section className="relative pt-[10rem] pb-[6rem] flex items-center justify-center overflow-hidden bg-white">
         <div className="relative text-center px-6 max-w-6xl mx-auto hero-content">
           <div className="pointer-events-none">
             <h1 className="text-4xl md:text-7xl lg:text-8xl font-heading font-bold text-black mb-6">
@@ -104,7 +104,9 @@ const ESLPage = () => {
           defaultValue="item-1"
         >
           <AccordionItem value="item-1">
-            <AccordionTrigger className="text-2xl">Product Information</AccordionTrigger>
+            <AccordionTrigger className="text-2xl">
+              Product Information
+            </AccordionTrigger>
             <AccordionContent className="flex flex-col gap-4 text-balance">
               <p>
                 Our flagship product combines cutting-edge technology with sleek
@@ -119,7 +121,9 @@ const ESLPage = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger className="text-2xl">Shipping Details</AccordionTrigger>
+            <AccordionTrigger className="text-2xl">
+              Shipping Details
+            </AccordionTrigger>
             <AccordionContent className="flex flex-col gap-4 text-balance">
               <p>
                 We offer worldwide shipping through trusted courier partners.
@@ -133,7 +137,9 @@ const ESLPage = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger className="text-2xl">Return Policy</AccordionTrigger>
+            <AccordionTrigger className="text-2xl">
+              Return Policy
+            </AccordionTrigger>
             <AccordionContent className="flex flex-col gap-4 text-balance">
               <p>
                 We stand behind our products with a comprehensive 30-day return

@@ -6,7 +6,7 @@ const CTABannerSection = () => {
     <section className="relative  overflow-hidden my-[6rem] px-6">
       {/* Background decorative elements */}
 
-      <div className="relative liquid-glass border border-white/20 rounded-xl backdrop-blur-xl max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-14 bg-black">
+      <div className="relative liquid-glass border border-white/20 rounded-xl backdrop-blur-xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-14 bg-black">
         <div className="text-center">
           {/* Main heading */}
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">

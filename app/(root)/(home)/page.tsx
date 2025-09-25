@@ -14,7 +14,7 @@ import DashboardAnimation from "@/components/home/DashboardAnimation";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
-      <div className="absolute top-0 inset-0 z-0 overflow-hidden">
+      <div className="absolute top-0 inset-0 z-[1] overflow-hidden">
         {<Wrapper />}
       </div>
       <Hero />

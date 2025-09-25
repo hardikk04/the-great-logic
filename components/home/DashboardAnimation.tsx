@@ -9,14 +9,17 @@ gsap.registerPlugin(ScrollTrigger);
 const DashboardAnimation = () => {
   useGSAP(() => {
     gsap.from(".dashboard-img", {
-      transform:
-        "translateY(120px) scale(0.8) rotateX(60deg)",
+      y: 120, // moves it up
+      scale: 0.8, // smaller at start
+      rotationX: 60, // tilt backward
+      opacity: 0, // fades in
+      transformOrigin: "center bottom", // pivot point
       ease: "power2.out",
       scrollTrigger: {
         scroller: "body",
         trigger: ".dashboard-img",
-        start: "top 90%",
-        end: "top 40%",
+        start: "top 150%",
+        end: "top 70%",
         // markers: true,
         scrub: 1,
       },
@@ -24,25 +27,18 @@ const DashboardAnimation = () => {
   }, []);
   return (
     <div className="showreel h-screen w-full flex justify-center overflow-hidden relative z-[1]">
-      <div className="w-[85%] h-full rounded-xl overflow-hidden relative flex justify-center items-end">
-        <Image
-          src={
-            "https://framerusercontent.com/images/e2bSBE2FGqkvwqDjSs5GYHchjWw.jpg"
-          }
-          alt="showreel"
-          width={1000}
-          height={1000}
-          className="dashboard-img w-[85%] h-[90%] rounded-t-xl relative z-[1]"
-        ></Image>
-        <Image
-          src={
-            "https://framerusercontent.com/images/uFd4uP6Hq41yXZpn8dV7vhg0.jpg"
-          }
-          alt="showreel"
-          width={1000}
-          height={1000}
-          className="w-full h-full object-cover absolute top-0 left-0"
-        ></Image>
+      <div className="w-full h-full rounded-xl overflow-hidden relative flex justify-center items-end">
+        <div className="perspective-[1200px] w-[95%] h-[90%] overflow-hidden">
+          <Image
+            src={
+              "https://framerusercontent.com/images/e2bSBE2FGqkvwqDjSs5GYHchjWw.jpg"
+            }
+            alt="showreel"
+            width={1000}
+            height={1000}
+            className="w-full dashboard-img h-full rounded-t-xl relative z-[1]"
+          ></Image>
+        </div>
       </div>
     </div>
   );
