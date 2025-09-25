@@ -12,19 +12,21 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isLoading, setisLoading] = useState(true);
   useGSAP(() => {
-    const tl = gsap.timeline();
+    if (isLoading) {
+      const tl = gsap.timeline();
 
-    tl.to(".loader-text span", {
-      opacity: 1,
-      stagger: {
-        amount: 0.8,
-      },
-    }).to(".loader", {
-      opacity: 0,
-      onComplete: () => {
-        setisLoading(false);
-      },
-    });
+      tl.to(".loader-text span", {
+        opacity: 1,
+        stagger: {
+          amount: 0.8,
+        },
+      }).to(".loader", {
+        opacity: 0,
+        onComplete: () => {
+          setisLoading(false);
+        },
+      });
+    }
   }, [isLoading]);
 
   if (isLoading) return <Loader />;

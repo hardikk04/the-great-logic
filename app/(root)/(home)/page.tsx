@@ -3,13 +3,13 @@
 import Blog from "@/components/home/Blog";
 import CTABannerSection from "@/components/home/CtaBanner";
 import Hero from "@/components/home/Hero";
-import Showreel from "@/components/home/Showreel";
 import Testimonial from "@/components/home/Testimonial";
 import Wrapper from "@/components/shared/Wrapper";
 
 import Product from "@/components/home/Product";
 
 import Workflow2 from "@/components/home/Workflow2";
+import DashboardAnimation from "@/components/home/DashboardAnimation";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
         {<Wrapper />}
       </div>
       <Hero />
-      <Showreel />
+      <DashboardAnimation />
       <Product />
       <Workflow2 />
       <Blog />
