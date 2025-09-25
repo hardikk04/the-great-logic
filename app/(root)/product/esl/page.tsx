@@ -13,6 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import StickyWrapper from "@/components/product/StickyWrapper";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -155,6 +156,7 @@ const ESLPage = () => {
           </AccordionItem>
         </Accordion>
       </section>
+      <StickyWrapper />
 
       <CTABannerSection />
     </main>
