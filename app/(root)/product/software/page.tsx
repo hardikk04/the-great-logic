@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
-import Showreel from "@/components/product/Showreel";
 import CTABannerSection from "@/components/home/CtaBanner";
 import {
   Accordion,
@@ -11,7 +11,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import StickyWrapper from "@/components/product/StickyWrapper";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,23 +29,23 @@ const SoftwarePage = () => {
   const advantages = [
     {
       number: "01",
-      title: "Intuitive Dashboard",
-      para: "Modern, clean interface with customizable widgets and real-time analytics for better decision making",
+      title: "AI-Powered Intelligence",
+      para: "Leverage machine learning algorithms for predictive analytics, automated decision-making, and intelligent process optimization that adapts to your business patterns.",
     },
     {
       number: "02",
-      title: "Seamless Integration",
-      para: "Connect with existing systems through robust APIs and pre-built connectors for popular platforms",
+      title: "Cloud-Native Architecture",
+      para: "Built on modern cloud infrastructure with microservices, ensuring unlimited scalability, 99.9% uptime, and seamless global deployment.",
     },
     {
       number: "03",
-      title: "Advanced Analytics",
-      para: "Powerful reporting tools with AI-driven insights and predictive analytics for business optimization",
+      title: "Zero-Code Integration",
+      para: "Connect with any system through our visual integration builder - no coding required. Pre-built connectors for 500+ popular business applications.",
     },
     {
       number: "04",
-      title: "Enterprise Security",
-      para: "Bank-level security with multi-factor authentication, encryption, and compliance with industry standards",
+      title: "Real-Time Collaboration",
+      para: "Enable instant team collaboration with live data sharing, concurrent editing, and intelligent workflow automation across all departments.",
     },
   ];
 
@@ -96,41 +95,470 @@ const SoftwarePage = () => {
         </div>
       </section>
 
-      <Showreel url="/video/workflow.mp4" />
-
-      {/* Custom Advantages Section for Software */}
-      <section className="max-sm:hidden max-md:hidden home-projects relative text-white pt-[6vw]">
+      {/* Software Management Features Section */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="project-title max-sm:py-[6vw] py-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
-                Key Features
-              </h2>
-              <p className="text-lg md:text-xl text-black/70 max-w-3xl mx-auto">
-                Discover the powerful features that make our software management
-                platform the perfect solution for modern businesses.
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">
+              Comprehensive Software Management
+            </h2>
+            <p className="text-lg md:text-xl text-black/70 max-w-4xl mx-auto">
+              Transform your business operations with our integrated software
+              management platform. From inventory tracking to customer
+              relationship management, we&apos;ve got you covered.
+            </p>
+          </div>
+
+          {/* Main Features Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+            {/* Large Feature Card */}
+            <div className="lg:col-span-8 bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
+              <div className="flex flex-col lg:flex-row items-start gap-8">
+                <div className="flex-1">
+                  <div className="inline-flex items-center bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                    SMART INVENTORY
+                  </div>
+                  <h3 className="text-2xl font-bold text-black mb-4">
+                    AI-Powered Inventory Management
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed mb-6">
+                    Real-time inventory tracking with predictive analytics,
+                    automated reordering, and intelligent forecasting. Optimize
+                    stock levels across multiple locations with machine learning
+                    algorithms.
+                  </p>
+                  <div className="flex items-center text-blue-600 font-semibold">
+                    <span className="mr-2">Learn More</span>
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div className="w-full lg:w-64 h-48 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl flex items-center justify-center">
+                  <svg
+                    className="w-16 h-16 text-blue-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            {/* Vertical Feature Cards */}
+            <div className="lg:col-span-4 space-y-6">
+              <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all duration-300">
+                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                  <svg
+                    className="w-6 h-6 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                    />
+                  </svg>
+                </div>
+                <h4 className="font-bold text-black mb-2">
+                  Customer Relations
+                </h4>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Complete CRM with 360° customer view and automated workflows
+                </p>
+              </div>
+
+              <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all duration-300">
+                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                  <svg
+                    className="w-6 h-6 text-purple-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                    />
+                  </svg>
+                </div>
+                <h4 className="font-bold text-black mb-2">Analytics & BI</h4>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Real-time dashboards with predictive modeling and automated
+                  insights
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all duration-300 group">
+              <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
+                <svg
+                  className="w-6 h-6 text-orange-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </div>
+              <h4 className="font-bold text-black mb-3">Workflow Automation</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Streamline repetitive tasks with intelligent automation and
+                custom workflows across all departments.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all duration-300 group">
+              <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
+                <svg
+                  className="w-6 h-6 text-red-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  />
+                </svg>
+              </div>
+              <h4 className="font-bold text-black mb-3">Enterprise Security</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Bank-grade security with role-based access, audit trails, and
+                compliance management for industry standards.
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all duration-300 group">
+              <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
+                <svg
+                  className="w-6 h-6 text-teal-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                  />
+                </svg>
+              </div>
+              <h4 className="font-bold text-black mb-3">
+                Seamless Integration
+              </h4>
+              <p className="text-gray-600 leading-relaxed">
+                Connect with 500+ applications through robust API ecosystem and
+                pre-built connectors for seamless data flow.
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-10">
+        </div>
+      </section>
+
+      {/* Next-Gen Software Platform Advantages */}
+      <section className="py-20 ">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">
+              Advatages Software Platform
+            </h2>
+            <p className="text-lg md:text-xl text-black/70 max-w-3xl mx-auto">
+              Experience the future of business software with our cutting-edge
+              platform designed for modern enterprises seeking scalability,
+              efficiency, and innovation.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {advantages.map((advantage, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
+                className="group relative bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
               >
-                <div className="flex items-center mb-4">
-                  <span className="text-3xl font-bold text-[#0DACFB] mr-4">
-                    {advantage.number}
-                  </span>
-                  <h3 className="text-xl font-semibold text-black">
-                    {advantage.title}
-                  </h3>
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center text-2xl font-bold text-black group-hover:bg-black group-hover:text-white transition-all duration-300">
+                      {advantage.number}
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-black mb-4 group-hover:text-gray-700 transition-colors duration-300">
+                      {advantage.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed mb-6">
+                      {advantage.para}
+                    </p>
+                    <div className="flex items-center text-black/70 hover:text-black transition-colors duration-200 cursor-pointer">
+                      <span className="mr-2 text-sm font-medium">
+                        Explore Feature
+                      </span>
+                      <svg
+                        className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-black/70 leading-relaxed">
-                  {advantage.para}
-                </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industries We Serve Section */}
+      <section className="py-20 bg-black text-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              Industries We&apos;ve Transformed
+            </h2>
+            <p className="text-lg md:text-xl text-white/80 max-w-4xl mx-auto">
+              Our software solutions have successfully empowered businesses
+              across diverse industries, delivering measurable results and
+              driving digital transformation.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {/* Healthcare */}
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-all duration-300">
+                <svg
+                  className="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Healthcare</h3>
+              <p className="text-white/70 leading-relaxed mb-6">
+                Streamlined patient management, inventory tracking for medical
+                supplies, and compliance reporting for 50+ healthcare
+                facilities.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-white/60 text-sm">Impact</span>
+                <div className="text-white font-bold">40% efficiency boost</div>
+              </div>
+            </div>
+
+            {/* Manufacturing */}
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-all duration-300">
+                <svg
+                  className="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Manufacturing</h3>
+              <p className="text-white/70 leading-relaxed mb-6">
+                Production planning, quality control, and supply chain
+                optimization for major manufacturing companies across
+                Asia-Pacific.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-white/60 text-sm">Cost Reduction</span>
+                <div className="text-white font-bold">35% savings</div>
+              </div>
+            </div>
+
+            {/* Retail & E-commerce */}
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-all duration-300">
+                <svg
+                  className="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Retail & E-commerce</h3>
+              <p className="text-white/70 leading-relaxed mb-6">
+                Omnichannel inventory management, customer analytics, and
+                automated ordering systems for 200+ retail locations.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-white/60 text-sm">Processing Speed</span>
+                <div className="text-white font-bold">60% faster</div>
+              </div>
+            </div>
+
+            {/* Logistics & Transportation */}
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-all duration-300">
+                <svg
+                  className="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 9l4-4 4 4m0 6l-4 4-4-4"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-4">
+                Logistics & Transportation
+              </h3>
+              <p className="text-white/70 leading-relaxed mb-6">
+                Fleet management, route optimization, and real-time tracking
+                solutions for transportation companies nationwide.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-white/60 text-sm">Fuel Savings</span>
+                <div className="text-white font-bold">25% reduction</div>
+              </div>
+            </div>
+
+            {/* Financial Services */}
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-all duration-300">
+                <svg
+                  className="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Financial Services</h3>
+              <p className="text-white/70 leading-relaxed mb-6">
+                Risk management, compliance tracking, and automated reporting
+                systems for banks and financial institutions.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-white/60 text-sm">Compliance</span>
+                <div className="text-white font-bold">50% improvement</div>
+              </div>
+            </div>
+
+            {/* Technology */}
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-all duration-300">
+                <svg
+                  className="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Technology</h3>
+              <p className="text-white/70 leading-relaxed mb-6">
+                Project management, resource allocation, and development
+                lifecycle tracking for tech startups and enterprises.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-white/60 text-sm">Delivery Speed</span>
+                <div className="text-white font-bold">45% faster</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Stats Section */}
+          <div className="border border-white/20 rounded-2xl p-8 bg-white/5">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div>
+                <div className="text-4xl font-bold text-white mb-2">500+</div>
+                <div className="text-white/70">Businesses Served</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-white mb-2">15+</div>
+                <div className="text-white/70">Industries</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-white mb-2">99.9%</div>
+                <div className="text-white/70">Uptime Guarantee</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -160,6 +588,149 @@ const SoftwarePage = () => {
                 </span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">
+              Case Studies
+            </h2>
+            <p className="text-lg md:text-xl text-black/70 max-w-3xl mx-auto">
+              Discover how leading companies transformed their operations with
+              our software solutions and achieved remarkable results.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Case Study 1 - Healthcare */}
+            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-gray-300 transition-all duration-300 group">
+              <div className="aspect-video w-full overflow-hidden">
+                <Image
+                  src="/img/healthcare.jpg"
+                  alt="Healthcare Management System"
+                  width={400}
+                  height={225}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-8">
+                <h3 className="text-xl font-bold text-black mb-4 group-hover:text-gray-700 transition-colors duration-300">
+                  MedCare Hospital Network
+                </h3>
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  Streamlined patient management across 15 facilities, reducing
+                  administrative overhead by 40% and improving patient
+                  satisfaction scores by 35%.
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="text-sm text-gray-500">Healthcare</div>
+                  <div className="flex items-center text-black/70 hover:text-black transition-colors duration-200 cursor-pointer">
+                    <span className="text-sm font-medium mr-2">Read More</span>
+                    <svg
+                      className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Case Study 2 - Manufacturing */}
+            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-gray-300 transition-all duration-300 group">
+              <div className="aspect-video w-full overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?q=80&w=1200&auto=format&fit=crop"
+                  alt="Manufacturing Process Optimization"
+                  width={400}
+                  height={225}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-8">
+                <h3 className="text-xl font-bold text-black mb-4 group-hover:text-gray-700 transition-colors duration-300">
+                  TechFlow Manufacturing
+                </h3>
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  Implemented AI-driven production planning that reduced waste
+                  by 30% and increased overall equipment effectiveness to 95%
+                  across all production lines.
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="text-sm text-gray-500">Manufacturing</div>
+                  <div className="flex items-center text-black/70 hover:text-black transition-colors duration-200 cursor-pointer">
+                    <span className="text-sm font-medium mr-2">Read More</span>
+                    <svg
+                      className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Case Study 3 - Retail */}
+            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-gray-300 transition-all duration-300 group">
+              <div className="aspect-video w-full overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop"
+                  alt="Retail Management System"
+                  width={400}
+                  height={225}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-8">
+                <h3 className="text-xl font-bold text-black mb-4 group-hover:text-gray-700 transition-colors duration-300">
+                  RetailMax Chain
+                </h3>
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  Unified inventory management across 200+ stores, achieving
+                  99.5% stock accuracy and reducing out-of-stock incidents by
+                  60% through predictive analytics.
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="text-sm text-gray-500">Retail</div>
+                  <div className="flex items-center text-black/70 hover:text-black transition-colors duration-200 cursor-pointer">
+                    <span className="text-sm font-medium mr-2">Read More</span>
+                    <svg
+                      className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -255,8 +826,6 @@ const SoftwarePage = () => {
           </Accordion>
         </div>
       </section>
-
-      <StickyWrapper />
 
       <CTABannerSection />
     </main>
