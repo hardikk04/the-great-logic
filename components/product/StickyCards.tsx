@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import React, { useRef } from "react";
 import "@/style/StickyCards.css";
 import { useGSAP } from "@gsap/react";
@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 interface StickyCardsProps {
   title: string;
-  image: string;
+  video: string;
   description: string;
   sizes: string;
   colors: string;
@@ -19,7 +19,7 @@ const StickyCards = () => {
   const stickyCardsData: StickyCardsProps[] = [
     {
       title: "Great Logic Thin Series (GLT)",
-      image: "https://www.minewtag.com/upload/ztyImg/2025-05/68394bc623e7e.jpg",
+      video: "/video/Logic Labels.mp4",
       description:
         "Ultra-thin and lightweight, perfect for shelves, bins, and compact spaces. Designed for efficiency and endurance with up to 5 years battery life.",
       sizes: `2.1, 2.9, 3.5, 4.2, 5.8, 7.5, 11.6`,
@@ -27,8 +27,8 @@ const StickyCards = () => {
     },
     {
       title: "Great Logic Button Series (GLB)",
-      image:
-        "https://images.unsplash.com/photo-1599508266124-804fc6eecf09?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      video:
+        "/video/Logic Lights 2.mp4",
       description:
         "Equipped with the latest e-ink display technology and programmable button functionality, these Logic Tags go beyond simple displays. They are purpose-built for smart warehouses, enabling precise goods’ tracking and offering seamless integration with Manufacturing Execution Systems to streamline operations and boost efficiency.",
       sizes: "2.9",
@@ -36,8 +36,8 @@ const StickyCards = () => {
     },
     {
       title: "Great Logic Prismatic Series(GLP)",
-      image:
-        "https://images.unsplash.com/photo-1687803551107-b3ff415ef426?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      video:
+        "/video/Logic Lights.mp4",
       description:
         "High-impact multi-color displays (up to 6 colors) for branding, promotions, and dynamic visibility.",
       sizes: "7.5, 13.3",
@@ -45,8 +45,8 @@ const StickyCards = () => {
     },
     {
       title: "Great Logic General Series(GLG)",
-      image:
-        "https://images.unsplash.com/photo-1687803551107-b3ff415ef426?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      video:
+        "/video/Logic Labels.mp4",
       description:
         "Versatile, All-purpose Logic Tags — durable, reliable, and available in the widest range of sizes. A balance of cost and performance.",
       sizes: "1.5, 2.1, 2.9, 4.2, 5.8, 7.5",
@@ -54,8 +54,8 @@ const StickyCards = () => {
     },
     {
       title: "Great Logic Meeting Series(GLM)",
-      image:
-        "https://images.unsplash.com/photo-1687803551107-b3ff415ef426?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      video:
+        "/video/Logic Lights 2.mp4",
       description:
         "Specially designed for Conference Tables and Meetings, with Unique shapes (V-Shape, L-Shape, T-Shape). Enhance way of new age professionalism with multi-color nameplates and signage.",
       sizes: "7.5",
@@ -133,13 +133,14 @@ const StickyCards = () => {
             </div>
             <div className="sticky-card-index h-full">
               <div className="sticky-card-img h-full">
-                <Image
+                {/* <Image
                   src={cardData.image}
                   alt={cardData.title}
                   width={500}
                   height={500}
                   className="object-cover w-full h-full"
-                ></Image>
+                ></Image> */}
+                <video src={cardData.video} className="h-full rounded-xl w-full object-cover" muted loop autoPlay playsInline></video>
               </div>
             </div>
           </div>
