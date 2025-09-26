@@ -27,17 +27,19 @@ const DashboardAnimation = () => {
   }, []);
   return (
     <div className="showreel h-screen w-full flex justify-center overflow-hidden relative z-[1]">
-      <div className="w-full h-full rounded-xl overflow-hidden relative flex justify-center items-end">
-        <div className="perspective-[1200px] w-[95%] h-[90%] overflow-hidden">
-          <Image
-            src={
-              "https://framerusercontent.com/images/e2bSBE2FGqkvwqDjSs5GYHchjWw.jpg"
-            }
-            alt="showreel"
-            width={1000}
-            height={1000}
-            className="w-full dashboard-img h-full rounded-t-xl relative z-[1]"
-          ></Image>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full h-full rounded-xl overflow-hidden relative flex justify-center items-end bg-[#EAEFF5]">
+          <div className="perspective-[1200px] w-[95%] h-[90%] overflow-hidden">
+            <Image
+              src={
+                "https://framerusercontent.com/images/e2bSBE2FGqkvwqDjSs5GYHchjWw.jpg"
+              }
+              alt="showreel"
+              width={1000}
+              height={1000}
+              className="w-full dashboard-img h-full rounded-t-xl relative z-[1]"
+            ></Image>
+          </div>
         </div>
       </div>
     </div>

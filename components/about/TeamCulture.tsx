@@ -36,27 +36,30 @@ const TeamCulture = () => {
   ];
 
   return (
-    <section className="px-6 pt-20">
-      <div className="mx-auto">
+    <section className="pt-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
             Our <span className="text-blue-600">Culture</span> & Values
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            What makes us different isn&apos;t just our technology—it&apos;s our people, 
-            our values, and our unwavering commitment to excellence in everything we do.
+            What makes us different isn&apos;t just our technology—it&apos;s our
+            people, our values, and our unwavering commitment to excellence in
+            everything we do.
           </p>
         </div>
 
         {/* Values in a masonry-style layout */}
         <div className="columns-1 md:columns-2 gap-8 mb-20 space-y-8">
           {values.map((value, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="group break-inside-avoid bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 mb-8"
             >
               <div className="flex flex-col items-center text-center space-y-4">
-                <div className={`p-4 rounded-2xl bg-gradient-to-r ${value.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                <div
+                  className={`p-4 rounded-2xl bg-gradient-to-r ${value.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                >
                   <value.icon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-black">{value.title}</h3>
@@ -68,8 +71,6 @@ const TeamCulture = () => {
             </div>
           ))}
         </div>
-
-   
       </div>
     </section>
   );

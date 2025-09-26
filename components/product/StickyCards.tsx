@@ -27,8 +27,7 @@ const StickyCards = () => {
     },
     {
       title: "Great Logic Button Series (GLB)",
-      video:
-        "/video/Logic Lights 2.mp4",
+      video: "/video/Logic Lights 2.mp4",
       description:
         "Equipped with the latest e-ink display technology and programmable button functionality, these Logic Tags go beyond simple displays. They are purpose-built for smart warehouses, enabling precise goods’ tracking and offering seamless integration with Manufacturing Execution Systems to streamline operations and boost efficiency.",
       sizes: "2.9",
@@ -36,8 +35,7 @@ const StickyCards = () => {
     },
     {
       title: "Great Logic Prismatic Series(GLP)",
-      video:
-        "/video/Logic Lights.mp4",
+      video: "/video/Logic Lights.mp4",
       description:
         "High-impact multi-color displays (up to 6 colors) for branding, promotions, and dynamic visibility.",
       sizes: "7.5, 13.3",
@@ -45,8 +43,7 @@ const StickyCards = () => {
     },
     {
       title: "Great Logic General Series(GLG)",
-      video:
-        "/video/Logic Labels.mp4",
+      video: "/video/Logic Labels.mp4",
       description:
         "Versatile, All-purpose Logic Tags — durable, reliable, and available in the widest range of sizes. A balance of cost and performance.",
       sizes: "1.5, 2.1, 2.9, 4.2, 5.8, 7.5",
@@ -54,8 +51,7 @@ const StickyCards = () => {
     },
     {
       title: "Great Logic Meeting Series(GLM)",
-      video:
-        "/video/Logic Lights 2.mp4",
+      video: "/video/Logic Lights 2.mp4",
       description:
         "Specially designed for Conference Tables and Meetings, with Unique shapes (V-Shape, L-Shape, T-Shape). Enhance way of new age professionalism with multi-color nameplates and signage.",
       sizes: "7.5",
@@ -87,13 +83,11 @@ const StickyCards = () => {
             end: "top top",
             onUpdate: (self) => {
               const progress = self.progress;
-              const scale = 1 - progress * 0.25;
-              const afterOpacity = progress;
+              const scale = 1 - progress * 0.1;
 
               gsap.set(card, {
                 scale,
                 borderRadius: "1rem",
-                "--after-opacity": afterOpacity,
               });
             },
           });
@@ -104,13 +98,13 @@ const StickyCards = () => {
   );
 
   return (
-    <div className="sticky-cards max-w-7xl" ref={container}>
+    <div className="sticky-cards" ref={container}>
       {stickyCardsData.map((cardData, index) => {
         return (
           <div className={`sticky-card sticky-card-${index + 1}`} key={index}>
             <div className="sticky-card-content">
               <div className="sticky-card-content-wrapper">
-                <h2 className="sticky-card-header text-[3rem] font-bold leading-[1.1]">
+                <h2 className="sticky-card-header text-[2rem] font-bold leading-[1.1]">
                   {cardData.title}
                 </h2>
 
@@ -140,7 +134,14 @@ const StickyCards = () => {
                   height={500}
                   className="object-cover w-full h-full"
                 ></Image> */}
-                <video src={cardData.video} className="h-full rounded-xl w-full object-cover" muted loop autoPlay playsInline></video>
+                <video
+                  src={cardData.video}
+                  className="h-full rounded-xl w-full object-cover"
+                  muted
+                  loop
+                  autoPlay
+                  playsInline
+                ></video>
               </div>
             </div>
           </div>

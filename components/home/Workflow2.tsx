@@ -1,163 +1,73 @@
-"use client";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import Image from "next/image";
-import React, { useCallback, useState, MouseEvent } from "react";
-
 const Workflow2 = () => {
-  useGSAP(() => {
-    gsap.from(".curve-card", {
-      right: "-50%",
-      // stagger: 0.1,
-      scrollTrigger: {
-        scroller: "body",
-        trigger: ".curve-card",
-        start: "top 90%",
-        end: "top 60%",
-        // markers: true,
-        scrub: 1,
-      },
-    });
-  });
-
-  const [rotateStates, setRotateStates] = useState([
-    { x: 0, y: 0 },
-    { x: 0, y: 0 },
-    { x: 0, y: 0 },
-    { x: 0, y: 0 },
-  ]);
-
-  const createMouseMoveHandler = useCallback((cardIndex: number) => {
-    return (e: MouseEvent<HTMLDivElement>) => {
-      const card = e.currentTarget;
-      const box = card.getBoundingClientRect();
-      const x = e.clientX - box.left;
-      const y = e.clientY - box.top;
-      const centerX = box.width / 2;
-      const centerY = box.height / 2;
-      const rotateX = (y - centerY) / 7;
-      const rotateY = (centerX - x) / 7;
-
-      setRotateStates((prev) => {
-        const newStates = [...prev];
-        newStates[cardIndex] = { x: rotateX, y: rotateY };
-        return newStates;
-      });
-    };
-  }, []);
-
-  const createMouseLeaveHandler = useCallback((cardIndex: number) => {
-    return () => {
-      setRotateStates((prev) => {
-        const newStates = [...prev];
-        newStates[cardIndex] = { x: 0, y: 0 };
-        return newStates;
-      });
-    };
-  }, []);
-
   return (
-    <section className="h-screen w-full relative">
-      <h2 className="absolute top-15 left-1/2 -translate-x-1/2 text-6xl font-bold z-0">
-        WORKFLOW
-      </h2>
-      <div className="curve-wrapper w-full overflow-hidden flex justify-center items-center h-full relative z-[1]">
-        {/* Card 1 */}
-        <div
-          onMouseMove={createMouseMoveHandler(0)}
-          onMouseLeave={createMouseLeaveHandler(0)}
-          style={{
-            transform: `perspective(1000px) rotateX(${rotateStates[0].x}deg) rotateY(${rotateStates[0].y}deg) scale3d(1, 1, 1)`,
-            transition: "all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s",
-          }}
-          className="curve-card h-[40vh] w-[18%] shrink-0 absolute transform rotate-20 -translate-x-[200%] -translate-y-[30%]"
-        >
-          <div className="h-full w-full overflow-hidden bg-amber-200 rounded-lg shadow-lg">
-            <Image
-              src={
-                "https://static.vecteezy.com/system/resources/previews/000/517/014/non_2x/healthcare-characters-vector.jpg"
-              }
-              alt="healthcare"
-              width={1000}
-              height={1000}
-              className="w-full h-full object-cover"
-            ></Image>
-          </div>
-          <p>Healthcare</p>
+    <section className="w-full relative bg-white pt-30">
+      {/* Header Section */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-heading font-bold text-black mb-6">
+            OUR WORKFLOW
+          </h2>
+          <p className="text-lg md:text-xl text-black max-w-4xl mx-auto leading-relaxed font-body">
+            Transforming industries with innovative IoT solutions and smart
+            digital experiences across multiple sectors
+          </p>
         </div>
 
-        {/* Card 2 */}
-        <div
-          onMouseMove={createMouseMoveHandler(1)}
-          onMouseLeave={createMouseLeaveHandler(1)}
-          style={{
-            transform: `perspective(1000px) rotateX(${rotateStates[1].x}deg) rotateY(${rotateStates[1].y}deg) scale3d(1, 1, 1)`,
-            transition: "all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s",
-          }}
-          className="curve-card h-[40vh] w-[18%] shrink-0 absolute transform rotate-12 -translate-x-[80%] translate-y-[0%]"
-        >
-          <div className="h-full w-full overflow-hidden bg-amber-300 rounded-lg shadow-lg">
-            <Image
-              src={
-                "https://static.vecteezy.com/system/resources/previews/002/451/431/non_2x/girl-buying-products-from-online-shop-free-vector.jpg"
-              }
-              alt="healthcare"
-              width={1000}
-              height={1000}
-              className="w-full h-full object-cover"
-            ></Image>
+        {/* Workflow Steps */}
+        <div className="pt-20">
+          <div className="flex flex-col md:flex-row justify-between items-center mx-auto space-y-8 md:space-y-0 md:space-x-8">
+            <div className="flex-1 text-center">
+              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-xl">1</span>
+              </div>
+              <h3 className="text-xl font-heading font-semibold text-black mb-2">
+                Warehouse
+              </h3>
+              <p className="text-black font-body">
+                Understanding your business needs and challenges
+              </p>
+            </div>
+            <div className="hidden md:block w-16 h-0.5 bg-black"></div>
+            <div className="flex-1 text-center">
+              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-xl">2</span>
+              </div>
+              <h3 className="text-xl font-heading font-semibold text-black mb-2">
+                Shoping
+              </h3>
+              <p className="text-black font-body">
+                Creating tailored IoT solutions for your industry
+              </p>
+            </div>
+            <div className="hidden md:block w-16 h-0.5 bg-black"></div>
+            <div className="flex-1 text-center">
+              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-xl">3</span>
+              </div>
+              <h3 className="text-xl font-heading font-semibold text-black mb-2">
+                Office
+              </h3>
+              <p className="text-black font-body">
+                Seamless implementation and integration
+              </p>
+            </div>
+            <div className="hidden md:block w-16 h-0.5 bg-black"></div>
+            <div className="flex-1 text-center">
+              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-xl">4</span>
+              </div>
+              <h3 className="text-xl font-heading font-semibold text-black mb-2">
+                Health
+              </h3>
+              <p className="text-black font-body">
+                Ongoing maintenance and optimization
+              </p>
+            </div>
           </div>
-          <p>Shopping</p>
-        </div>
-
-        {/* Card 3 */}
-        <div
-          onMouseMove={createMouseMoveHandler(2)}
-          onMouseLeave={createMouseLeaveHandler(2)}
-          style={{
-            transform: `perspective(1000px) rotateX(${rotateStates[2].x}deg) rotateY(${rotateStates[2].y}deg) scale3d(1, 1, 1)`,
-            transition: "all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s",
-          }}
-          className="curve-card h-[40vh] w-[18%] shrink-0 absolute transform -rotate-12 translate-x-[55%] translate-y-[0%]"
-        >
-          <div className="h-full w-full overflow-hidden bg-amber-400 rounded-lg shadow-lg">
-            <Image
-              src={
-                "https://static.vecteezy.com/system/resources/previews/005/237/774/non_2x/logistics-warehouse-loading-truck-working-forklift-illustration-vector.jpg"
-              }
-              alt="healthcare"
-              width={1000}
-              height={1000}
-              className="w-full h-full object-cover"
-            ></Image>
-          </div>
-          <p>Warehouse</p>
-        </div>
-
-        {/* Card 4 */}
-        <div
-          onMouseMove={createMouseMoveHandler(3)}
-          onMouseLeave={createMouseLeaveHandler(3)}
-          style={{
-            transform: `perspective(1000px) rotateX(${rotateStates[3].x}deg) rotateY(${rotateStates[3].y}deg) scale3d(1, 1, 1)`,
-            transition: "all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s",
-          }}
-          className="curve-card h-[40vh] w-[18%] shrink-0 absolute transform -rotate-20 translate-x-[180%] -translate-y-[30%]"
-        >
-          <div className="h-full w-full overflow-hidden bg-amber-500 rounded-lg shadow-lg">
-            <Image
-              src={
-                "https://static.vecteezy.com/system/resources/previews/000/217/371/non_2x/vector-office-character-illustration.jpg"
-              }
-              alt="healthcare"
-              width={1000}
-              height={1000}
-              className="w-full h-full object-cover"
-            ></Image>
-          </div>
-          <p>Office</p>
         </div>
       </div>
+
+      {/* Industries We Serve */}
     </section>
   );
 };

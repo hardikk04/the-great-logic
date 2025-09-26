@@ -6,8 +6,8 @@ import React from "react";
 
 const MissionVision = () => {
   return (
-    <section className="relative z-[2] py-20 md:px-6">
-      <div className="mx-auto">
+    <section className="relative z-[2] py-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
             Our Purpose & <span className="text-blue-600">Vision</span>

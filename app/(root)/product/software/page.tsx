@@ -2,7 +2,6 @@
 import React from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Wrapper from "@/components/shared/Wrapper";
 import { Button } from "@/components/ui/button";
 import Showreel from "@/components/product/Showreel";
 import CTABannerSection from "@/components/home/CtaBanner";
@@ -52,34 +51,47 @@ const SoftwarePage = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-white">
-      <div className="absolute top-0 inset-0 z-[1] overflow-hidden">
-        <Wrapper />
-      </div>
-
-      {/* Hero Section */}
-      <section className="relative pt-[10rem] pb-[6rem] flex items-center justify-center overflow-hidden bg-white">
-        <div className="relative text-center px-6 max-w-6xl mx-auto hero-content">
-          <div className="pointer-events-none">
-            <h1 className="text-4xl md:text-7xl lg:text-8xl font-heading font-bold text-black mb-6">
-              Software Management
-              <br />
-              <span className="text-[#0DACFB]">Platform</span>
-            </h1>
-            <p className="text-lg md:text-xl text-black/80 max-w-3xl mx-auto mb-8 font-body">
-              Streamline your business operations with our comprehensive
-              software management platform. Built for scalability, security, and
-              seamless integration with your existing workflow.
-            </p>
-          </div>
-          <div className="flex z-[2] flex-col sm:flex-row gap-4 justify-center items-center relative">
-            <Button
-              variant={"default"}
-              className="button hover:text-white duration-300 transition-all leading-0"
-            >
-              <p className="relative z-[1]">Start Free Trial</p>
-            </Button>
-       
+    <main className="min-h-screen bg-white pt-20">
+      {/* Hero Section with Background Image */}
+      <section className="relative py-[8rem] flex items-center justify-center overflow-hidden bg-white">
+        {/* Background Image */}
+        <div className="absolute top-0 inset-0 z-[1] overflow-hidden">
+          <div
+            className="w-full h-full bg-cover bg-center bg-no-repeat opacity-70"
+            style={{
+              backgroundImage:
+                "url('https://www.minewtag.com/upload/ztyImg/2025-03/67e24f9150516.jpg')",
+            }}
+          />
+          {/* Optional overlay for better text readability */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(92deg, rgb(12 11 11 / 52%), rgb(41 45 47 / 21%))",
+            }}
+          />
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-[1]">
+          <div className="relative text-center max-w-6xl mx-auto hero-content text-white">
+            <div className="pointer-events-none">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
+                Software and App
+              </h1>
+              <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8 font-body">
+                Streamline your business operations with our comprehensive
+                software management platform. Built for security, and seamless
+                integration with your existing workflow.
+              </p>
+            </div>
+            <div className="flex z-[2] flex-col sm:flex-row gap-4 justify-center items-center relative">
+              <Button
+                variant={"default"}
+                className="button hover:text-white duration-300 transition-all leading-0"
+              >
+                <p className="relative z-[1]">Start Free Trial</p>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -88,40 +100,44 @@ const SoftwarePage = () => {
 
       {/* Custom Advantages Section for Software */}
       <section className="max-sm:hidden max-md:hidden home-projects relative text-white pt-[6vw]">
-        <div className="project-title max-sm:py-[6vw] sm:px-6 py-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
-              Key Features
-            </h2>
-            <p className="text-lg md:text-xl text-black/70 max-w-3xl mx-auto">
-              Discover the powerful features that make our software management
-              platform the perfect solution for modern businesses.
-            </p>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 mx-auto pb-10">
-          {advantages.map((advantage, index) => (
-            <div
-              key={index}
-              className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
-            >
-              <div className="flex items-center mb-4">
-                <span className="text-3xl font-bold text-[#0DACFB] mr-4">
-                  {advantage.number}
-                </span>
-                <h3 className="text-xl font-semibold text-black">
-                  {advantage.title}
-                </h3>
-              </div>
-              <p className="text-black/70 leading-relaxed">{advantage.para}</p>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="project-title max-sm:py-[6vw] py-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
+                Key Features
+              </h2>
+              <p className="text-lg md:text-xl text-black/70 max-w-3xl mx-auto">
+                Discover the powerful features that make our software management
+                platform the perfect solution for modern businesses.
+              </p>
             </div>
-          ))}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-10">
+            {advantages.map((advantage, index) => (
+              <div
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
+              >
+                <div className="flex items-center mb-4">
+                  <span className="text-3xl font-bold text-[#0DACFB] mr-4">
+                    {advantage.number}
+                  </span>
+                  <h3 className="text-xl font-semibold text-black">
+                    {advantage.title}
+                  </h3>
+                </div>
+                <p className="text-black/70 leading-relaxed">
+                  {advantage.para}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Technical Specifications */}
-      <section className="py-20 px-6">
-        <div className="mx-auto">
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">
               Technical Specifications

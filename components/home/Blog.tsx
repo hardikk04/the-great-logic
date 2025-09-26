@@ -125,11 +125,8 @@ const Blog = () => {
   ];
 
   return (
-    <section
-      id="blog"
-      className="blog-section sm:px-6 py-4 pt-30"
-    >
-      <div className="container mx-auto text-black">
+    <section id="blog" className="blog-section py-4 pt-30">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-black">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
             Blog & Media
@@ -137,7 +134,7 @@ const Blog = () => {
         </div>
 
         {/* Horizontal Carousel */}
-        <div className="relative overflow-hidden px-4 md:px-0">
+        <div className="relative overflow-hidden">
           <div
             ref={carouselRef}
             className={`flex space-x-8 md:space-x-8 sm:space-x-6 max-sm:space-x-4 pb-8 overflow-x-auto scrollbar-hide pl-4 select-none ${

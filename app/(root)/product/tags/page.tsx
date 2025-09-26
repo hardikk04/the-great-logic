@@ -2,7 +2,6 @@
 import React from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Wrapper from "@/components/shared/Wrapper";
 import { Button } from "@/components/ui/button";
 import Showreel from "@/components/product/Showreel";
 import CTABannerSection from "@/components/home/CtaBanner";
@@ -30,33 +29,46 @@ const ESLPage = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-white">
-      <div className="absolute top-0 inset-0 z-[1] overflow-hidden">
-        <Wrapper />
-      </div>
-
-      {/* Hero Section */}
-      <section className="relative pt-[10rem] pb-[6rem] flex items-center justify-center overflow-hidden bg-white">
-        <div className="relative text-center px-6 max-w-6xl mx-auto hero-content">
-          <div className="pointer-events-none">
-            <h1 className="text-4xl md:text-7xl lg:text-8xl font-heading font-bold text-black mb-6">
-              Electronic Shelf Labels
-              <br />
-              <span className="text-[#0DACFB]">(ESL)</span>
-            </h1>
-            <p className="text-lg md:text-xl text-black/80 max-w-3xl mx-auto mb-8 font-body">
-              Transform your retail operations with intelligent digital price
-              tags that deliver real-time updates, reduce costs, and enhance
-              customer experience.
-            </p>
-          </div>
-          <div className="flex z-[2] flex-col sm:flex-row gap-4 justify-center items-center relative">
-            <Button
-              variant={"default"}
-              className="button hover:text-white duration-300 transition-all leading-0"
-            >
-              <p className="relative z-[1]">Request Demo</p>
-            </Button>
+    <main className="min-h-screen bg-white pt-20">
+      <section className="relative py-[8rem] flex items-center justify-center overflow-hidden bg-white">
+        {/* Background Image */}
+        <div className="absolute top-0 inset-0 z-[1] overflow-hidden">
+          <div
+            className="w-full h-full bg-cover bg-center bg-no-repeat opacity-70"
+            style={{
+              backgroundImage:
+                "url('https://www.minewtag.com/upload/ztyImg/2025-03/67e24f9150516.jpg')",
+            }}
+          />
+          {/* Gradient overlay for text readability */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(92deg, rgb(12 11 11 / 52%), rgb(41 45 47 / 21%))",
+            }}
+          />
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-[2]">
+          <div className="relative text-center max-w-6xl mx-auto hero-content">
+            <div className="pointer-events-none">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 drop-shadow-lg">
+                Logic Tags
+              </h1>
+              <p className="text-md md:text-lg text-white/95 max-w-3xl mx-auto mb-8 font-body ">
+                Transform your retail operations with intelligent digital price
+                tags that deliver real-time updates, reduce costs, and enhance
+                customer experience.
+              </p>
+            </div>
+            <div className="flex z-[3] flex-col sm:flex-row gap-4 justify-center items-center relative">
+              <Button
+                variant={"default"}
+                className="button hover:text-white duration-300 transition-all leading-0 shadow-lg"
+              >
+                <p className="relative z-[1]">Request Demo</p>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -66,8 +78,8 @@ const ESLPage = () => {
       <Advantages />
 
       {/* Technical Specifications */}
-      <section className="py-20 px-6">
-        <div className="mx-auto">
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">
               Technical Specifications

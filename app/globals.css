@@ -254,3 +254,8 @@
   transform: translateY(-5px);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
+
+.bg-section {
+  background-image: url("https://www.minewtag.com/upload/ztyImg/2025-03/67e24f9150516.jpg");
+  
+}

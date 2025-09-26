@@ -48,9 +48,12 @@ const Navbar = () => {
       label: "Products",
       href: "#products",
       dropdown: [
-        { label: "Electronic Shelf Labels (ESL)", href: "/product/esl" },
-        { label: "Warehouse Warning Light & Picking Label", href: "/product/warehouse" },
-        { label: "Software Management App", href: "/product/software" },
+        { label: "Logic Tags", href: "/product/tags" },
+        {
+          label: "Logic Lights",
+          href: "/product/lights",
+        },
+        { label: "Software and App", href: "/product/software" },
       ],
     },
     {
@@ -70,15 +73,22 @@ const Navbar = () => {
       className={`fixed top-0 w-full z-50 text-black transition-transform duration-300 ease-in-out ${
         isScrolled
           ? "backdrop-blur-md shadow-soft bg-white/80"
-          : "bg-transparent"
+          : "bg-white"
       } ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
     >
-      <div className="container mx-auto sm:px-6 py-4 px-6">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center">
-            <Image src="/img/logo.png" alt="logo" width={150} height={150}></Image>
-          </div>
+          <Link href="/">
+            <div className="flex items-center">
+              <Image
+                src="/img/logo.png"
+                alt="logo"
+                width={150}
+                height={150}
+              ></Image>
+            </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
@@ -133,8 +143,10 @@ const Navbar = () => {
 
           {/* Contact Button */}
           <div className="hidden lg:block">
-            <Button variant={"default"}
-             className="button hover:text-white duration-300 transition-all leading-0">
+            <Button
+              variant={"default"}
+              className="button hover:text-white duration-300 transition-all leading-0"
+            >
               <p className="relative z-[1]">Contact Us</p>
             </Button>
           </div>

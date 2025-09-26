@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-const Showreel = ({url}: { url: string }) => {
+const Showreel = ({ url }: { url: string }) => {
   useGSAP(() => {
     gsap.from("video", {
       width: "90%",
@@ -21,14 +21,16 @@ const Showreel = ({url}: { url: string }) => {
   }, []);
   return (
     <div className="showreel h-screen w-full flex justify-center overflow-hidden relative z-[1]">
-      <video
-        className="h-full w-full object-cover"
-        src={url}
-        autoPlay
-        muted
-        loop
-        playsInline
-      ></video>
+      <div className="container">
+        <video
+          className="h-full w-full object-contain"
+          src={url}
+          autoPlay
+          muted
+          loop
+          playsInline
+        ></video>
+      </div>
     </div>
   );
 };

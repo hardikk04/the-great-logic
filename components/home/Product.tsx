@@ -44,11 +44,13 @@ const Product = () => {
     }
   }, []);
   return (
-    <section className="philosophy w-full relative overflow-hidden sm:px-6 py-4 pt-16">
-      <div>
-        <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
-          Products
-        </h2>
+    <section className="philosophy w-full relative overflow-hidden py-4 pt-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
+            Products
+          </h2>
+        </div>
       </div>
       <div className="absolute pointer-events-none h-full w-full z-0 flex justify-between items-start inset-0">
         {!isMobile ? (
@@ -113,59 +115,65 @@ const Product = () => {
           </svg>
         )}
       </div>
-      <div className="h-[85vh] max-sm:py-[4vw] w-full flex justify-between items-center relative z-[1]">
-        <ProcessCard
-          number={0o1}
-          title="Revolutionizing Price Tagging"
-          para="Ditch manual paper tags — our Electronic Shelf Labels bring instant updates, high-contrast displays, and wireless control. ESLs ensure accurate pricing, reduce errors, and give your store a modern, dynamic look while saving time and cost."
-        />
-        <div className="rounded-lg overflow-hidden">
-          <Image
-            src={
-              "https://plus.unsplash.com/premium_photo-1732591008691-05dddcedfb66?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            }
-            alt="light"
-            width={1000}
-            height={1000}
-            className="w-full h-full object-cover hover:scale-105 duration-300"
-          ></Image>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="h-[85vh] max-sm:py-[4vw] w-full flex justify-between items-center relative z-[1]">
+          <ProcessCard
+            number={0o1}
+            title="Logic Tags"
+            para="Ditch manual paper tags — our Electronic Shelf Labels bring instant updates, high-contrast displays, and wireless control. ESLs ensure accurate pricing, reduce errors, and give your store a modern, dynamic look while saving time and cost."
+          />
+          <div className="rounded-lg overflow-hidden">
+            <Image
+              src={
+                "https://plus.unsplash.com/premium_photo-1732591008691-05dddcedfb66?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              }
+              alt="light"
+              width={1000}
+              height={1000}
+              className="w-full h-full object-cover hover:scale-105 duration-300"
+            ></Image>
+          </div>
         </div>
       </div>
-      <div className="h-[85vh] max-sm:py-[4vw] w-full flex justify-between items-center relative z-[1]">
-        <div className="rounded-lg overflow-hidden">
-          <Image
-            src={
-              "https://images.unsplash.com/photo-1657819547733-40124a52d37e?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            }
-            alt="light"
-            width={1000}
-            height={1000}
-            className="w-full h-full object-cover hover:scale-105 duration-300"
-          ></Image>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="h-[85vh] max-sm:py-[4vw] w-full flex justify-between items-center relative z-[1]">
+          <div className="rounded-lg overflow-hidden">
+            <Image
+              src={
+                "https://images.unsplash.com/photo-1657819547733-40124a52d37e?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              }
+              alt="light"
+              width={1000}
+              height={1000}
+              className="w-full h-full object-cover hover:scale-105 duration-300"
+            ></Image>
+          </div>
+          <ProcessCard
+            number={0o2}
+            title="Logic Lights"
+            para="Beautiful Design of all pages with the (newly) defined CI.
+                  Highly optimized and prepared for development."
+          />
         </div>
-        <ProcessCard
-          number={0o2}
-          title="Smarter Warehousing, Safer Operations"
-          para="Beautiful Design of all pages with the (newly) defined CI.
-                Highly optimized and prepared for development."
-        />
       </div>
-      <div className="h-[85vh] max-sm:py-[4vw] w-full flex justify-between items-center relative z-[1]">
-        <ProcessCard
-          number={0o3}
-          title="Software for Warehouse Management"
-          para="Enhance warehouse efficiency with intelligent warning lights and picking labels. From guiding staff with clear visual signals to improving safety and speed in picking operations, our solutions streamline logistics for maximum productivity."
-        />
-        <div className="rounded-lg overflow-hidden">
-          <Image
-            src={
-              "https://images.unsplash.com/photo-1622127922075-fb1d21fbacbf?q=80&w=1333&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            }
-            alt="light"
-            width={1000}
-            height={1000}
-            className="w-full h-full object-cover hover:scale-105 duration-300"
-          ></Image>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="h-[85vh] max-sm:py-[4vw] w-full flex justify-between items-center relative z-[1]">
+          <ProcessCard
+            number={0o3}
+            title="Software and App"
+            para="Enhance warehouse efficiency with intelligent warning lights and picking labels. From guiding staff with clear visual signals to improving safety and speed in picking operations, our solutions streamline logistics for maximum productivity."
+          />
+          <div className="rounded-lg overflow-hidden">
+            <Image
+              src={
+                "https://images.unsplash.com/photo-1622127922075-fb1d21fbacbf?q=80&w=1333&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              }
+              alt="light"
+              width={1000}
+              height={1000}
+              className="w-full h-full object-cover hover:scale-105 duration-300"
+            ></Image>
+          </div>
         </div>
       </div>
     </section>

@@ -2,9 +2,7 @@
 import React from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Wrapper from "@/components/shared/Wrapper";
 import { Button } from "@/components/ui/button";
-import Showreel from "@/components/product/Showreel";
 import CTABannerSection from "@/components/home/CtaBanner";
 import {
   Accordion,
@@ -12,7 +10,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import StickyWrapper from "@/components/product/StickyWrapper";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,38 +51,50 @@ const WarehousePage = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-white">
-      <div className="absolute top-0 inset-0 z-[1] overflow-hidden">
-        <Wrapper />
-      </div>
-
-      {/* Hero Section */}
-      <section className="relative pt-[10rem] pb-[6rem] flex items-center justify-center overflow-hidden bg-white">
-        <div className="relative text-center px-6 max-w-6xl mx-auto hero-content">
-          <div className="pointer-events-none">
-            <h1 className="text-4xl md:text-7xl lg:text-8xl font-heading font-bold text-black mb-6">
-              Warehouse Warning Light
-              <br />
-              <span className="text-[#0DACFB]">& Picking Label</span>
-            </h1>
-            <p className="text-lg md:text-xl text-black/80 max-w-3xl mx-auto mb-8 font-body">
-              Revolutionize your warehouse operations with intelligent visual
-              guidance systems. Reduce picking errors, increase productivity,
-              and streamline your fulfillment process.
-            </p>
-          </div>
-          <div className="flex z-[2] flex-col sm:flex-row gap-4 justify-center items-center relative">
-            <Button
-              variant={"default"}
-              className="button hover:text-white duration-300 transition-all leading-0"
-            >
-              <p className="relative z-[1]">Schedule Demo</p>
-            </Button>
+    <main className="min-h-screen bg-white pt-20">
+      {/* Hero Section with Background Image */}
+      <section className="relative py-[8rem] flex items-center justify-center overflow-hidden bg-white">
+        {/* Background Image */}
+        <div className="absolute top-0 inset-0 z-[1] overflow-hidden">
+          <div
+            className="w-full h-full bg-cover bg-center bg-no-repeat opacity-70"
+            style={{
+              backgroundImage:
+                "url('https://www.minewtag.com/upload/ztyImg/2025-03/67e24f9150516.jpg')",
+            }}
+          />
+          {/* Optional overlay for better text readability */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(92deg, rgb(12 11 11 / 52%), rgb(41 45 47 / 21%))",
+            }}
+          />
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-[1]">
+          <div className="relative text-center max-w-6xl mx-auto hero-content text-white">
+            <div className="pointer-events-none">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
+                Logic Lights
+              </h1>
+              <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8 font-body">
+                Revolutionize your warehouse operations with intelligent visual
+                guidance systems. Reduce picking errors, increase productivity,
+                and streamline your fulfillment process.
+              </p>
+            </div>
+            <div className="flex z-[2] flex-col sm:flex-row gap-4 justify-center items-center relative">
+              <Button
+                variant={"default"}
+                className="button hover:text-white duration-300 transition-all leading-0"
+              >
+                <p className="relative z-[1]">Schedule Demo</p>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
-
-      <Showreel url="/video/workflow1.mp4" />
 
       <section className="max-sm:hidden max-md:hidden home-projects relative text-white pt-[6vw]">
         <div className="project-title max-sm:py-[6vw] sm:px-6 py-4">
@@ -99,7 +108,7 @@ const WarehousePage = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 mx-auto py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 mx-auto">
           {advantages.map((advantage, index) => (
             <div
               key={index}
@@ -292,8 +301,6 @@ const WarehousePage = () => {
           </Accordion>
         </div>
       </section>
-
-      <StickyWrapper />
 
       <CTABannerSection />
     </main>
