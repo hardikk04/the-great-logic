@@ -20,7 +20,7 @@ const ContactPage = () => {
       <ContactHero />
 
       <section className="py-20">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
               Ready to connect
@@ -82,7 +82,7 @@ const ContactPage = () => {
         </div>
       </section>
 
-      <div className="relative z-10 py-16 max-w-6xl mx-auto text-center">
+      <div className="relative z-10 py-16 max-w-5xl mx-auto text-center">
         <ContactForm />
       </div>
     </main>
