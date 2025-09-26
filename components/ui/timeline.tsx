@@ -2,7 +2,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useScroll, useTransform, motion } from "motion/react";
-import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
@@ -92,12 +91,6 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div className="timeline-section w-full " ref={containerRef}>
-      <div className="py-20 pb-0 px-4 md:px-6">
-        <h2 className="text-black text-[4vw] max-sm:text-[8vw] max-md:text-[7vw] z-1 para py-5">
-          Products
-        </h2>
-      </div>
-
       <div ref={ref} className="relative pb-20 flex flex-col md:gap-52">
         {data.map((item, index) => (
           <div
@@ -106,15 +99,15 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <div className="sticky-pointer h-10 absolute left-3 md:left-3 w-10 rounded-full bg-black dark:bg-white flex items-center justify-center">
-                {/* <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2"></div> */}
-                <Image
+                <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2"></div>
+                {/* <Image
                   src={item.image}
                   width={20}
                   height={20}
                   alt="logo"
                   priority
                   className={`h-8 w-8 rounded-full tag-img-${index}`}
-                />
+                /> */}
               </div>
               <h3 className="hidden md:block text-xl md:pl-20 md:text-4xl font-bold text-neutral-700 dark:text-neutral-500 ">
                 {item.title}
