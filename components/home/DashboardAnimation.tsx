@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const DashboardAnimation = () => {
   useGSAP(() => {
     gsap.from(".dashboard-img", {
-      y: 120, // moves it up
+      // y: 120, // moves it up
       scale: 0.8, // smaller at start
       rotationX: 60, // tilt backward
       opacity: 0, // fades in
@@ -26,10 +26,10 @@ const DashboardAnimation = () => {
     });
   }, []);
   return (
-    <div className="showreel h-screen w-full flex justify-center overflow-hidden relative z-[1]">
+    <div className="showreel h-[90vh] w-full flex justify-center overflow-hidden relative z-[1]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="w-full h-full rounded-xl overflow-hidden relative flex justify-center items-end bg-[#EAEFF5]">
-          <div className="perspective-[1200px] w-[95%] h-[90%] overflow-hidden">
+        <div className="w-full h-full rounded-xl overflow-hidden relative flex justify-center items-end">
+          <div className="perspective-[1200px] w-[95%] h-full overflow-hidden">
             <Image
               src={
                 "https://framerusercontent.com/images/e2bSBE2FGqkvwqDjSs5GYHchjWw.jpg"

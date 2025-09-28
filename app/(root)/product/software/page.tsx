@@ -15,17 +15,6 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 const SoftwarePage = () => {
-  const specifications = [
-    { label: "Platform Compatibility", value: "Web, iOS, Android, Windows" },
-    { label: "Database Support", value: "MySQL, PostgreSQL, MongoDB" },
-    { label: "API Integration", value: "REST, GraphQL, WebSocket" },
-    { label: "Security Features", value: "OAuth 2.0, JWT, SSL Encryption" },
-    { label: "Real-time Updates", value: "Live data synchronization" },
-    { label: "Deployment", value: "Cloud, On-premise, Hybrid" },
-    { label: "User Management", value: "Role-based access control" },
-    { label: "Analytics", value: "Advanced reporting & insights" },
-  ];
-
   const advantages = [
     {
       number: "01",
@@ -563,35 +552,6 @@ const SoftwarePage = () => {
         </div>
       </section>
 
-      {/* Technical Specifications */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">
-              Technical Specifications
-            </h2>
-            <p className="text-lg md:text-xl text-black/70 max-w-3xl mx-auto">
-              Built with modern technologies and designed for enterprise-grade
-              performance and reliability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {specifications.map((spec, index) => (
-              <div
-                key={index}
-                className="flex justify-between items-center p-6 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300"
-              >
-                <span className="font-semibold text-black">{spec.label}</span>
-                <span className="text-[#0DACFB] font-medium text-right">
-                  {spec.value}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Case Studies Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -735,8 +695,8 @@ const SoftwarePage = () => {
         </div>
       </section>
 
-      <section className="faq md:px-6 py-20">
-        <div className="mx-auto">
+      <section className="faq py-20">
+        <div className="container mx-auto md:px-6 lg:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
               Frequently Asked Questions

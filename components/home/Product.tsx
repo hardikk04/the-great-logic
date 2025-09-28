@@ -119,7 +119,7 @@ const Product = () => {
         <div className="h-[85vh] max-sm:py-[4vw] w-full flex justify-between items-center relative z-[1]">
           <ProcessCard
             number={0o1}
-            title="Logic Tags"
+            title="Logic Labels"
             para="Ditch manual paper tags — our Electronic Shelf Labels bring instant updates, high-contrast displays, and wireless control. ESLs ensure accurate pricing, reduce errors, and give your store a modern, dynamic look while saving time and cost."
           />
           <div className="rounded-lg overflow-hidden">

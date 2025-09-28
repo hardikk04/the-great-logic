@@ -2,21 +2,21 @@ import React from "react";
 import Image from "next/image";
 
 const Testimonial = () => {
-  // Sample logo data - dummy company logos
+  
   const logos = [
-    { name: "ACME Corp", url: "/logos/acme-logo.svg" },
-    { name: "TechFlow", url: "/logos/techflow-logo.svg" },
-    { name: "InnovateCorp", url: "/logos/innovatecorp-logo.svg" },
-    { name: "DataVision", url: "/logos/datavision-logo.svg" },
-    { name: "CloudSync", url: "/logos/cloudsync-logo.svg" },
-    { name: "NextGen", url: "/logos/nextgen-logo.svg" },
-    { name: "QuantumLab", url: "/logos/quantumlab-logo.svg" },
-    { name: "GlobalTech", url: "/logos/globaltech-logo.svg" },
+    { name: "FarmGrowers", url: "/logos/farm.png" },
+    { name: "Koh", url: "/logos/koh.png" },
+    { name: "Mercedes", url: "/logos/mercedes.png" },
+    { name: "Netgear", url: "/logos/netgear.png" },
+    { name: "Padams", url: "/logos/padams.png" },
+    { name: "Tata", url: "/logos/tata.png" },
+    { name: "TradeUno", url: "/logos/tradeuno.png" },
+    
   ];
 
   return (
     <section className="py-16 bg-white overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
             Trusted by Industry Leaders

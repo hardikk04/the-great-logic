@@ -1,5 +1,7 @@
 "use client";
 
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import Image from "next/image";
 
 const Workflow2 = () => {
@@ -30,6 +32,20 @@ const Workflow2 = () => {
     },
   ];
 
+  useGSAP(() => {
+    gsap.from(".workflow-all", {
+      y: 100,
+      opacity: 0,
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: ".workflow-all",
+        start: "top 100%",
+        end: "top 60%",
+        scrub: 1,
+      },
+    });
+  });
+
   return (
     <section className="w-full bg-white pt-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,7 +65,7 @@ const Workflow2 = () => {
         {/* Workflow Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {workflowSteps.map((step) => (
-            <div key={step.id} className="group relative">
+            <div key={step.id} className={`group relative workflow-all`}>
               {/* Card */}
               <div className="relative bg-white border border-gray-200 rounded-lg overflow-hidden transition-all duration-300 hover:border-gray-300 hover:shadow-lg h-80 flex flex-col">
                 {/* Image */}
@@ -58,7 +74,7 @@ const Workflow2 = () => {
                     src={step.image}
                     alt={step.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
 

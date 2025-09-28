@@ -29,7 +29,7 @@ const StickyCards = () => {
       title: "Great Logic Button Series (GLB)",
       video: "/video/Logic Lights 2.mp4",
       description:
-        "Equipped with the latest e-ink display technology and programmable button functionality, these Logic Tags go beyond simple displays. They are purpose-built for smart warehouses, enabling precise goods’ tracking and offering seamless integration with Manufacturing Execution Systems to streamline operations and boost efficiency.",
+        "Equipped with the latest e-ink display technology and programmable button functionality, these Logic labels go beyond simple displays. They are purpose-built for smart warehouses, enabling precise goods’ tracking and offering seamless integration with Manufacturing Execution Systems to streamline operations and boost efficiency.",
       sizes: "2.9",
       colors: "Black/White, Black/White/Red/Yellow",
     },
