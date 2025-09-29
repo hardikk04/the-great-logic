@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
 import CTABannerSection from "@/components/home/CtaBanner";
 import { useGSAP } from "@gsap/react";
-import { WobbleCard } from "@/components/ui/wobble-card";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -204,7 +204,17 @@ const SoftwarePage = () => {
           {/* Main Features Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
             {/* Large Feature Card */}
-            <div className="lg:col-span-8 bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
+            <div className="relative lg:col-span-8 bg-gradient-to-br from-gray-50 border to-white rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
+              <GlowingEffect
+                spread={80}
+                glow={true}
+                disabled={false}
+                proximity={100}
+                inactiveZone={0.1}
+                blur={1}
+                borderWidth={2}
+                movementDuration={1}
+              />
               <div className="flex flex-col lg:flex-row items-start gap-8">
                 <div className="flex-1">
                   <div className="inline-flex items-center bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
@@ -239,7 +249,17 @@ const SoftwarePage = () => {
 
             {/* Vertical Feature Cards */}
             <div className="lg:col-span-4 space-y-6">
-              <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all duration-300">
+              <div className="relative bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all duration-300">
+                <GlowingEffect
+                  spread={60}
+                  glow={true}
+                  disabled={false}
+                  proximity={80}
+                  inactiveZone={0.1}
+                  blur={1}
+                  borderWidth={1}
+                  movementDuration={1}
+                />
                 <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
                   <svg
                     className="w-6 h-6 text-green-600"
@@ -264,7 +284,17 @@ const SoftwarePage = () => {
                 </p>
               </div>
 
-              <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all duration-300">
+              <div className="relative bg-white border border-gray-200 rounded-2xl p-6 transition-all duration-300">
+                <GlowingEffect
+                  spread={60}
+                  glow={true}
+                  disabled={false}
+                  proximity={80}
+                  inactiveZone={0.1}
+                  blur={1}
+                  borderWidth={1}
+                  movementDuration={1}
+                />
                 <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
                   <svg
                     className="w-6 h-6 text-purple-600"
@@ -293,7 +323,17 @@ const SoftwarePage = () => {
 
           {/* Bottom Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="comprehensive bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md group">
+            <div className="comprehensive relative bg-white border border-gray-200 rounded-2xl p-6 group">
+              <GlowingEffect
+                spread={60}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.1}
+                blur={1}
+                borderWidth={1}
+                movementDuration={1}
+              />
               <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
                 <svg
                   className="w-6 h-6 text-orange-600"
@@ -324,7 +364,17 @@ const SoftwarePage = () => {
               </p>
             </div>
 
-            <div className="comprehensive bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md group">
+            <div className="comprehensive relative bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md group">
+              <GlowingEffect
+                spread={60}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.1}
+                blur={1}
+                borderWidth={1}
+                movementDuration={1}
+              />
               <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
                 <svg
                   className="w-6 h-6 text-red-600"
@@ -372,6 +422,16 @@ const SoftwarePage = () => {
                 key={index}
                 className="group advantages-card relative bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg"
               >
+                <GlowingEffect
+                  spread={60}
+                  glow={true}
+                  disabled={false}
+                  proximity={80}
+                  inactiveZone={0.1}
+                  blur={1}
+                  borderWidth={1}
+                  movementDuration={1}
+                />
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
                     <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center text-2xl font-bold text-black group-hover:bg-black group-hover:text-white transition-all duration-300">
@@ -385,7 +445,6 @@ const SoftwarePage = () => {
                     <p className="text-gray-600 leading-relaxed mb-6">
                       {advantage.para}
                     </p>
-                  
                   </div>
                 </div>
               </div>
@@ -410,7 +469,18 @@ const SoftwarePage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {/* Healthcare */}
-            <div className="industry-card bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
+            <div className="industry-card relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
+              <GlowingEffect
+                spread={60}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.1}
+                blur={1}
+                borderWidth={1}
+                movementDuration={1}
+                variant="white"
+              />
               <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
                 <svg
                   className="w-8 h-8 text-white"
@@ -438,7 +508,18 @@ const SoftwarePage = () => {
             </div>
 
             {/* Manufacturing */}
-            <div className="industry-card bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
+            <div className="industry-card relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
+              <GlowingEffect
+                spread={60}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.1}
+                blur={1}
+                borderWidth={1}
+                movementDuration={1}
+                variant="white"
+              />
               <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
                 <svg
                   className="w-8 h-8 text-white"
@@ -465,7 +546,18 @@ const SoftwarePage = () => {
             </div>
 
             {/* Retail & E-commerce */}
-            <div className="industry-card bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
+            <div className="industry-card relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
+              <GlowingEffect
+                spread={60}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.1}
+                blur={1}
+                borderWidth={1}
+                movementDuration={1}
+                variant="white"
+              />
               <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
                 <svg
                   className="w-8 h-8 text-white"
@@ -492,7 +584,18 @@ const SoftwarePage = () => {
             </div>
 
             {/* Logistics & Transportation */}
-            <div className="industry-card bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
+            <div className="industry-card relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
+              <GlowingEffect
+                spread={60}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.1}
+                blur={1}
+                borderWidth={1}
+                movementDuration={1}
+                variant="white"
+              />
               <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
                 <svg
                   className="w-8 h-8 text-white"
@@ -521,7 +624,18 @@ const SoftwarePage = () => {
             </div>
 
             {/* Financial Services */}
-            <div className="industry-card bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
+            <div className="industry-card relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
+              <GlowingEffect
+                spread={60}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.1}
+                blur={1}
+                borderWidth={1}
+                movementDuration={1}
+                variant="white"
+              />
               <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
                 <svg
                   className="w-8 h-8 text-white"
@@ -550,7 +664,18 @@ const SoftwarePage = () => {
             </div>
 
             {/* Technology */}
-            <div className="industry-card bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
+            <div className="industry-card relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
+              <GlowingEffect
+                spread={60}
+                glow={true}
+                disabled={false}
+                proximity={80}
+                inactiveZone={0.1}
+                blur={1}
+                borderWidth={1}
+                movementDuration={1}
+                variant="white"
+              />
               <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
                 <svg
                   className="w-8 h-8 text-white"
@@ -627,7 +752,7 @@ const SoftwarePage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Case Study 1 - Healthcare */}
-            <div className="case-card bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-gray-300 group">
+            <div className="case-card relative bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-gray-300 group">
               <div className="aspect-video w-full overflow-hidden">
                 <Image
                   src="/img/healthcare.jpg"
@@ -669,7 +794,7 @@ const SoftwarePage = () => {
             </div>
 
             {/* Case Study 2 - Manufacturing */}
-            <div className="case-card bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-gray-300 group">
+            <div className="case-card relative bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-gray-300 group">
               <div className="aspect-video w-full overflow-hidden">
                 <Image
                   src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?q=80&w=1200&auto=format&fit=crop"
@@ -711,7 +836,7 @@ const SoftwarePage = () => {
             </div>
 
             {/* Case Study 3 - Retail */}
-            <div className="case-card bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-gray-300 group">
+            <div className="case-card relative bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-gray-300 group">
               <div className="aspect-video w-full overflow-hidden">
                 <Image
                   src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop"
