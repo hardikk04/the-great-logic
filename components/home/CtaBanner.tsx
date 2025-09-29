@@ -26,7 +26,7 @@ const CTABannerSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
                 variant={"default"}
-                className="button hover:text-white duration-300 transition-all leading-0"
+                className="button border-white/25 border-[1px] hover:text-white duration-300 transition-all leading-0"
               >
                 <p className="relative z-[1]">Talk to an Expert</p>
               </Button>

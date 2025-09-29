@@ -15,7 +15,7 @@ const Testimonial = () => {
   ];
 
   return (
-    <section className="py-16 bg-white overflow-hidden">
+    <section className="py-16 bg-white overflow-hidden pt-24">
       <div className="mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">

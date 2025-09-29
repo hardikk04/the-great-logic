@@ -46,11 +46,6 @@ const SoftwarePage = () => {
       title: "Zero-Code Integration",
       para: "Enable easy connectivity between systems without coding complexity.",
     },
-    {
-      number: "07",
-      title: "Real-Time Collaboration",
-      para: "Enhance teamwork with instant updates and shared access.",
-    },
   ];
 
   useGSAP(() => {

@@ -1,16 +1,19 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+// import { Mail, Phone, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
   const footerLinks = {
     products: [
-      { label: "Logic Labels", href: "/product/label" },
+      { label: "Logic Labels", href: "/product/logic-label" },
       {
         label: "Logic Lights",
-        href: "/product/lights",
+        href: "/product/logic-light",
       },
-      { label: "Software and App", href: "/product/software" },
+      {
+        label: "Software and App",
+        href: "/product/software-and-app-development",
+      },
     ],
     support: [
       { label: "About us", href: "/about" },
@@ -53,7 +56,7 @@ const Footer = () => {
             </p>
 
             {/* Contact Info */}
-            <div className="space-y-3">
+            {/* <div className="space-y-3">
               <div className="flex items-center space-x-3 text-black/70">
                 <Mail className="w-4 h-4" />
                 <Link href={"mailto:Info@thegreatlogic.com"}>
@@ -72,7 +75,7 @@ const Footer = () => {
                   Rohido Jaipur Address, Rohido Mumbai Address
                 </span>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Products */}
