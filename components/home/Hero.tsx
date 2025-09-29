@@ -12,12 +12,12 @@ const Hero = () => {
           <h1 className="text-4xl md:text-7xl lg:text-8xl font-heading font-bold text-black mb-6">
             Revolutionizing
             <br />
-            <span className="">Digital Store Tags</span>
+            <span className="">Digital Store Labels</span>
           </h1>
 
           <p className="text-md md:text-xl text-black md:my-12 max-w-3xl mx-auto font-body ">
             From manual to digital, Great Logic brings innovation to retail with
-            cutting-edge tag solutions that transform how stores operate.
+            cutting-edge label solutions that transform how stores operate.
           </p>
         </div>
       </div>

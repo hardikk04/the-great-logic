@@ -50,7 +50,7 @@ const Footer = () => {
               Great Logic
             </h3>
             <p className="text-black/80 font-body mb-6 leading-relaxed">
-              Revolutionizing retail with innovative digital tag solutions.
+              Revolutionizing retail with innovative digital label solutions.
               Making stores smarter, more efficient, and future-ready.
             </p>
 

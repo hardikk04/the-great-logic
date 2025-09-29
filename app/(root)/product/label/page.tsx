@@ -3,7 +3,6 @@ import React from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
-import Showreel from "@/components/product/Showreel";
 import CTABannerSection from "@/components/home/CtaBanner";
 import Advantages from "@/components/product/Advantages";
 import {
@@ -56,9 +55,10 @@ const ESLPage = () => {
                 Logic labels
               </h1>
               <p className="text-md md:text-lg text-white/95 max-w-3xl mx-auto mb-8 font-body ">
-                Transform your retail operations with intelligent digital price
-                tags that deliver real-time updates, reduce costs, and enhance
-                customer experience.
+                The Next-Generation digital display solutions. Designed to power
+                smart, future-ready warehousing and operations, where real-time
+                visibility, intelligent tracking, and color-coded systems are
+                essential for speed and accuracy.
               </p>
             </div>
             <div className="flex z-[3] flex-col sm:flex-row gap-4 justify-center items-center relative">
@@ -66,19 +66,18 @@ const ESLPage = () => {
                 variant={"default"}
                 className="button hover:text-white duration-300 transition-all leading-0 shadow-lg"
               >
-                <p className="relative z-[1]">Request Demo</p>
+                <p className="relative z-[1]">Contact us</p>
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      <Showreel url="/video/esl.mp4" />
+      {/* <Showreel url="/video/esl.mp4" /> */}
 
       <Advantages />
       <StickyWrapper />
 
-      {/* Technical Specifications */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">

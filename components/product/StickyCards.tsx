@@ -45,7 +45,7 @@ const StickyCards = () => {
       title: "Great Logic General Series(GLG)",
       video: "/video/Logic Labels.mp4",
       description:
-        "Versatile, All-purpose Logic Tags — durable, reliable, and available in the widest range of sizes. A balance of cost and performance.",
+        "Versatile, All-purpose Logic Labels — durable, reliable, and available in the widest range of sizes. A balance of cost and performance.",
       sizes: "1.5, 2.1, 2.9, 4.2, 5.8, 7.5",
       colors: "Black/White, Black/White/Red, Black/White/Red/Yellow",
     },

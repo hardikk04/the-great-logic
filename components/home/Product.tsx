@@ -120,9 +120,9 @@ const Product = () => {
           <ProcessCard
             number={0o1}
             title="Logic Labels"
-            para="Ditch manual paper tags — our Electronic Shelf Labels bring instant updates, high-contrast displays, and wireless control. ESLs ensure accurate pricing, reduce errors, and give your store a modern, dynamic look while saving time and cost."
+            para="Ditch manual paper labels — our Electronic Shelf Labels bring instant updates, high-contrast displays, and wireless control. ESLs ensure accurate pricing, reduce errors, and give your store a modern, dynamic look while saving time and cost."
           />
-          <div className="rounded-lg overflow-hidden">
+          <div className="rounded-lg overflow-hidden w-1/3">
             <Image
               src={
                 "https://plus.unsplash.com/premium_photo-1732591008691-05dddcedfb66?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -137,10 +137,10 @@ const Product = () => {
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="h-[85vh] max-sm:py-[4vw] w-full flex justify-between items-center relative z-[1]">
-          <div className="rounded-lg overflow-hidden">
+          <div className="rounded-lg overflow-hidden w-1/3">
             <Image
               src={
-                "https://images.unsplash.com/photo-1657819547733-40124a52d37e?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                "/img/logic-ligth.png"
               }
               alt="light"
               width={1000}
@@ -163,7 +163,7 @@ const Product = () => {
             title="Software and App"
             para="Enhance warehouse efficiency with intelligent warning lights and picking labels. From guiding staff with clear visual signals to improving safety and speed in picking operations, our solutions streamline logistics for maximum productivity."
           />
-          <div className="rounded-lg overflow-hidden">
+          <div className="rounded-lg overflow-hidden w-1/3">
             <Image
               src={
                 "https://images.unsplash.com/photo-1622127922075-fb1d21fbacbf?q=80&w=1333&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

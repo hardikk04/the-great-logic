@@ -89,7 +89,7 @@ const WarehousePage = () => {
                 variant={"default"}
                 className="button hover:text-white duration-300 transition-all leading-0"
               >
-                <p className="relative z-[1]">Schedule Demo</p>
+                <p className="relative z-[1]">Contact us</p>
               </Button>
             </div>
           </div>

@@ -48,7 +48,7 @@ const Navbar = () => {
       label: "Products",
       href: "#products",
       dropdown: [
-        { label: "Logic Tags", href: "/product/tags" },
+        { label: "Logic Labels", href: "/product/label" },
         {
           label: "Logic Lights",
           href: "/product/lights",

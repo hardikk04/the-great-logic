@@ -14,7 +14,7 @@ const Advantages = () => {
     {
       number: "01",
       title: "Fast Batch Updates",
-      para: "E ink price tags can be refreshed in a few seconds with just one click, supports bulk pricing changes, reducing human errors",
+      para: "E ink price labels can be refreshed in a few seconds with just one click, supports bulk pricing changes, reducing human errors",
     },
     {
       number: "02",

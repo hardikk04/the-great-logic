@@ -71,7 +71,7 @@ const Blog = () => {
       id: 1,
       title: "The Future of Retail: Digital Transformation",
       excerpt:
-        "Exploring how digital tags are reshaping the retail landscape and creating new opportunities for growth.",
+        "Exploring how digital labels are reshaping the retail landscape and creating new opportunities for growth.",
       image:
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
       author: "Sarah Johnson",
@@ -93,7 +93,7 @@ const Blog = () => {
       id: 3,
       title: "Case Study: Walmart's Digital Transformation",
       excerpt:
-        "A deep dive into how major retailers are implementing digital tag solutions across their store networks.",
+        "A deep dive into how major retailers are implementing digital label solutions across their store networks.",
       image:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop",
       author: "Emily Rodriguez",
@@ -102,9 +102,9 @@ const Blog = () => {
     },
     {
       id: 4,
-      title: "ROI of Digital Price Tags",
+      title: "ROI of Digital Price Labels",
       excerpt:
-        "Understanding the financial benefits and return on investment of implementing digital tagging systems.",
+        "Understanding the financial benefits and return on investment of implementing digital labelling systems.",
       image:
         "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=250&fit=crop",
       author: "David Kim",
@@ -113,9 +113,9 @@ const Blog = () => {
     },
     {
       id: 5,
-      title: "Innovation Spotlight: AI-Powered Tags",
+      title: "Innovation Spotlight: AI-Powered Labels",
       excerpt:
-        "The latest developments in artificial intelligence integration with digital retail tag technology.",
+        "The latest developments in artificial intelligence integration with digital retail label technology.",
       image:
         "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=250&fit=crop",
       author: "Lisa Wang",

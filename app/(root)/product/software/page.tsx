@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -11,10 +11,15 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const SoftwarePage = () => {
+  const businessesRef = useRef(null);
+  const industriesRef = useRef(null);
+  const uptimeRef = useRef(null);
+
   const advantages = [
     {
       number: "01",
@@ -37,6 +42,92 @@ const SoftwarePage = () => {
       para: "Enable instant team collaboration with live data sharing, concurrent editing, and intelligent workflow automation across all departments.",
     },
   ];
+
+  useGSAP(() => {
+    gsap.from(".comprehensive", {
+      opacity: 0,
+      y: 50,
+      scrollTrigger: {
+        trigger: ".comprehensive",
+        start: "top 90%",
+        end: "top 50%",
+        scrub: true,
+      },
+    });
+    gsap.from(".advantages-card", {
+      opacity: 0,
+      y: 150,
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: ".advantages-card",
+        start: "top 90%",
+        end: "top 20%",
+        scrub: true,
+      },
+    });
+    gsap.from(".industry-card", {
+      opacity: 0,
+      y: 80,
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: ".industry-card",
+        start: "top 95%",
+        end: "top 40%",
+        scrub: true,
+      },
+    });
+    gsap.from(".case-card", {
+      opacity: 0,
+      y: 80,
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: ".case-card",
+        start: "top 95%",
+        end: "top 40%",
+        scrub: true,
+      },
+    });
+    gsap.from(".faq-section", {
+      opacity: 0,
+      y: 60,
+      scrollTrigger: {
+        trigger: ".faq-section",
+        start: "top 95%",
+        end: "top 60%",
+        scrub: true,
+      },
+    });
+
+    // Counter animations
+    const animateCounter = (
+      element: HTMLElement | null,
+      endValue: number,
+      suffix = ""
+    ) => {
+      if (element) {
+        const obj = { value: 0 };
+        gsap.to(obj, {
+          value: endValue,
+          duration: 2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: element,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+          onUpdate: function () {
+            const currentValue =
+              endValue === 99.9 ? obj.value.toFixed(1) : Math.round(obj.value);
+            element.textContent = currentValue + suffix;
+          },
+        });
+      }
+    };
+
+    animateCounter(businessesRef.current, 500, "+");
+    animateCounter(industriesRef.current, 15, "+");
+    animateCounter(uptimeRef.current, 99.9, "%");
+  });
 
   return (
     <main className="min-h-screen bg-white pt-20">
@@ -101,7 +192,7 @@ const SoftwarePage = () => {
           {/* Main Features Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
             {/* Large Feature Card */}
-            <div className="lg:col-span-8 bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
+            <div className="comprehensive lg:col-span-8 bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg">
               <div className="flex flex-col lg:flex-row items-start gap-8">
                 <div className="flex-1">
                   <div className="inline-flex items-center bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
@@ -154,7 +245,7 @@ const SoftwarePage = () => {
 
             {/* Vertical Feature Cards */}
             <div className="lg:col-span-4 space-y-6">
-              <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all duration-300">
+              <div className="comprehensive bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md">
                 <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
                   <svg
                     className="w-6 h-6 text-green-600"
@@ -178,7 +269,7 @@ const SoftwarePage = () => {
                 </p>
               </div>
 
-              <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all duration-300">
+              <div className="comprehensive bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md">
                 <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
                   <svg
                     className="w-6 h-6 text-purple-600"
@@ -205,7 +296,7 @@ const SoftwarePage = () => {
 
           {/* Bottom Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all duration-300 group">
+            <div className="comprehensive bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md group">
               <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
                 <svg
                   className="w-6 h-6 text-orange-600"
@@ -234,7 +325,7 @@ const SoftwarePage = () => {
               </p>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all duration-300 group">
+            <div className="comprehensive bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md group">
               <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
                 <svg
                   className="w-6 h-6 text-red-600"
@@ -257,7 +348,7 @@ const SoftwarePage = () => {
               </p>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all duration-300 group">
+            <div className="comprehensive bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md group">
               <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
                 <svg
                   className="w-6 h-6 text-teal-600"
@@ -303,7 +394,7 @@ const SoftwarePage = () => {
             {advantages.map((advantage, index) => (
               <div
                 key={index}
-                className="group relative bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
+                className="group advantages-card relative bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg"
               >
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
@@ -360,8 +451,8 @@ const SoftwarePage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {/* Healthcare */}
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
-              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-all duration-300">
+            <div className="industry-card bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -389,8 +480,8 @@ const SoftwarePage = () => {
             </div>
 
             {/* Manufacturing */}
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
-              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-all duration-300">
+            <div className="industry-card bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -418,8 +509,8 @@ const SoftwarePage = () => {
             </div>
 
             {/* Retail & E-commerce */}
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
-              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-all duration-300">
+            <div className="industry-card bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -446,8 +537,8 @@ const SoftwarePage = () => {
             </div>
 
             {/* Logistics & Transportation */}
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
-              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-all duration-300">
+            <div className="industry-card bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -476,8 +567,8 @@ const SoftwarePage = () => {
             </div>
 
             {/* Financial Services */}
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
-              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-all duration-300">
+            <div className="industry-card bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -504,8 +595,8 @@ const SoftwarePage = () => {
             </div>
 
             {/* Technology */}
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
-              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition-all duration-300">
+            <div className="industry-card bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -536,15 +627,30 @@ const SoftwarePage = () => {
           <div className="border border-white/20 rounded-2xl p-8 bg-white/5">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
-                <div className="text-4xl font-bold text-white mb-2">500+</div>
+                <div
+                  ref={businessesRef}
+                  className="text-4xl font-bold text-white mb-2"
+                >
+                  0+
+                </div>
                 <div className="text-white/70">Businesses Served</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-white mb-2">15+</div>
+                <div
+                  ref={industriesRef}
+                  className="text-4xl font-bold text-white mb-2"
+                >
+                  0+
+                </div>
                 <div className="text-white/70">Industries</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-white mb-2">99.9%</div>
+                <div
+                  ref={uptimeRef}
+                  className="text-4xl font-bold text-white mb-2"
+                >
+                  0%
+                </div>
                 <div className="text-white/70">Uptime Guarantee</div>
               </div>
             </div>
@@ -567,7 +673,7 @@ const SoftwarePage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Case Study 1 - Healthcare */}
-            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-gray-300 transition-all duration-300 group">
+            <div className="case-card bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-gray-300 group">
               <div className="aspect-video w-full overflow-hidden">
                 <Image
                   src="/img/healthcare.jpg"
@@ -609,7 +715,7 @@ const SoftwarePage = () => {
             </div>
 
             {/* Case Study 2 - Manufacturing */}
-            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-gray-300 transition-all duration-300 group">
+            <div className="case-card bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-gray-300 group">
               <div className="aspect-video w-full overflow-hidden">
                 <Image
                   src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?q=80&w=1200&auto=format&fit=crop"
@@ -651,7 +757,7 @@ const SoftwarePage = () => {
             </div>
 
             {/* Case Study 3 - Retail */}
-            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-gray-300 transition-all duration-300 group">
+            <div className="case-card bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-gray-300 group">
               <div className="aspect-video w-full overflow-hidden">
                 <Image
                   src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop"
@@ -695,7 +801,7 @@ const SoftwarePage = () => {
         </div>
       </section>
 
-      <section className="faq py-20">
+      <section className="faq-section faq py-20">
         <div className="container mx-auto md:px-6 lg:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
