@@ -18,23 +18,38 @@ const SoftwarePage = () => {
   const advantages = [
     {
       number: "01",
-      title: "AI-Powered Intelligence",
-      para: "Leverage machine learning algorithms for predictive analytics, automated decision-making, and intelligent process optimization that adapts to your business patterns.",
+      title: "Workflow Automation",
+      para: "Simplify processes and reduce manual effort for faster, error-free operations.",
     },
     {
       number: "02",
-      title: "Cloud-Native Architecture",
-      para: "Built on modern cloud infrastructure with microservices, ensuring unlimited scalability, 99.9% uptime, and seamless global deployment.",
+      title: "Enterprise Security",
+      para: "Protect sensitive data with advanced security features and compliance-ready solutions.",
     },
     {
       number: "03",
-      title: "Zero-Code Integration",
-      para: "Connect with any system through our visual integration builder - no coding required. Pre-built connectors for 500+ popular business applications.",
+      title: "Seamless Integration",
+      para: "Connect your software with existing tools and systems effortlessly.",
     },
     {
       number: "04",
+      title: "Analytics & Business Intelligence",
+      para: "Gain actionable insights to make smarter decisions.",
+    },
+    {
+      number: "05",
+      title: "Cloud-Native Architecture",
+      para: "Scalable, reliable, and accessible software from anywhere.",
+    },
+    {
+      number: "06",
+      title: "Zero-Code Integration",
+      para: "Enable easy connectivity between systems without coding complexity.",
+    },
+    {
+      number: "07",
       title: "Real-Time Collaboration",
-      para: "Enable instant team collaboration with live data sharing, concurrent editing, and intelligent workflow automation across all departments.",
+      para: "Enhance teamwork with instant updates and shared access.",
     },
   ];
 
@@ -150,12 +165,14 @@ const SoftwarePage = () => {
           <div className="relative text-center max-w-6xl mx-auto hero-content text-white">
             <div className="pointer-events-none">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
-                Software and App
+                Custom Software & App Solutions for Smarter Operations
               </h1>
               <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8 font-body">
-                Streamline your business operations with our comprehensive
-                software management platform. Built for security, and seamless
-                integration with your existing workflow.
+                At The Great Logic, we develop tailored software and apps that
+                streamline workflows, enhance security, and integrate seamlessly
+                with your operations. Our solutions are designed to empower
+                businesses across industries with efficiency, analytics, and
+                real-time collaboration.
               </p>
             </div>
             <div className="flex z-[2] flex-col sm:flex-row gap-4 justify-center items-center relative">
@@ -175,129 +192,107 @@ const SoftwarePage = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">
-              Comprehensive Software Management
+              Our Software Expertise
             </h2>
             <p className="text-lg md:text-xl text-black/70 max-w-4xl mx-auto">
-              Transform your business operations with our integrated software
-              management platform. From inventory tracking to customer
-              relationship management, we&apos;ve got you covered.
+              We build robust software solutions to automate and optimize
+              critical business processes, helping you save time, reduce errors,
+              and improve productivity.
             </p>
           </div>
 
           {/* Main Features Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
             {/* Large Feature Card */}
-
-            <div className="comprehensive lg:col-span-8 bg-gradient-to-br  rounded-2xl">
-              <WobbleCard>
-                <div className="flex flex-col lg:flex-row items-start gap-8">
-                  <div className="flex-1">
-                    <div className="inline-flex items-center bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                      SMART INVENTORY
-                    </div>
-                    <h3 className="text-2xl font-bold text-black mb-4">
-                      AI-Powered Inventory Management
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed mb-6">
-                      Real-time inventory tracking with predictive analytics,
-                      automated reordering, and intelligent forecasting.
-                      Optimize stock levels across multiple locations with
-                      machine learning algorithms.
-                    </p>
-                    <div className="flex items-center text-blue-600 font-semibold">
-                      <span className="mr-2">Learn More</span>
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </div>
+            <div className="lg:col-span-8 bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
+              <div className="flex flex-col lg:flex-row items-start gap-8">
+                <div className="flex-1">
+                  <div className="inline-flex items-center bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                    SMART INVENTORY
                   </div>
-                  <div className="w-full lg:w-64 h-48 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl flex items-center justify-center">
-                    <svg
-                      className="w-16 h-16 text-blue-500"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                      />
-                    </svg>
-                  </div>
+                  <h3 className="text-2xl font-bold text-black mb-4">
+                    Warehouse Management
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed mb-6">
+                    Optimize storage, track inventory, and improve logistics
+                    efficiency.
+                  </p>
                 </div>
-              </WobbleCard>
+                <div className="w-full lg:w-64 h-48 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl flex items-center justify-center">
+                  <svg
+                    className="w-16 h-16 text-blue-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                    />
+                  </svg>
+                </div>
+              </div>
             </div>
 
             {/* Vertical Feature Cards */}
             <div className="lg:col-span-4 space-y-6">
-              <WobbleCard containerClassName="comprehensive bg-white border border-gray-200 rounded-2xl">
-                <div>
-                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
-                    <svg
-                      className="w-6 h-6 text-green-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                      />
-                    </svg>
-                  </div>
-                  <h4 className="font-bold text-black mb-2">
-                    Customer Relations
-                  </h4>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    Complete CRM with 360° customer view and automated workflows
-                  </p>
+              <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all duration-300">
+                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                  <svg
+                    className="w-6 h-6 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                    />
+                  </svg>
                 </div>
-              </WobbleCard>
+                <h4 className="font-bold text-black mb-2">
+                  Inventory Management
+                </h4>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Maintain accurate stock levels and streamline procurement and
+                  replenishment.
+                </p>
+              </div>
 
-              <WobbleCard containerClassName="comprehensive bg-white border border-gray-200 rounded-2xlhover:shadow-md">
-                <div className="">
-                  <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
-                    <svg
-                      className="w-6 h-6 text-purple-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                      />
-                    </svg>
-                  </div>
-                  <h4 className="font-bold text-black mb-2">Analytics & BI</h4>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    Real-time dashboards with predictive modeling and automated
-                    insights
-                  </p>
+              <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all duration-300">
+                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                  <svg
+                    className="w-6 h-6 text-purple-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                    />
+                  </svg>
                 </div>
-              </WobbleCard>
+                <h4 className="font-bold text-black mb-2">
+                  Hospital Management
+                </h4>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Manage patient records, appointments, billing, and clinical
+                  workflows efficiently.
+                </p>
+              </div>
             </div>
           </div>
 
           {/* Bottom Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="comprehensive bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md group">
               <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
                 <svg
@@ -320,10 +315,12 @@ const SoftwarePage = () => {
                   />
                 </svg>
               </div>
-              <h4 className="font-bold text-black mb-3">Workflow Automation</h4>
+              <h4 className="font-bold text-black mb-3">
+                E-commerce Solutions
+              </h4>
               <p className="text-gray-600 leading-relaxed">
-                Streamline repetitive tasks with intelligent automation and
-                custom workflows across all departments.
+                Power online stores with seamless order, payment, and customer
+                management.
               </p>
             </div>
 
@@ -343,35 +340,12 @@ const SoftwarePage = () => {
                   />
                 </svg>
               </div>
-              <h4 className="font-bold text-black mb-3">Enterprise Security</h4>
-              <p className="text-gray-600 leading-relaxed">
-                Bank-grade security with role-based access, audit trails, and
-                compliance management for industry standards.
-              </p>
-            </div>
-
-            <div className="comprehensive bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md group">
-              <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
-                <svg
-                  className="w-6 h-6 text-teal-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-                  />
-                </svg>
-              </div>
               <h4 className="font-bold text-black mb-3">
-                Seamless Integration
+                POS & Billing Systems
               </h4>
               <p className="text-gray-600 leading-relaxed">
-                Connect with 500+ applications through robust API ecosystem and
-                pre-built connectors for seamless data flow.
+                Fast, accurate, and integrated billing for retail and
+                hospitality businesses.
               </p>
             </div>
           </div>
@@ -383,12 +357,12 @@ const SoftwarePage = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">
-              Advatages Software Platform
+              Why Choose Automation
             </h2>
             <p className="text-lg md:text-xl text-black/70 max-w-3xl mx-auto">
-              Experience the future of business software with our cutting-edge
-              platform designed for modern enterprises seeking scalability,
-              efficiency, and innovation.
+              Automation transforms the way businesses operate. Our solutions
+              enhance efficiency, provide actionable insights, and ensure
+              secure, seamless workflows across your organization.
             </p>
           </div>
 
@@ -442,12 +416,12 @@ const SoftwarePage = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Industries We&apos;ve Transformed
+              Industries We Serve
             </h2>
             <p className="text-lg md:text-xl text-white/80 max-w-4xl mx-auto">
-              Our software solutions have successfully empowered businesses
-              across diverse industries, delivering measurable results and
-              driving digital transformation.
+              Our software and automation solutions are designed to meet the
+              unique needs of multiple industries, enabling smarter operations
+              and better outcomes.
             </p>
           </div>
 
@@ -471,9 +445,8 @@ const SoftwarePage = () => {
               </div>
               <h3 className="text-xl font-bold mb-4">Healthcare</h3>
               <p className="text-white/70 leading-relaxed mb-6">
-                Streamlined patient management, inventory tracking for medical
-                supplies, and compliance reporting for 50+ healthcare
-                facilities.
+                Streamline hospital operations, patient management, and clinical
+                workflows.
               </p>
               <div className="flex items-center justify-between">
                 <span className="text-white/60 text-sm">Impact</span>
@@ -500,9 +473,7 @@ const SoftwarePage = () => {
               </div>
               <h3 className="text-xl font-bold mb-4">Manufacturing</h3>
               <p className="text-white/70 leading-relaxed mb-6">
-                Production planning, quality control, and supply chain
-                optimization for major manufacturing companies across
-                Asia-Pacific.
+                Optimize production, inventory, and supply chain processes.
               </p>
               <div className="flex items-center justify-between">
                 <span className="text-white/60 text-sm">Cost Reduction</span>
@@ -529,8 +500,7 @@ const SoftwarePage = () => {
               </div>
               <h3 className="text-xl font-bold mb-4">Retail & E-commerce</h3>
               <p className="text-white/70 leading-relaxed mb-6">
-                Omnichannel inventory management, customer analytics, and
-                automated ordering systems for 200+ retail locations.
+                Enhance sales, inventory management, and customer experience.
               </p>
               <div className="flex items-center justify-between">
                 <span className="text-white/60 text-sm">Processing Speed</span>
@@ -559,8 +529,7 @@ const SoftwarePage = () => {
                 Logistics & Transportation
               </h3>
               <p className="text-white/70 leading-relaxed mb-6">
-                Fleet management, route optimization, and real-time tracking
-                solutions for transportation companies nationwide.
+                Improve tracking, scheduling, and delivery efficiency.
               </p>
               <div className="flex items-center justify-between">
                 <span className="text-white/60 text-sm">Fuel Savings</span>
@@ -585,10 +554,11 @@ const SoftwarePage = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-4">Financial Services</h3>
+              <h3 className="text-xl font-bold mb-4">
+                Banking & Financial Services
+              </h3>
               <p className="text-white/70 leading-relaxed mb-6">
-                Risk management, compliance tracking, and automated reporting
-                systems for banks and financial institutions.
+                Secure, compliant, and efficient financial operations.
               </p>
               <div className="flex items-center justify-between">
                 <span className="text-white/60 text-sm">Compliance</span>
@@ -615,8 +585,7 @@ const SoftwarePage = () => {
               </div>
               <h3 className="text-xl font-bold mb-4">Technology</h3>
               <p className="text-white/70 leading-relaxed mb-6">
-                Project management, resource allocation, and development
-                lifecycle tracking for tech startups and enterprises.
+                Custom software solutions to support innovation and scalability.{" "}
               </p>
               <div className="flex items-center justify-between">
                 <span className="text-white/60 text-sm">Delivery Speed</span>
