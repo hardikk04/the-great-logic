@@ -2,8 +2,8 @@
 import React from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Button } from "@/components/ui/button";
 import CTABannerSection from "@/components/home/CtaBanner";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,49 +65,43 @@ const WarehousePage = () => {
                 and streamline your fulfillment process.
               </p>
             </div>
-            <div className="flex z-[2] flex-col sm:flex-row gap-4 justify-center items-center relative">
-              <Button
-                variant={"default"}
-                className="button hover:text-white duration-300 transition-all leading-0"
-              >
-                <p className="relative z-[1]">Contact us</p>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
 
       <section className="max-sm:hidden max-md:hidden home-projects relative text-white pt-[6vw] flex justify-center">
         <div className="container">
-        <div className="project-title max-sm:py-[6vw] sm:px-6 py-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
-              System Benefits
-            </h2>
-            <p className="text-lg md:text-xl text-black/70 max-w-3xl mx-auto">
-              Transform your warehouse operations with our advanced visual
-              guidance and Labeling system designed for maximum efficiency.
-            </p>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 mx-auto">
-          {advantages.map((advantage, index) => (
-            <div
-              key={index}
-              className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
-            >
-              <div className="flex items-center mb-4">
-                <span className="text-3xl font-bold text-[#0DACFB] mr-4">
-                  {advantage.number}
-                </span>
-                <h3 className="text-xl font-semibold text-black">
-                  {advantage.title}
-                </h3>
-              </div>
-              <p className="text-black/70 leading-relaxed">{advantage.para}</p>
+          <div className="project-title max-sm:py-[6vw] sm:px-6 py-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
+                System Benefits
+              </h2>
+              <p className="text-lg md:text-xl text-black/70 max-w-3xl mx-auto">
+                Transform your warehouse operations with our advanced visual
+                guidance and Labeling system designed for maximum efficiency.
+              </p>
             </div>
-          ))}
-        </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 mx-auto">
+            {advantages.map((advantage, index) => (
+              <div key={index} className="relative">
+                <GlowingEffect disabled={false} className="rounded-xl" />
+                <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <span className="text-3xl font-bold text-[#0DACFB] mr-4">
+                      {advantage.number}
+                    </span>
+                    <h3 className="text-xl font-semibold text-black">
+                      {advantage.title}
+                    </h3>
+                  </div>
+                  <p className="text-black/70 leading-relaxed">
+                    {advantage.para}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -50,7 +50,7 @@ const Navbar = () => {
       dropdown: [
         { label: "Logic Labels", href: "/product/logic-label" },
         {
-          label: "Logic Lights",
+          label: "Logic Light",
           href: "/product/logic-light",
         },
         { label: "Software and App", href: "/product/software-and-app-development" },

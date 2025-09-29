@@ -150,7 +150,7 @@ const Product = () => {
           </div>
           <ProcessCard
             number={0o2}
-            title="Logic Lights"
+            title="Logic Light"
             para="A 7-color configurable light system designed to signal alerts, statuses, or process conditions. Controlled via our software, Logic Light enhances visibility, safety, and workflow efficiency across industrial, retail, and warehouse environments."
           />
         </div>

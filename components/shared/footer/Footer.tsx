@@ -7,7 +7,7 @@ const Footer = () => {
     products: [
       { label: "Logic Labels", href: "/product/logic-label" },
       {
-        label: "Logic Lights",
+        label: "Logic Light",
         href: "/product/logic-light",
       },
       {

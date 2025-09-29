@@ -3,7 +3,6 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Button } from "@/components/ui/button";
 import CTABannerSection from "@/components/home/CtaBanner";
 import { useGSAP } from "@gsap/react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
@@ -170,14 +169,6 @@ const SoftwarePage = () => {
                 real-time collaboration.
               </p>
             </div>
-            <div className="flex z-[2] flex-col sm:flex-row gap-4 justify-center items-center relative">
-              <Button
-                variant={"default"}
-                className="button hover:text-white duration-300 transition-all leading-0"
-              >
-                <p className="relative z-[1]">Start Free Trial</p>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
@@ -200,16 +191,7 @@ const SoftwarePage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
             {/* Large Feature Card */}
             <div className="relative lg:col-span-8 bg-gradient-to-br from-gray-50 border to-white rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
-              <GlowingEffect
-                spread={80}
-                glow={true}
-                disabled={false}
-                proximity={100}
-                inactiveZone={0.1}
-                blur={1}
-                borderWidth={2}
-                movementDuration={1}
-              />
+              <GlowingEffect borderWidth={1} disabled={false} className="rounded-xl" />
               <div className="flex flex-col lg:flex-row items-start gap-8">
                 <div className="flex-1">
                   <div className="inline-flex items-center bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
@@ -245,16 +227,7 @@ const SoftwarePage = () => {
             {/* Vertical Feature Cards */}
             <div className="lg:col-span-4 space-y-6">
               <div className="relative bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all duration-300">
-                <GlowingEffect
-                  spread={60}
-                  glow={true}
-                  disabled={false}
-                  proximity={80}
-                  inactiveZone={0.1}
-                  blur={1}
-                  borderWidth={1}
-                  movementDuration={1}
-                />
+                <GlowingEffect disabled={false} className="rounded-xl" />
                 <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
                   <svg
                     className="w-6 h-6 text-green-600"
@@ -280,16 +253,7 @@ const SoftwarePage = () => {
               </div>
 
               <div className="relative bg-white border border-gray-200 rounded-2xl p-6 transition-all duration-300">
-                <GlowingEffect
-                  spread={60}
-                  glow={true}
-                  disabled={false}
-                  proximity={80}
-                  inactiveZone={0.1}
-                  blur={1}
-                  borderWidth={1}
-                  movementDuration={1}
-                />
+                <GlowingEffect disabled={false} className="rounded-xl" />
                 <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
                   <svg
                     className="w-6 h-6 text-purple-600"
@@ -319,16 +283,7 @@ const SoftwarePage = () => {
           {/* Bottom Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="comprehensive relative bg-white border border-gray-200 rounded-2xl p-6 group">
-              <GlowingEffect
-                spread={60}
-                glow={true}
-                disabled={false}
-                proximity={80}
-                inactiveZone={0.1}
-                blur={1}
-                borderWidth={1}
-                movementDuration={1}
-              />
+              <GlowingEffect disabled={false} className="rounded-xl" />
               <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
                 <svg
                   className="w-6 h-6 text-orange-600"
@@ -360,16 +315,7 @@ const SoftwarePage = () => {
             </div>
 
             <div className="comprehensive relative bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md group">
-              <GlowingEffect
-                spread={60}
-                glow={true}
-                disabled={false}
-                proximity={80}
-                inactiveZone={0.1}
-                blur={1}
-                borderWidth={1}
-                movementDuration={1}
-              />
+              <GlowingEffect disabled={false} className="rounded-xl" />
               <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
                 <svg
                   className="w-6 h-6 text-red-600"
@@ -417,16 +363,7 @@ const SoftwarePage = () => {
                 key={index}
                 className="group advantages-card relative bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg"
               >
-                <GlowingEffect
-                  spread={60}
-                  glow={true}
-                  disabled={false}
-                  proximity={80}
-                  inactiveZone={0.1}
-                  blur={1}
-                  borderWidth={1}
-                  movementDuration={1}
-                />
+                <GlowingEffect disabled={false} className="rounded-xl" />
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
                     <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center text-2xl font-bold text-black group-hover:bg-black group-hover:text-white transition-all duration-300">
@@ -465,17 +402,7 @@ const SoftwarePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {/* Healthcare */}
             <div className="industry-card relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
-              <GlowingEffect
-                spread={60}
-                glow={true}
-                disabled={false}
-                proximity={80}
-                inactiveZone={0.1}
-                blur={1}
-                borderWidth={1}
-                movementDuration={1}
-                variant="white"
-              />
+              <GlowingEffect disabled={false} className="rounded-xl" />
               <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
                 <svg
                   className="w-8 h-8 text-white"
@@ -504,17 +431,7 @@ const SoftwarePage = () => {
 
             {/* Manufacturing */}
             <div className="industry-card relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
-              <GlowingEffect
-                spread={60}
-                glow={true}
-                disabled={false}
-                proximity={80}
-                inactiveZone={0.1}
-                blur={1}
-                borderWidth={1}
-                movementDuration={1}
-                variant="white"
-              />
+              <GlowingEffect disabled={false} className="rounded-xl" />
               <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
                 <svg
                   className="w-8 h-8 text-white"
@@ -542,17 +459,7 @@ const SoftwarePage = () => {
 
             {/* Retail & E-commerce */}
             <div className="industry-card relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
-              <GlowingEffect
-                spread={60}
-                glow={true}
-                disabled={false}
-                proximity={80}
-                inactiveZone={0.1}
-                blur={1}
-                borderWidth={1}
-                movementDuration={1}
-                variant="white"
-              />
+              <GlowingEffect disabled={false} className="rounded-xl" />
               <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
                 <svg
                   className="w-8 h-8 text-white"
@@ -580,17 +487,7 @@ const SoftwarePage = () => {
 
             {/* Logistics & Transportation */}
             <div className="industry-card relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
-              <GlowingEffect
-                spread={60}
-                glow={true}
-                disabled={false}
-                proximity={80}
-                inactiveZone={0.1}
-                blur={1}
-                borderWidth={1}
-                movementDuration={1}
-                variant="white"
-              />
+              <GlowingEffect disabled={false} className="rounded-xl" />
               <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
                 <svg
                   className="w-8 h-8 text-white"
@@ -620,17 +517,7 @@ const SoftwarePage = () => {
 
             {/* Financial Services */}
             <div className="industry-card relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
-              <GlowingEffect
-                spread={60}
-                glow={true}
-                disabled={false}
-                proximity={80}
-                inactiveZone={0.1}
-                blur={1}
-                borderWidth={1}
-                movementDuration={1}
-                variant="white"
-              />
+              <GlowingEffect disabled={false} className="rounded-xl" />
               <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
                 <svg
                   className="w-8 h-8 text-white"
@@ -660,17 +547,7 @@ const SoftwarePage = () => {
 
             {/* Technology */}
             <div className="industry-card relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 group">
-              <GlowingEffect
-                spread={60}
-                glow={true}
-                disabled={false}
-                proximity={80}
-                inactiveZone={0.1}
-                blur={1}
-                borderWidth={1}
-                movementDuration={1}
-                variant="white"
-              />
+              <GlowingEffect disabled={false} className="rounded-xl" />
               <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
                 <svg
                   className="w-8 h-8 text-white"
