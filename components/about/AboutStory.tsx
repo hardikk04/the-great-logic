@@ -33,7 +33,7 @@ const AboutStory = () => {
         <div className="space-y-4">
           <h3 className="text-2xl font-bold text-black">First Breakthrough</h3>
           <p className="text-gray-700 leading-relaxed">
-            Our innovative digital store label solution gained traction in the
+            Our innovative digital store Label solution gained traction in the
             retail industry. We helped our first 50 businesses transform their
             operations, proving that technology could be both powerful and
             user-friendly.

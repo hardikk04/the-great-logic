@@ -71,7 +71,7 @@ const Blog = () => {
       id: 1,
       title: "The Future of Retail: Digital Transformation",
       excerpt:
-        "Exploring how digital labels are reshaping the retail landscape and creating new opportunities for growth.",
+        "Exploring how digital Labels are reshaping the retail landscape and creating new opportunities for growth.",
       image:
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
       author: "Sarah Johnson",
@@ -82,7 +82,7 @@ const Blog = () => {
       id: 2,
       title: "Sustainability in Retail Technology",
       excerpt:
-        "How electronic shelf labels contribute to more sustainable retail practices and reduce environmental impact.",
+        "How electronic shelf Labels contribute to more sustainable retail practices and reduce environmental impact.",
       image:
         "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=250&fit=crop",
       author: "Michael Chen",
@@ -93,7 +93,7 @@ const Blog = () => {
       id: 3,
       title: "Case Study: Walmart's Digital Transformation",
       excerpt:
-        "A deep dive into how major retailers are implementing digital label solutions across their store networks.",
+        "A deep dive into how major retailers are implementing digital Label solutions across their store networks.",
       image:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop",
       author: "Emily Rodriguez",
@@ -115,7 +115,7 @@ const Blog = () => {
       id: 5,
       title: "Innovation Spotlight: AI-Powered Labels",
       excerpt:
-        "The latest developments in artificial intelligence integration with digital retail label technology.",
+        "The latest developments in artificial intelligence integration with digital retail Label technology.",
       image:
         "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=250&fit=crop",
       author: "Lisa Wang",

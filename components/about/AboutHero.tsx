@@ -20,7 +20,7 @@ const AboutHero = () => {
 
             <p className="text-md md:text-xl text-black md:my-12 max-w-3xl mx-auto font-body ">
               From manual to digital, Great Logic brings innovation to retail
-              with cutting-edge label solutions that transform how stores operate.
+              with cutting-edge Label solutions that transform how stores operate.
             </p>
           </div>
 

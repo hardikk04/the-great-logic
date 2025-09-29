@@ -120,7 +120,7 @@ const Product = () => {
           <ProcessCard
             number={0o1}
             title="Logic Labels"
-            para="A smart display solution for supermarkets and warehouses that replaces traditional labels with dynamic, real-time data. Easily update product details, pricing, or inventory information through our app and software, improving accuracy, efficiency, and customer experience."
+            para="A smart display solution for supermarkets and warehouses that replaces traditional Labels with dynamic, real-time data. Easily update product details, pricing, or inventory information through our app and software, improving accuracy, efficiency, and customer experience."
           />
           <div className="rounded-lg overflow-hidden w-1/3">
             <Image

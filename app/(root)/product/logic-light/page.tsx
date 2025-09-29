@@ -17,7 +17,7 @@ const WarehousePage = () => {
     {
       number: "02",
       title: "Real-time Inventory",
-      para: "Dynamic digital labels automatically update stock levels and product information synchronized with your WMS",
+      para: "Dynamic digital Labels automatically update stock levels and product information synchronized with your WMS",
     },
     {
       number: "03",
@@ -57,7 +57,7 @@ const WarehousePage = () => {
           <div className="relative text-center max-w-6xl mx-auto hero-content text-white">
             <div className="pointer-events-none">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
-                Logic Lights
+                Logic Light
               </h1>
               <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8 font-body">
                 Revolutionize your warehouse operations with intelligent visual
@@ -86,7 +86,7 @@ const WarehousePage = () => {
             </h2>
             <p className="text-lg md:text-xl text-black/70 max-w-3xl mx-auto">
               Transform your warehouse operations with our advanced visual
-              guidance and labeling system designed for maximum efficiency.
+              guidance and Labeling system designed for maximum efficiency.
             </p>
           </div>
         </div>

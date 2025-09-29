@@ -35,7 +35,7 @@ const ESLPage = () => {
           <div className="relative text-center max-w-6xl mx-auto hero-content">
             <div className="pointer-events-none">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 drop-shadow-lg">
-                Logic labels
+                Logic Labels
               </h1>
               <p className="text-md md:text-lg text-white/95 max-w-3xl mx-auto mb-8 font-body ">
                 The Next-Generation digital display solutions. Designed to power
