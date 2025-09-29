@@ -385,24 +385,7 @@ const SoftwarePage = () => {
                     <p className="text-gray-600 leading-relaxed mb-6">
                       {advantage.para}
                     </p>
-                    <div className="flex items-center text-black/70 hover:text-black transition-colors duration-200 cursor-pointer">
-                      <span className="mr-2 text-sm font-medium">
-                        Explore Feature
-                      </span>
-                      <svg
-                        className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </div>
+                  
                   </div>
                 </div>
               </div>
