@@ -3,7 +3,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 
 const DashboardAnimation = () => {
@@ -30,7 +29,7 @@ const DashboardAnimation = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="w-full h-full rounded-xl overflow-hidden relative flex justify-center items-end">
           <div className="perspective-[1200px] w-[95%] h-full overflow-hidden">
-            <Image
+            {/* <Image
               src={
                 "https://framerusercontent.com/images/e2bSBE2FGqkvwqDjSs5GYHchjWw.jpg"
               }
@@ -38,7 +37,8 @@ const DashboardAnimation = () => {
               width={1000}
               height={1000}
               className="w-full dashboard-img h-full rounded-t-xl relative z-[1]"
-            ></Image>
+            ></Image> */}
+            <video src="/video/main.mp4" muted loop autoPlay playsInline className="dashboard-img rounded-xl relative z-[1] h-full w-full object-cover"></video>
           </div>
         </div>
       </div>

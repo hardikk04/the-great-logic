@@ -21,14 +21,15 @@
   display: flex;
   gap: 3rem;
   will-change: tranform;
-  background-color: #FBFBFB;
+  background-color: #F0F1FA;
   border-radius: 1rem;
-  border: 1px solid rgb(229, 229, 232);;
+  /* border: 1px solid rgb(229, 229, 232);; */
 }
 
 
 .sticky-card-index {
-  flex: 2;
+  flex: 4;
+  padding-top: 1rem;
 }
 
 .sticky-card-content {
