@@ -8,7 +8,7 @@ const Hero = () => {
     >
       {/* Main Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative z-10 text-center max-w-6xl mx-auto">
+        <div className="relative z-10 text-center max-w-7xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-black mb-6">
             Bridging the physical and digital worlds to drive smarter operations.
           </h1>

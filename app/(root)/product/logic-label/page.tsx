@@ -18,7 +18,7 @@ const ESLPage = () => {
             className="w-full h-full bg-cover bg-center bg-no-repeat opacity-70"
             style={{
               backgroundImage:
-                "url('https://www.minewtag.com/upload/ztyImg/2025-03/67e24f9150516.jpg')",
+                "url('/img/logic label/Next-Gen Warehouse Ready.png')",
             }}
           />
           {/* Gradient overlay for text readability */}
@@ -31,7 +31,7 @@ const ESLPage = () => {
           />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-[2]">
-          <div className="relative text-center max-w-6xl mx-auto hero-content">
+          <div className="relative text-center max-w-7xl mx-auto hero-content">
             <div className="pointer-events-none">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 drop-shadow-lg">
                 Logic Labels
@@ -50,8 +50,8 @@ const ESLPage = () => {
 
       {/* <Showreel url="/video/esl.mp4" /> */}
 
-      <Advantages />
       <StickyWrapper />
+      <Advantages />
 
       {/* <section className="faq py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-6">

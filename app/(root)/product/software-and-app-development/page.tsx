@@ -143,7 +143,7 @@ const SoftwarePage = () => {
             className="w-full h-full bg-cover bg-center bg-no-repeat opacity-70"
             style={{
               backgroundImage:
-                "url('https://www.minewtag.com/upload/ztyImg/2025-03/67e24f9150516.jpg')",
+                "url('https://images.unsplash.com/photo-1623479322729-28b25c16b011?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
             }}
           />
           {/* Optional overlay for better text readability */}
@@ -156,7 +156,7 @@ const SoftwarePage = () => {
           />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-[1]">
-          <div className="relative text-center max-w-6xl mx-auto hero-content text-white">
+          <div className="relative text-center max-w-7xl mx-auto hero-content text-white">
             <div className="pointer-events-none">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
                 Custom Software & App Solutions for Smarter Operations

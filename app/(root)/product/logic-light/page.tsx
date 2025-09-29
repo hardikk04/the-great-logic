@@ -4,6 +4,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CTABannerSection from "@/components/home/CtaBanner";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
+import Image from "next/image";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,6 +33,20 @@ const WarehousePage = () => {
     },
   ];
 
+  useGSAP(() => {
+    gsap.to(".full-screen-img", {
+      width: "100%",
+      scrollTrigger: {
+        scroller: "body",
+        trigger: ".full-screen-img",
+        start: "top 60%",
+        end: "top 40%",
+        scrub: 1,
+        // markers: true,
+      },
+    });
+  });
+
   return (
     <main className="min-h-screen bg-white pt-20">
       {/* Hero Section with Background Image */}
@@ -40,8 +56,7 @@ const WarehousePage = () => {
           <div
             className="w-full h-full bg-cover bg-center bg-no-repeat opacity-70"
             style={{
-              backgroundImage:
-                "url('https://www.minewtag.com/upload/ztyImg/2025-03/67e24f9150516.jpg')",
+              backgroundImage: "url('/img/Logic Lights In Stores.png')",
             }}
           />
           {/* Optional overlay for better text readability */}
@@ -105,6 +120,18 @@ const WarehousePage = () => {
         </div>
       </section>
 
+      <section className="full-screen-img h-screen w-full flex justify-center items-center pt-24 overflow-hidden">
+        <div className="full-screen-img h-full w-[80%]">
+          <Image
+            src={"/img/Light in Warehouse.png"}
+            alt="Light in Warehouse"
+            height={1000}
+            width={1000}
+            className="object-cover h-full w-full"
+          ></Image>
+        </div>
+      </section>
+
       <section className="py-20">
         <div className="mx-auto container px-6">
           <div className="text-center mb-16">
@@ -118,38 +145,47 @@ const WarehousePage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-white rounded-xl shadow-lg">
-              <div className="text-4xl md:text-5xl font-bold text-[#0DACFB] mb-4">
-                90%
+            <div className="relative">
+              <GlowingEffect disabled={false} className="rounded-xl" />
+              <div className="text-center p-8 bg-white rounded-xl shadow-lg">
+                <div className="text-4xl md:text-5xl font-bold text-[#0DACFB] mb-4">
+                  90%
+                </div>
+                <h3 className="text-xl font-semibold text-black mb-2">
+                  Error Reduction
+                </h3>
+                <p className="text-black/70">
+                  Significant decrease in picking and sorting errors
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-black mb-2">
-                Error Reduction
-              </h3>
-              <p className="text-black/70">
-                Significant decrease in picking and sorting errors
-              </p>
             </div>
-            <div className="text-center p-8 bg-white rounded-xl shadow-lg">
-              <div className="text-4xl md:text-5xl font-bold text-[#0DACFB] mb-4">
-                35%
+            <div className="relative">
+              <GlowingEffect disabled={false} className="rounded-xl" />
+              <div className="text-center p-8 bg-white rounded-xl shadow-lg">
+                <div className="text-4xl md:text-5xl font-bold text-[#0DACFB] mb-4">
+                  35%
+                </div>
+                <h3 className="text-xl font-semibold text-black mb-2">
+                  Faster Operations
+                </h3>
+                <p className="text-black/70">
+                  Average improvement in picking and fulfillment speed
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-black mb-2">
-                Faster Operations
-              </h3>
-              <p className="text-black/70">
-                Average improvement in picking and fulfillment speed
-              </p>
             </div>
-            <div className="text-center p-8 bg-white rounded-xl shadow-lg">
-              <div className="text-4xl md:text-5xl font-bold text-[#0DACFB] mb-4">
-                24/7
+            <div className="relative">
+              <GlowingEffect disabled={false} className="rounded-xl" />
+              <div className="text-center p-8 bg-white rounded-xl shadow-lg">
+                <div className="text-4xl md:text-5xl font-bold text-[#0DACFB] mb-4">
+                  24/7
+                </div>
+                <h3 className="text-xl font-semibold text-black mb-2">
+                  Continuous Operation
+                </h3>
+                <p className="text-black/70">
+                  Round-the-clock reliability with minimal maintenance
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-black mb-2">
-                Continuous Operation
-              </h3>
-              <p className="text-black/70">
-                Round-the-clock reliability with minimal maintenance
-              </p>
             </div>
           </div>
         </div>

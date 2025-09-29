@@ -46,8 +46,8 @@ const Product = () => {
   return (
     <section className="philosophy w-full relative overflow-hidden py-4 pt-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
+        <div className="text-center">
+          <h2 className="text-3xl md:text-5xl font-bold text-black">
             The Great Logic Product Lineup
           </h2>
         </div>
@@ -116,7 +116,7 @@ const Product = () => {
         )}
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="h-[85vh] max-sm:py-[4vw] w-full flex justify-between items-center relative z-[1]">
+        <div className="h-[80vh] max-sm:py-[4vw] w-full flex justify-between items-center relative z-[1]">
           <ProcessCard
             number={0o1}
             title="Logic Labels"

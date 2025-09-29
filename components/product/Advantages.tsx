@@ -41,6 +41,12 @@ const Advantages = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
               Features
             </h2>
+
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+              Key Features: Simple, clear, and user-friendly design that
+              highlights functionality while maintaining a modern and
+              professional look.
+            </p>
           </div>
         </div>
         <div className="project-container w-full h-[80vh] my-[6vw] mt-0 relative flex max-sm:flex-wrap max-sm:gap-[2vw] max-md:flex-wrap max-md:gap-[2vw] justify-center">

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Heart, Globe, Rocket, Shield } from "lucide-react";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 const TeamCulture = () => {
   const values = [
@@ -49,24 +50,26 @@ const TeamCulture = () => {
           </p>
         </div>
 
-        {/* Values in a masonry-style layout */}
-        <div className="columns-1 md:columns-2 gap-8 mb-20 space-y-8">
+        {/* Values in a grid layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           {values.map((value, index) => (
-            <div
-              key={index}
-              className="group break-inside-avoid bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 mb-8"
-            >
-              <div className="flex flex-col items-center text-center space-y-4">
-                <div
-                  className={`p-4 rounded-2xl bg-gradient-to-r ${value.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}
-                >
-                  <value.icon className="h-8 w-8 text-white" />
+            <div key={index} className="relative">
+              <GlowingEffect disabled={false} className="rounded-2xl" />
+              <div className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 h-full">
+                <div className="flex flex-col items-center text-center space-y-4 h-full">
+                  <div
+                    className={`p-4 rounded-2xl bg-gradient-to-r ${value.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    <value.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-black">
+                    {value.title}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed flex-1">
+                    {value.description}
+                  </p>
+                  <div className="w-12 h-1 bg-gradient-to-r from-gray-300 to-gray-100 rounded-full"></div>
                 </div>
-                <h3 className="text-2xl font-bold text-black">{value.title}</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {value.description}
-                </p>
-                <div className="w-12 h-1 bg-gradient-to-r from-gray-300 to-gray-100 rounded-full"></div>
               </div>
             </div>
           ))}

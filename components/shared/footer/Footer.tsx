@@ -19,7 +19,7 @@ const Footer = () => {
       { label: "About us", href: "/about" },
       { label: "Contact us", href: "/contact" },
       { label: "Privacy Policy", href: "/privacy-policy" },
-      { label: "Terms and Conditions", href: "terms-conditions" },
+      { label: "Terms and Conditions", href: "/terms-conditions" },
     ],
   };
 
@@ -152,27 +152,6 @@ const Footer = () => {
               © 2025 Great Logic. All rights reserved. | Design and Developed by
               Rohido Media
             </p>
-
-            <div className="flex space-x-6 text-sm">
-              <a
-                href="#"
-                className="text-black/60 hover:text-black transition-colors duration-200 font-body"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="#"
-                className="text-black/60 hover:text-black transition-colors duration-200 font-body"
-              >
-                Terms of Service
-              </a>
-              <a
-                href="#"
-                className="text-black/60 hover:text-black transition-colors duration-200 font-body"
-              >
-                Cookie Policy
-              </a>
-            </div>
           </div>
         </div>
       </div>

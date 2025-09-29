@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 const CTABannerSection = () => {
   return (
-    <section className="relative overflow-hidden my-[6rem]">
+    <section className="relative overflow-hidden my-[6rem] mt-[3rem]">
       {/* Background decorative elements */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative liquid-glass border border-white/20 rounded-xl backdrop-blur-xl px-4 sm:px-6 lg:px-8 py-16 lg:py-14 bg-black">

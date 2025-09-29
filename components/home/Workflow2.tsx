@@ -3,6 +3,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 const Workflow2 = () => {
   const workflowSteps = [
@@ -40,7 +41,7 @@ const Workflow2 = () => {
       scrollTrigger: {
         trigger: ".workflow-all",
         start: "top 100%",
-        end: "top 60%",
+        end: "top 40%",
         scrub: 1,
       },
     });
@@ -67,6 +68,7 @@ const Workflow2 = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {workflowSteps.map((step) => (
             <div key={step.id} className={`group relative workflow-all`}>
+              <GlowingEffect disabled={false} className="rounded-lg" />
               {/* Card */}
               <div className="relative bg-white border border-gray-200 rounded-lg overflow-hidden transition-all duration-300 hover:border-gray-300 hover:shadow-lg h-80 flex flex-col">
                 {/* Image */}
