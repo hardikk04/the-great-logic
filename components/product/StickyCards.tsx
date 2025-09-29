@@ -126,7 +126,7 @@ const StickyCards = () => {
               </div>
             </div>
             <div className="sticky-card-index h-full">
-              <div className="sticky-card-img h-full">
+              <div className="sticky-card-img h-auto">
                 {/* <Image
                   src={cardData.image}
                   alt={cardData.title}
@@ -136,7 +136,7 @@ const StickyCards = () => {
                 ></Image> */}
                 <video
                   src={cardData.video}
-                  className="h-full rounded-xl w-full object-cover"
+                  className="h-full rounded-xl w-full object-cotain"
                   muted
                   loop
                   autoPlay
