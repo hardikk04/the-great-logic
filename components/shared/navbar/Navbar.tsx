@@ -53,7 +53,10 @@ const Navbar = () => {
           label: "Logic Light",
           href: "/product/logic-light",
         },
-        { label: "Software and App", href: "/product/software-and-app-development" },
+        {
+          label: "Software and App",
+          href: "/product/software-and-app-development",
+        },
       ],
     },
     {
@@ -71,9 +74,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 w-full z-50 text-black transition-transform duration-300 ease-in-out ${
-        isScrolled
-          ? "backdrop-blur-md shadow-soft bg-white/80"
-          : "bg-white"
+        isScrolled ? "backdrop-blur-md shadow-soft bg-white/80" : "bg-white"
       } ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -143,12 +144,14 @@ const Navbar = () => {
 
           {/* Contact Button */}
           <div className="hidden lg:block">
-            <Button
-              variant={"default"}
-              className="button hover:text-white duration-300 transition-all leading-0"
-            >
-              <p className="relative z-[1]">Contact Us</p>
-            </Button>
+            <Link href={"/contact"}>
+              <Button
+                variant={"default"}
+                className="button hover:text-white duration-300 transition-all leading-0"
+              >
+                <p className="relative z-[1]">Contact Us</p>
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}

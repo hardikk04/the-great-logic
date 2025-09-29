@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const CTABannerSection = () => {
   return (
@@ -24,12 +25,14 @@ const CTABannerSection = () => {
 
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
-                variant={"default"}
-                className="button border-white/25 border-[1px] hover:text-white duration-300 transition-all leading-0"
-              >
-                <p className="relative z-[1]">Talk to an Expert</p>
-              </Button>
+              <Link href={"/contact"}>
+                <Button
+                  variant={"default"}
+                  className="button border-white/25 border-[1px] hover:text-white duration-300 transition-all leading-0"
+                >
+                  <p className="relative z-[1]">Talk to an Expert</p>
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
