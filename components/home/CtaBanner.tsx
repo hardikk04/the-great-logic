@@ -18,9 +18,8 @@ const CTABannerSection = () => {
 
             {/* Subheading */}
             <p className="text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Join thousands of companies already using our platform to
-              accelerate growth, increase productivity, and unlock new
-              possibilities.
+              Discover how our hardware and software solutions can revolutionize
+              the way you work.
             </p>
 
             {/* CTA buttons */}
@@ -29,7 +28,7 @@ const CTABannerSection = () => {
                 variant={"default"}
                 className="button hover:text-white duration-300 transition-all leading-0"
               >
-                <p className="relative z-[1]">Start Free Trial</p>
+                <p className="relative z-[1]">Talk to an Expert</p>
               </Button>
             </div>
           </div>

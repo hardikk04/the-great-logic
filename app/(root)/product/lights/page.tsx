@@ -4,29 +4,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
 import CTABannerSection from "@/components/home/CtaBanner";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const WarehousePage = () => {
-  const specifications = [
-    { label: "LED Technology", value: "High-brightness RGB LEDs" },
-    { label: "Visibility Range", value: "Up to 50 meters" },
-    { label: "Light Modes", value: "Solid, Blinking, Breathing, Chase" },
-    { label: "Colors", value: "16.7 million color combinations" },
-    { label: "Power Supply", value: "12V DC / 24V DC / PoE+" },
-    { label: "Operating Temperature", value: "-20°C to +60°C" },
-    { label: "IP Rating", value: "IP65 (Dust & Water Resistant)" },
-    { label: "Connectivity", value: "Ethernet, Wireless, RS485" },
-    { label: "Label Technology", value: "E-Paper with NFC" },
-    { label: "Mount Options", value: "Magnetic, Screw-on, Adhesive" },
-  ];
-
   const advantages = [
     {
       number: "01",
@@ -96,7 +77,8 @@ const WarehousePage = () => {
         </div>
       </section>
 
-      <section className="max-sm:hidden max-md:hidden home-projects relative text-white pt-[6vw]">
+      <section className="max-sm:hidden max-md:hidden home-projects relative text-white pt-[6vw] flex justify-center">
+        <div className="container">
         <div className="project-title max-sm:py-[6vw] sm:px-6 py-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
@@ -126,10 +108,11 @@ const WarehousePage = () => {
             </div>
           ))}
         </div>
+        </div>
       </section>
 
-      <section className="py-20 px-6">
-        <div className="mx-auto">
+      <section className="py-20">
+        <div className="mx-auto container px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">
               Proven Results
@@ -142,7 +125,7 @@ const WarehousePage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-8 bg-white rounded-xl shadow-lg">
-              <div className="text-4xl md:text-6xl font-bold text-[#0DACFB] mb-4">
+              <div className="text-4xl md:text-5xl font-bold text-[#0DACFB] mb-4">
                 90%
               </div>
               <h3 className="text-xl font-semibold text-black mb-2">
@@ -153,7 +136,7 @@ const WarehousePage = () => {
               </p>
             </div>
             <div className="text-center p-8 bg-white rounded-xl shadow-lg">
-              <div className="text-4xl md:text-6xl font-bold text-[#0DACFB] mb-4">
+              <div className="text-4xl md:text-5xl font-bold text-[#0DACFB] mb-4">
                 35%
               </div>
               <h3 className="text-xl font-semibold text-black mb-2">
@@ -164,7 +147,7 @@ const WarehousePage = () => {
               </p>
             </div>
             <div className="text-center p-8 bg-white rounded-xl shadow-lg">
-              <div className="text-4xl md:text-6xl font-bold text-[#0DACFB] mb-4">
+              <div className="text-4xl md:text-5xl font-bold text-[#0DACFB] mb-4">
                 24/7
               </div>
               <h3 className="text-xl font-semibold text-black mb-2">
@@ -178,35 +161,7 @@ const WarehousePage = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6">
-        <div className="mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">
-              Technical Specifications
-            </h2>
-            <p className="text-lg md:text-xl text-black/70 max-w-3xl mx-auto">
-              Engineered for demanding warehouse environments with
-              industrial-grade components and reliability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {specifications.map((spec, index) => (
-              <div
-                key={index}
-                className="flex justify-between items-center p-6 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300"
-              >
-                <span className="font-semibold text-black">{spec.label}</span>
-                <span className="text-[#0DACFB] font-medium text-right">
-                  {spec.value}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="faq py-20">
+      {/* <section className="faq py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
@@ -300,7 +255,7 @@ const WarehousePage = () => {
             </AccordionItem>
           </Accordion>
         </div>
-      </section>
+      </section> */}
 
       <CTABannerSection />
     </main>

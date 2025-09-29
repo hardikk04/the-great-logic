@@ -5,13 +5,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
 import CTABannerSection from "@/components/home/CtaBanner";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { useGSAP } from "@gsap/react";
+import { WobbleCard } from "@/components/ui/wobble-card";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -192,26 +187,67 @@ const SoftwarePage = () => {
           {/* Main Features Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
             {/* Large Feature Card */}
-            <div className="comprehensive lg:col-span-8 bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg">
-              <div className="flex flex-col lg:flex-row items-start gap-8">
-                <div className="flex-1">
-                  <div className="inline-flex items-center bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                    SMART INVENTORY
+
+            <div className="comprehensive lg:col-span-8 bg-gradient-to-br  rounded-2xl">
+              <WobbleCard>
+                <div className="flex flex-col lg:flex-row items-start gap-8">
+                  <div className="flex-1">
+                    <div className="inline-flex items-center bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                      SMART INVENTORY
+                    </div>
+                    <h3 className="text-2xl font-bold text-black mb-4">
+                      AI-Powered Inventory Management
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed mb-6">
+                      Real-time inventory tracking with predictive analytics,
+                      automated reordering, and intelligent forecasting.
+                      Optimize stock levels across multiple locations with
+                      machine learning algorithms.
+                    </p>
+                    <div className="flex items-center text-blue-600 font-semibold">
+                      <span className="mr-2">Learn More</span>
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-black mb-4">
-                    AI-Powered Inventory Management
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed mb-6">
-                    Real-time inventory tracking with predictive analytics,
-                    automated reordering, and intelligent forecasting. Optimize
-                    stock levels across multiple locations with machine learning
-                    algorithms.
-                  </p>
-                  <div className="flex items-center text-blue-600 font-semibold">
-                    <span className="mr-2">Learn More</span>
+                  <div className="w-full lg:w-64 h-48 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl flex items-center justify-center">
                     <svg
-                      className="w-4 h-4"
+                      className="w-16 h-16 text-blue-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </WobbleCard>
+            </div>
+
+            {/* Vertical Feature Cards */}
+            <div className="lg:col-span-4 space-y-6">
+              <WobbleCard containerClassName="comprehensive bg-white border border-gray-200 rounded-2xl">
+                <div>
+                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                    <svg
+                      className="w-6 h-6 text-green-600"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -220,77 +256,43 @@ const SoftwarePage = () => {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
-                        d="M9 5l7 7-7 7"
+                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
                       />
                     </svg>
                   </div>
+                  <h4 className="font-bold text-black mb-2">
+                    Customer Relations
+                  </h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Complete CRM with 360° customer view and automated workflows
+                  </p>
                 </div>
-                <div className="w-full lg:w-64 h-48 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl flex items-center justify-center">
-                  <svg
-                    className="w-16 h-16 text-blue-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
+              </WobbleCard>
 
-            {/* Vertical Feature Cards */}
-            <div className="lg:col-span-4 space-y-6">
-              <div className="comprehensive bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md">
-                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
-                  <svg
-                    className="w-6 h-6 text-green-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                    />
-                  </svg>
+              <WobbleCard containerClassName="comprehensive bg-white border border-gray-200 rounded-2xlhover:shadow-md">
+                <div className="">
+                  <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                    <svg
+                      className="w-6 h-6 text-purple-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                      />
+                    </svg>
+                  </div>
+                  <h4 className="font-bold text-black mb-2">Analytics & BI</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Real-time dashboards with predictive modeling and automated
+                    insights
+                  </p>
                 </div>
-                <h4 className="font-bold text-black mb-2">
-                  Customer Relations
-                </h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Complete CRM with 360° customer view and automated workflows
-                </p>
-              </div>
-
-              <div className="comprehensive bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md">
-                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
-                  <svg
-                    className="w-6 h-6 text-purple-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                    />
-                  </svg>
-                </div>
-                <h4 className="font-bold text-black mb-2">Analytics & BI</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Real-time dashboards with predictive modeling and automated
-                  insights
-                </p>
-              </div>
+              </WobbleCard>
             </div>
           </div>
 
@@ -800,7 +802,7 @@ const SoftwarePage = () => {
           </div>
         </div>
       </section>
-
+      {/* 
       <section className="faq-section faq py-20">
         <div className="container mx-auto md:px-6 lg:px-6">
           <div className="text-center mb-12">
@@ -891,7 +893,7 @@ const SoftwarePage = () => {
             </AccordionItem>
           </Accordion>
         </div>
-      </section>
+      </section> */}
 
       <CTABannerSection />
     </main>

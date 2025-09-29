@@ -48,7 +48,7 @@ const Product = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
-            Products
+            The Great Logic Product Lineup
           </h2>
         </div>
       </div>
@@ -120,7 +120,7 @@ const Product = () => {
           <ProcessCard
             number={0o1}
             title="Logic Labels"
-            para="Ditch manual paper labels — our Electronic Shelf Labels bring instant updates, high-contrast displays, and wireless control. ESLs ensure accurate pricing, reduce errors, and give your store a modern, dynamic look while saving time and cost."
+            para="A smart display solution for supermarkets and warehouses that replaces traditional labels with dynamic, real-time data. Easily update product details, pricing, or inventory information through our app and software, improving accuracy, efficiency, and customer experience."
           />
           <div className="rounded-lg overflow-hidden w-1/3">
             <Image
@@ -151,8 +151,7 @@ const Product = () => {
           <ProcessCard
             number={0o2}
             title="Logic Lights"
-            para="Beautiful Design of all pages with the (newly) defined CI.
-                  Highly optimized and prepared for development."
+            para="A 7-color configurable light system designed to signal alerts, statuses, or process conditions. Controlled via our software, Logic Light enhances visibility, safety, and workflow efficiency across industrial, retail, and warehouse environments."
           />
         </div>
       </div>
@@ -161,7 +160,7 @@ const Product = () => {
           <ProcessCard
             number={0o3}
             title="Software and App"
-            para="Enhance warehouse efficiency with intelligent warning lights and picking labels. From guiding staff with clear visual signals to improving safety and speed in picking operations, our solutions streamline logistics for maximum productivity."
+            para="Tailored digital solutions built to automate and optimize your operations. From workflow management to device control, our custom software and apps are designed to integrate seamlessly with your systems and meet your unique automation needs."
           />
           <div className="rounded-lg overflow-hidden w-1/3">
             <Image

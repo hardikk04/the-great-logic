@@ -114,12 +114,12 @@ const StickyCards = () => {
                   </div>
                   <div className="sticky-card-copy-title">
                     <p>
-                      <b>Available Sizes: </b>(About the State)
+                      <b>Available Sizes: </b>{cardData.sizes}
                     </p>
                   </div>
                   <div className="sticky-card-copy-title">
                     <p>
-                      <b>Available Colors: </b>(About the State)
+                      <b>Available Colors: </b>{cardData.colors}
                     </p>
                   </div>
                 </div>

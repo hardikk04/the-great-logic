@@ -1,6 +1,5 @@
 "use client";
 
-import Blog from "@/components/home/Blog";
 import CTABannerSection from "@/components/home/CtaBanner";
 import Hero from "@/components/home/Hero";
 import Testimonial from "@/components/home/Testimonial";
@@ -21,7 +20,7 @@ export default function Home() {
       <DashboardAnimation />
       <Product />
       <Workflow2 />
-      <Blog />
+      {/* <Blog /> */}
       <Testimonial />
       <CTABannerSection />
     </main>

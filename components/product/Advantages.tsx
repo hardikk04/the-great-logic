@@ -13,23 +13,23 @@ const Advantages = () => {
   const [projectCard] = useState<ProjectCard[]>([
     {
       number: "01",
-      title: "Fast Batch Updates",
-      para: "E ink price labels can be refreshed in a few seconds with just one click, supports bulk pricing changes, reducing human errors",
+      title: "Flexible Sizes &amp; Mounting",
+      para: "Available in multiple dimensions and shapes to fit retail, warehouse, and industrial needs.",
     },
     {
       number: "02",
-      title: "Long Battery Life",
-      para: "Refresh three times a day, endurance up to ten years and support battery replacement",
+      title: "Next-Gen Warehouse Ready",
+      para: "Enables smarter operations with location tracking, system integration, and error-proofing.",
     },
     {
       number: "03",
-      title: "Stock Sync and Alerts",
-      para: "Synchronize inventory information in real time and send low-stock alerts",
+      title: "Ultra-Low Power",
+      para: "Designed for long battery life, ensuring years of reliable operation.",
     },
     {
       number: "04",
-      title: "Strong Data Security",
-      para: "Multi-layer encryption (PSK, AES-CMAC, AES-CTR) and secure platform architecture prevent unauthorized access and data breaches.",
+      title: "Wireless & Smart",
+      para: "Seamless Bluetooth-based connectivity for real-time updates and control.",
     },
   ]);
 
@@ -49,29 +49,29 @@ const Advantages = () => {
               height={1000}
               width={1000}
               className="w-1/4 object-cover project-img-0"
-              src="https://www.minewtag.com/upload/ztyImg/2025-05/68394bc623e7e.jpg"
-              alt=""
+              src="/img/logic label/Flexible Sizes & Mounting..png"
+              alt="Flexible Sizes & Mounting"
             />
             <Image
               height={1000}
               width={1000}
               className="w-1/4 object-cover project-img-1"
-              src="https://images.unsplash.com/photo-1599508266124-804fc6eecf09?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
+              src="/img/logic label/Next-Gen Warehouse Ready.png"
+              alt="Next-Gen Warehouse Ready"
             />
             <Image
               height={1000}
               width={1000}
               className="w-1/4 object-cover project-img-2"
-              src="https://images.unsplash.com/photo-1687803551107-b3ff415ef426?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
+              src="/img/logic label/Ultra-Low Power.png"
+              alt="Ultra-Low Power"
             />
             <Image
               height={1000}
               width={1000}
               className="w-1/4 object-cover project-img-3"
-              src="https://images.unsplash.com/photo-1599508266124-804fc6eecf09?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
+              src="/img/logic label/Wireless & Smart.png"
+              alt="logic label/Wireless & Smart"
             />
           </div>
           {projectCard.map((data, index) => (

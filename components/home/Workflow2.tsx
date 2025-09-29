@@ -14,7 +14,7 @@ const Workflow2 = () => {
     },
     {
       id: 2,
-      title: "Shopping",
+      title: "Supermarket ",
       description: "Digital solutions for modern retail experiences",
       image: "/img/supermarket.png",
     },
@@ -53,12 +53,13 @@ const Workflow2 = () => {
         <div className="text-center pb-10">
           <div className="text-center">
             <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
-              Our Workflow
+              Transforming Operations Across Sectors
             </h2>
           </div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            A streamlined approach to delivering exceptional IoT solutions
-            across industries
+            From warehouses to healthcare, our automation solutions seamlessly
+            adapt to different environments, boosting efficiency and enabling
+            smarter operations across every industry.
           </p>
         </div>
 

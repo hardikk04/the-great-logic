@@ -5,28 +5,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
 import CTABannerSection from "@/components/home/CtaBanner";
 import Advantages from "@/components/product/Advantages";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import StickyWrapper from "@/components/product/StickyWrapper";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ESLPage = () => {
-  const specifications = [
-    { label: "Display Technology", value: "E-Paper (E-Ink)" },
-    { label: "Screen Sizes", value: "2.13″, 2.9″, 4.2″, 7.5″" },
-    { label: "Resolution", value: "Up to 800×480 pixels" },
-    { label: "Colors", value: "Black/White/Red or Black/White" },
-    { label: "Battery Life", value: "3-5 years typical use" },
-    { label: "Operating Temperature", value: "-10°C to +50°C" },
-    { label: "Connectivity", value: "2.4GHz Wireless, Bluetooth" },
-    { label: "Mounting", value: "Magnetic, Clip-on, Adhesive" },
-  ];
-
   return (
     <main className="min-h-screen bg-white pt-20">
       <section className="relative py-[8rem] flex items-center justify-center overflow-hidden bg-white">
@@ -78,33 +61,7 @@ const ESLPage = () => {
       <Advantages />
       <StickyWrapper />
 
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">
-              Technical Specifications
-            </h2>
-            <p className="text-lg md:text-xl text-black/70 max-w-3xl mx-auto">
-              Engineered for reliability and performance in demanding retail
-              environments.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {specifications.map((spec, index) => (
-              <div
-                key={index}
-                className="flex justify-between items-center p-6 bg-white rounded-xl shadow-md border border-gray-100"
-              >
-                <span className="font-semibold text-black">{spec.label}</span>
-                <span className="text-[#0DACFB] font-medium">{spec.value}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="faq py-20">
+      {/* <section className="faq py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
@@ -171,7 +128,7 @@ const ESLPage = () => {
             </AccordionItem>
           </Accordion>
         </div>
-      </section>
+      </section> */}
 
       <CTABannerSection />
     </main>

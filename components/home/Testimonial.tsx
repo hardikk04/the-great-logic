@@ -22,7 +22,7 @@ const Testimonial = () => {
             Trusted by Industry Leaders
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Join thousands of companies that trust our solutions
+            Join hundreds of companies that trust our solutions
           </p>
         </div>
 
@@ -46,7 +46,7 @@ const Testimonial = () => {
                   alt={logo.name}
                   width={120}
                   height={60}
-                  className="max-h-12 max-w-28 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 "
+                  className="max-h-12 max-w-28 object-contain"
                 />
               </div>
             ))}
@@ -61,7 +61,7 @@ const Testimonial = () => {
                   alt={logo.name}
                   width={120}
                   height={60}
-                  className="max-h-12 max-w-28 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 "
+                  className="max-h-12 max-w-28 object-contain"
                 />
               </div>
             ))}
@@ -88,7 +88,7 @@ const Testimonial = () => {
                   alt={logo.name}
                   width={120}
                   height={60}
-                  className="max-h-12 max-w-28 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 "
+                  className="max-h-12 max-w-28 object-contain"
                 />
               </div>
             ))}
@@ -103,7 +103,7 @@ const Testimonial = () => {
                   alt={logo.name}
                   width={120}
                   height={60}
-                  className="max-h-12 max-w-28 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 "
+                  className="max-h-12 max-w-28 object-contain"
                 />
               </div>
             ))}
