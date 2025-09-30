@@ -570,10 +570,12 @@ const SoftwarePage = () => {
                     className="object-contain"
                   ></Image>
                 </div>
-                <h2>Workflow Automation</h2>
-                <p>
-                  {`Simplify processes and reduce manual effort for faster, error-free operations.`}
-                </p>
+                <div className="flex flex-col gap-4">
+                  <h2>Workflow Automation</h2>
+                  <p>
+                    {`Simplify processes and reduce manual effort for faster, error-free operations.`}
+                  </p>
+                </div>
               </div>
               <div className="page7-elem2 page7-elem">
                 <div className="w-16 h-10 rounded-2xl flex items-center justify-center">
@@ -585,11 +587,13 @@ const SoftwarePage = () => {
                     className="object-contain"
                   ></Image>
                 </div>
-                <h2>Enterprise Security</h2>
-                <p>
-                  Protect sensitive data with advanced security features and
-                  compliance-ready solutions.
-                </p>
+                <div className="flex flex-col gap-4">
+                  <h2>Enterprise Security</h2>
+                  <p>
+                    Protect sensitive data with advanced security features and
+                    compliance-ready solutions.
+                  </p>
+                </div>
               </div>
               <div className="page7-elem3 page7-elem">
                 <div className="w-16 h-10 rounded-2xl flex items-center justify-center">
@@ -601,11 +605,13 @@ const SoftwarePage = () => {
                     className="object-contain"
                   ></Image>
                 </div>
-                <h2>Seamless Integration</h2>
-                <p>
-                  Connect your software with existing tools and systems
-                  effortlessly.
-                </p>
+                <div className="flex flex-col gap-4">
+                  <h2>Seamless Integration</h2>
+                  <p>
+                    Connect your software with existing tools and systems
+                    effortlessly.
+                  </p>
+                </div>
               </div>
               <div className="page7-elem4 page7-elem">
                 <div className="w-16 h-10 rounded-2xl flex items-center justify-center">
@@ -617,8 +623,10 @@ const SoftwarePage = () => {
                     className="object-contain"
                   ></Image>
                 </div>
-                <h2>Analytics & Business Intelligence</h2>
-                <p>Gain actionable insights to make smarter decisions.</p>
+                <div className="flex flex-col gap-4">
+                  <h2>Analytics & Business Intelligence</h2>
+                  <p>Gain actionable insights to make smarter decisions.</p>
+                </div>
               </div>
             </div>
           </div>
