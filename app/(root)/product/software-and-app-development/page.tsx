@@ -15,34 +15,24 @@ const SoftwarePage = () => {
 
   const advantages = [
     {
-      number: "01",
-      title: "Workflow Automation",
-      para: "Simplify processes and reduce manual effort for faster, error-free operations.",
+      title: "Warehouse Management",
+      para: "Optimize storage, track inventory, and improve logistics efficiency.",
     },
     {
-      number: "02",
-      title: "Enterprise Security",
-      para: "Protect sensitive data with advanced security features and compliance-ready solutions.",
+      title: "Inventory Management",
+      para: "Maintain accurate stock levels and streamline procurement and replenishment.",
     },
     {
-      number: "03",
-      title: "Seamless Integration",
-      para: "Connect your software with existing tools and systems effortlessly.",
+      title: "Hospital Management",
+      para: "Manage patient records, appointments, billing, and clinical workflows efficiently.",
     },
     {
-      number: "04",
-      title: "Analytics & Business Intelligence",
-      para: "Gain actionable insights to make smarter decisions.",
+      title: "E-commerce Solutions",
+      para: "Power online stores with seamless order, payment, and customer management.",
     },
     {
-      number: "05",
-      title: "Cloud-Native Architecture",
-      para: "Scalable, reliable, and accessible software from anywhere.",
-    },
-    {
-      number: "06",
-      title: "Zero-Code Integration",
-      para: "Enable easy connectivity between systems without coding complexity.",
+      title: "POS & Billing Systems",
+      para: "Fast, accurate, and integrated billing for retail and hospitality businesses.",
     },
   ];
 
@@ -87,8 +77,9 @@ const SoftwarePage = () => {
     // Responsive advantages container animation
     if (mediaQuery.matches) {
       // Desktop: Horizontal scroll animation (≥1024px)
+      // Calculate scroll to show only the last card (4 cards worth of scroll)
       gsap.to(".advantages-container", {
-        transform: "translateX(-30%)",
+        transform: "translateX(-20%)",
         scrollTrigger: {
           trigger: ".advantages-container",
           start: "top 40%",
@@ -121,7 +112,7 @@ const SoftwarePage = () => {
       // Re-initialize animations based on screen size
       if (mediaQuery.matches) {
         gsap.to(".advantages-container", {
-          transform: "translateX(-30%)",
+          transform: "translateX(-20%)",
           scrollTrigger: {
             trigger: ".advantages-container",
             start: "top 40%",
@@ -535,36 +526,28 @@ const SoftwarePage = () => {
           <div className="page7-container overflow-x-hidden">
             <div className="page7-container-elems">
               <div className="page7-elem1 page7-elem">
-                <h1>Career Growth</h1>
+                <h2>Workflow Automation</h2>
                 <p>
-                  {`We believe in investing in our employees' professional
-                  development and providing opportunities to learn and grow
-                  within the company.`}
+                  {`Simplify processes and reduce manual effort for faster, error-free operations.`}
                 </p>
               </div>
               <div className="page7-elem2 page7-elem">
-                <h1>Work-Life Balance</h1>
+                <h2>Enterprise Security</h2>
                 <p>
-                  We understand the importance of maintaining a healthy
-                  work-life balance and strive to provide flexibility and
-                  support to our employees.
+                  Protect sensitive data with advanced security features and
+                  compliance-ready solutions.
                 </p>
               </div>
               <div className="page7-elem3 page7-elem">
-                <h1>Diversity and Inclusion</h1>
+                <h2>Seamless Integration</h2>
                 <p>
-                  We believe diversity makes us stronger, and we are committed
-                  to fostering an inclusive workplace where everyone feels
-                  valued and supported.
+                  Connect your software with existing tools and systems
+                  effortlessly.
                 </p>
               </div>
               <div className="page7-elem4 page7-elem">
-                <h1>Impactful Work</h1>
-                <p>
-                  At Padam Group, you will have the opportunity to work on
-                  challenging and meaningful projects that make a real
-                  difference for our clients.
-                </p>
+                <h2>Analytics & Business Intelligence</h2>
+                <p>Gain actionable insights to make smarter decisions.</p>
               </div>
             </div>
           </div>

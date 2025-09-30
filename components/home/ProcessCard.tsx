@@ -1,13 +1,15 @@
 import gsap from "gsap";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 interface Props {
   title: string;
   para: string;
+  link: string;
 }
 
-const ProcessCard = ({ title, para }: Props) => {
+const ProcessCard = ({ title, para, link }: Props) => {
   return (
     <div
       className={`flex items-center text-black  w-[45%] max-sm:w-full max-md:w-full relative z-[1]`}
@@ -19,7 +21,8 @@ const ProcessCard = ({ title, para }: Props) => {
         <h3 className="heading text-3xl font-medium heading">{title}</h3>
         <span className="para text-xl inline-block opacity-70">{para}</span>
 
-        <span
+        <Link
+          href={link}
           onMouseEnter={() => {
             gsap.to(".right-arrow", {
               transform: "translateX(5px)",
@@ -32,8 +35,9 @@ const ProcessCard = ({ title, para }: Props) => {
           }}
           className="flex text-md items-center gap-1 underline-btn w-fit"
         >
-          Read more <ArrowRight color="#0DACFB" className="right-arrow pt-1" size={20} />
-        </span>
+          Read more{" "}
+          <ArrowRight color="#0DACFB" className="right-arrow pt-1" size={20} />
+        </Link>
       </div>
     </div>
   );

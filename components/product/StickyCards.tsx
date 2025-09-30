@@ -38,10 +38,6 @@ const StickyCards = () => {
                 className="w-4 h-5"
                 style={{
                   backgroundColor: colorMappings[color] || "#CCCCCC",
-                  border:
-                    color === "White"
-                      ? "1px solid #CCCCCC"
-                      : "1px solid #666666",
                 }}
                 title={color}
               />

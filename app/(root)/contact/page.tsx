@@ -97,19 +97,28 @@ const ContactPage = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                       <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                         <p className="text-sm text-muted-foreground">
-                          Jaipur, Rajasthan
+                          Jaipur: A1, A2 SS Bhandari Nagar, Swej Farm, Sodala,
+                          Jaipur, Rajasthan 302019
                         </p>
                       </div>
                       <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                         <p className="text-sm text-muted-foreground">
-                          Mumbai, Maharashtra
+                          Mumbai: 604, A wing, Trade Square Mehra Compound,
+                          Andheri - Kurla Rd, Safed Pul, Saki Naka, Andheri
+                          East, Mumbai, Maharashtra 400072
                         </p>
                       </div>
                       <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                        <p className="text-sm text-muted-foreground">Dubai</p>
+                        <p className="text-sm text-muted-foreground">
+                          Dubai: D Wings 4th floor - DSO Headquarters Dubai
+                          Silicon Oasis - Dubai - United Arab Emirates
+                        </p>
                       </div>
                       <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                        <p className="text-sm text-muted-foreground">Canada</p>
+                        <p className="text-sm text-muted-foreground">
+                          Canada: 6705 Tomken Road Unit 219 Box 244 Mississauga,
+                          ON L5T 2J6
+                        </p>
                       </div>
                       <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                         <p className="text-sm text-muted-foreground">UK</p>

@@ -119,6 +119,7 @@ const Product = () => {
         <div className="container mx-auto ">
           <div className="h-[85vh] max-sm:py-[4vw] w-full flex justify-between items-center relative z-[1]">
             <ProcessCard
+              link="/product/software-and-app-development"
               title="Software and App"
               para="Tailored digital solutions built to automate and optimize your operations. From workflow management to device control, our custom software and apps are designed to integrate seamlessly with your systems and meet your unique automation needs."
             />
@@ -146,12 +147,14 @@ const Product = () => {
             ></Image>
           </div>
           <ProcessCard
+            link="/product/logic-label"
             title="Logic Labels"
             para="A smart display solution for supermarkets and warehouses that replaces traditional Labels with dynamic, real-time data. Easily update product details, pricing, or inventory information through our app and software, improving accuracy, efficiency, and customer experience."
           />
         </div>
         <div className="h-[85vh] max-sm:py-[4vw] w-full flex justify-between items-center relative z-[1]">
           <ProcessCard
+            link="/product/logic-light"
             title="Logic Light"
             para="A 7-color configurable light system designed to signal alerts, statuses, or process conditions. Controlled via our software, Logic Light enhances visibility, safety, and workflow efficiency across industrial, retail, and warehouse environments."
           />

@@ -15,7 +15,7 @@
 .sticky-card {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 70vh;
   color: var(--bg);
   padding: 1.5rem;
   display: flex;

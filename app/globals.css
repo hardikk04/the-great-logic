@@ -361,8 +361,9 @@
   justify-content: space-between;
 }
 
-.page7-elem > h1 {
+.page7-elem > h2 {
   font-size: 2vw;
+  line-height: 1.2;
 }
 
 .page7-elem > p {
