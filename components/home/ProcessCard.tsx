@@ -19,7 +19,7 @@ const ProcessCard = ({ title, para, link }: Props) => {
       </h2>
       <div className="flex flex-col gap-6">
         <h3 className="heading text-3xl font-medium heading">{title}</h3>
-        <span className="para text-lg inline-block opacity-70">{para}</span>
+        <span className="text-lg text-gray-600 inline-block">{para}</span>
 
         <Link
           href={link}

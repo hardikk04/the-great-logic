@@ -23,7 +23,7 @@ const ContactPage = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
               Ready to connect
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
               {`We're here to help bring your ideas to life. Reach out and let's
                 start a conversation.`}
             </p>
@@ -36,10 +36,10 @@ const ContactPage = () => {
                 <GlowingEffect disabled={false} className="rounded-xl" />
                 <Card className="border-border shadow-soft hover:shadow-elegant transition-all duration-300">
                   <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-primary-light rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16 bg-primary-light rounded-xl flex items-center justify-center mx-auto">
                       <Mail className="w-8 h-8 text-primary" />
                     </div>
-                    <CardTitle className="text-foreground">Email Us</CardTitle>
+                    <CardTitle className="text-foreground text-lg">Email Us</CardTitle>
                     <CardDescription className="text-muted-foreground">
                       Send us a message anytime
                     </CardDescription>
@@ -60,10 +60,10 @@ const ContactPage = () => {
                 <GlowingEffect disabled={false} className="rounded-xl" />
                 <Card className="border-border shadow-soft hover:shadow-elegant transition-all duration-300">
                   <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-primary-light rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16 bg-primary-light rounded-xl flex items-center justify-center mx-auto">
                       <Phone className="w-8 h-8 text-primary" />
                     </div>
-                    <CardTitle className="text-foreground">Call Us</CardTitle>
+                    <CardTitle className="text-foreground text-lg">Call Us</CardTitle>
                     <CardDescription className="text-muted-foreground">
                       Speak with our team directly
                     </CardDescription>
@@ -85,10 +85,10 @@ const ContactPage = () => {
                 <GlowingEffect disabled={false} className="rounded-xl" />
                 <Card className="border-border shadow-soft hover:shadow-elegant transition-all duration-300">
                   <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-primary-light rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16 bg-primary-light rounded-xl flex items-center justify-center mx-auto">
                       <MapPin className="w-8 h-8 text-primary" />
                     </div>
-                    <CardTitle className="text-foreground">Visit Us</CardTitle>
+                    <CardTitle className="text-foreground text-lg">Visit Us</CardTitle>
                     <CardDescription className="text-muted-foreground">
                       Find us at our locations
                     </CardDescription>
@@ -96,32 +96,32 @@ const ContactPage = () => {
                   <CardContent>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                       <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-md text-muted-foreground">
                           Jaipur: A1, A2 SS Bhandari Nagar, Swej Farm, Sodala,
                           Jaipur, Rajasthan 302019
                         </p>
                       </div>
                       <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-md text-muted-foreground">
                           Mumbai: 604, A wing, Trade Square Mehra Compound,
                           Andheri - Kurla Rd, Safed Pul, Saki Naka, Andheri
                           East, Mumbai, Maharashtra 400072
                         </p>
                       </div>
                       <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-md text-muted-foreground">
                           Dubai: D Wings 4th floor - DSO Headquarters Dubai
                           Silicon Oasis - Dubai - United Arab Emirates
                         </p>
                       </div>
                       <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-md text-muted-foreground">
                           Canada: 6705 Tomken Road Unit 219 Box 244 Mississauga,
                           ON L5T 2J6
                         </p>
                       </div>
                       <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-md text-muted-foreground">
                           Australia: 320 Victoria Parade, East Melbourne VIC
                           3002
                         </p>

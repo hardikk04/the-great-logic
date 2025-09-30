@@ -14,7 +14,7 @@ const ContactHero = () => {
             <span className="text-black">Something Amazing</span>
           </h1>
 
-          <p className="text-md md:text-xl text-black md:my-12 max-w-3xl mx-auto font-body">
+          <p className="text-md md:text-xl text-black md:my-12 max-w-4xl mx-auto font-body">
             Ready to transform your digital presence? We&apos;re here to bring
             your vision to life with cutting-edge technology and innovative
             solutions.

@@ -110,7 +110,7 @@ const AboutStory = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
             Our <span className="text-blue-600">Journey</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto">
             From a small garage startup to a global technology leader—every step
             of our journey has been driven by passion, innovation, and
             unwavering commitment to our clients&apos; success.

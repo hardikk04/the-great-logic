@@ -18,7 +18,7 @@ const CTABannerSection = () => {
             </h2>
 
             {/* Subheading */}
-            <p className="text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
               Discover how our hardware and software solutions can revolutionize
               the way you work.
             </p>

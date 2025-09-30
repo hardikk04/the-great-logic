@@ -243,7 +243,7 @@ const SoftwarePage = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
                 Custom Software & App Solutions for Smarter Operations
               </h1>
-              <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8 font-body">
+              <p className="text-lg md:text-xl text-white/80 max-w-4xl mx-auto mb-8 font-body">
                 At The Great Logic, we develop tailored software and apps that
                 streamline workflows, enhance security, and integrate seamlessly
                 with your operations. Our solutions are designed to empower
@@ -262,7 +262,7 @@ const SoftwarePage = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">
               Our Software Expertise
             </h2>
-            <p className="text-lg md:text-xl text-black/70 max-w-4xl mx-auto">
+            <p className="text-lg md:text-lg text-black/70 max-w-4xl mx-auto">
               We build robust software solutions to automate and optimize
               critical business processes, helping you save time, reduce errors,
               and improve productivity.
@@ -327,7 +327,7 @@ const SoftwarePage = () => {
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Industries We Serve
             </h2>
-            <p className="text-lg md:text-xl text-white/80 max-w-4xl mx-auto">
+            <p className="text-lg md:text-lg text-white/80 max-w-4xl mx-auto">
               Our software and automation solutions are designed to meet the
               unique needs of multiple industries, enabling smarter operations
               and better outcomes.
@@ -551,7 +551,7 @@ const SoftwarePage = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">
               Why Choose Us
             </h2>
-            <p className="text-lg md:text-xl text-black/70 max-w-3xl mx-auto">
+            <p className="text-lg md:text-lg text-black/70 max-w-4xl mx-auto">
               Automation transforms the way businesses operate. Our solutions
               enhance efficiency, provide actionable insights, and ensure
               secure, seamless workflows across your organization.

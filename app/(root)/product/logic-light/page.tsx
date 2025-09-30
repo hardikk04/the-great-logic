@@ -121,7 +121,7 @@ const WarehousePage = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
                 Logic Light
               </h1>
-              <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8 font-body">
+              <p className="text-lg md:text-lg text-white/80 max-w-4xl mx-auto mb-8 font-body">
                 Revolutionize your warehouse operations with intelligent visual
                 guidance systems. Reduce picking errors, increase productivity,
                 and streamline your fulfillment process.
@@ -138,7 +138,7 @@ const WarehousePage = () => {
               <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
                 Why Choose Logic Light
               </h2>
-              <p className="text-lg md:text-xl text-black/70 max-w-3xl mx-auto">
+              <p className="text-lg md:text-lg text-black/70 max-w-4xl mx-auto">
                 Transform your warehouse operations with our advanced visual
                 guidance and Labeling system designed for maximum efficiency.
               </p>
@@ -172,7 +172,7 @@ const WarehousePage = () => {
                         {advantage.title}
                       </h3>
                     </div>
-                    <p className="text-gray-600 leading-relaxed text-sm flex-grow">
+                    <p className="text-gray-600 leading-relaxed text-md flex-grow">
                       {advantage.para}
                     </p>
                   </div>
@@ -209,7 +209,7 @@ const WarehousePage = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">
               Proven Results
             </h2>
-            <p className="text-lg md:text-xl text-black/70 max-w-3xl mx-auto">
+            <p className="text-lg md:text-lg text-black/70 max-w-3xl mx-auto">
               Real performance improvements achieved by warehouses using our
               system
             </p>
