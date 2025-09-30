@@ -9,6 +9,9 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileActiveDropdown, setMobileActiveDropdown] = useState<
+    string | null
+  >(null);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -158,7 +161,13 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             className="lg:hidden p-2 px-0"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            onClick={() => {
+              setIsMobileMenuOpen(!isMobileMenuOpen);
+              // Reset mobile dropdown when closing menu
+              if (isMobileMenuOpen) {
+                setMobileActiveDropdown(null);
+              }
+            }}
           >
             {isMobileMenuOpen ? (
               <X className="h-6 w-6" />
@@ -173,26 +182,71 @@ const Navbar = () => {
           <div className="lg:hidden px-4 mt-4 bg-white py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-200 font-body font-medium py-2"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
+                <div key={item.label}>
+                  {item.dropdown ? (
+                    <div>
+                      <button
+                        className="flex items-center justify-between w-full text-left text-foreground hover:text-primary transition-colors duration-200 font-body font-medium py-2"
+                        onClick={() =>
+                          setMobileActiveDropdown(
+                            mobileActiveDropdown === item.label
+                              ? null
+                              : item.label
+                          )
+                        }
+                      >
+                        {item.label}
+                        <ChevronDown
+                          className={`h-4 w-4 transition-transform duration-200 ${
+                            mobileActiveDropdown === item.label
+                              ? "rotate-180"
+                              : ""
+                          }`}
+                        />
+                      </button>
+                      {mobileActiveDropdown === item.label && (
+                        <div className="pl-4 mt-2 space-y-2 border-l-2 border-gray-100">
+                          {item.dropdown.map((dropdownItem) => (
+                            <Link
+                              key={dropdownItem.label}
+                              href={dropdownItem.href}
+                              className="block text-foreground/70 hover:text-primary transition-colors duration-200 font-body py-2 pl-2"
+                              onClick={() => {
+                                setIsMobileMenuOpen(false);
+                                setMobileActiveDropdown(null);
+                              }}
+                            >
+                              {dropdownItem.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="block text-foreground hover:text-primary transition-colors duration-200 font-body font-medium py-2"
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        setMobileActiveDropdown(null);
+                      }}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
+                </div>
               ))}
-              <Button
-                className="w-full mt-4"
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  document
-                    .getElementById("contact")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                Contact Us
-              </Button>
+              <Link href="/contact">
+                <Button
+                  className="w-full mt-4"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    setMobileActiveDropdown(null);
+                  }}
+                >
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </div>
         )}
