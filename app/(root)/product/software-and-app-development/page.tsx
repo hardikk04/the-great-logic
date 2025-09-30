@@ -113,18 +113,6 @@ const SoftwarePage = () => {
       // Mobile: No animation, just rely on CSS overflow scrolling
     }, 100);
 
-    gsap.from(".industry-card", {
-      opacity: 0,
-      y: 80,
-      stagger: 0.1,
-      scrollTrigger: {
-        trigger: ".industry-card",
-        start: "top 95%",
-        end: "top 40%",
-        scrub: true,
-      },
-    });
-
     // Always call page7Animation - it handles responsive behavior internally
     page7Animation();
 

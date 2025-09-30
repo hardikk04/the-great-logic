@@ -141,12 +141,12 @@ const Workflow2 = () => {
           <div className="overflow-hidden lg:overflow-visible workflow-container-wrapper">
             <div
               ref={scrollContainerRef}
-              className="flex gap-8 w-max overflow-x-auto lg:overflow-x-visible scrollbar-hide pb-6 lg:pb-0"
+              className="flex gap-4 sm:gap-8 w-max overflow-x-auto lg:overflow-x-visible scrollbar-hide pb-6 lg:pb-0"
             >
               {workflowSteps.map((step) => (
                 <div
                   key={step.id}
-                  className={`group relative workflow-all w-[calc(50vw-2rem)] md:w-[calc(50vw-2rem)] lg:w-[calc(50vw-2rem)] flex-shrink-0`}
+                  className={`group relative w-[calc(100vw-3rem)] sm:w-[calc(50vw-2rem)] lg:w-[calc(50vw-2rem)] flex-shrink-0`}
                 >
                   {/* Card */}
                   <div className="relative bg-white overflow-hidden transition-all duration-300 flex flex-col">

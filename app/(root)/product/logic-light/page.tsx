@@ -131,7 +131,7 @@ const WarehousePage = () => {
         </div>
       </section>
 
-      <section className="max-sm:hidden max-md:hidden home-projects relative text-white pt-[6vw] flex justify-center">
+      <section className=" home-projects relative text-white pt-[6vw] flex justify-center">
         <div className="container">
           <div className="project-title max-sm:py-[6vw] sm:px-6 py-4">
             <div className="text-center mb-12">

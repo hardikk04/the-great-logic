@@ -25,7 +25,7 @@ const DashboardAnimation = () => {
     });
   }, []);
   return (
-    <div className="showreel h-[90vh] w-full flex justify-center overflow-hidden relative z-[1]">
+    <div className="showreel h-[60vh] pt-6 md:h-[90vh] w-full flex justify-center overflow-hidden relative z-[1]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="w-full h-full rounded-xl overflow-hidden relative flex justify-center items-end">
           <div className="perspective-[1200px] w-[95%] h-full overflow-hidden">

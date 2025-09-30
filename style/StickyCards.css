@@ -21,11 +21,10 @@
   display: flex;
   gap: 3rem;
   will-change: tranform;
-  background-color: #F0F1FA;
+  background-color: #f0f1fa;
   border-radius: 1rem;
   /* border: 1px solid rgb(229, 229, 232);; */
 }
-
 
 .sticky-card-index {
   flex: 4;
@@ -43,11 +42,6 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
-
-.sticky-card-img img {
-  /* aspect-ratio: 5/3; */
-  border-radius: 0.5rem;
 }
 
 .sticky-card-copy {
@@ -85,5 +79,9 @@
 
   .sticky-card-index {
     flex: 1;
+  }
+
+  .sticky-card {
+    height: 90vh;
   }
 }
