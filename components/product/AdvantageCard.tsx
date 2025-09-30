@@ -47,7 +47,7 @@ const AdvantageCard = ({
           opacity: 0,
         });
       }}
-      className={`project-elems project-elem-${index} max-sm:w-[45%] max-sm:border-none max-md:w-[45%] max-md:border-none w-1/4 max-sm:h-1/2 max-md:h-1/2 h-full shrink-0 p-[2vw] border-r border-white/30 relative z-[1]`}
+      className={`project-elems project-elem-${index} w-1/4 h-full shrink-0 p-[2vw] border-r border-white/30 relative z-[1]`}
     >
       <div className="relative z-[1]">
         <span>{number}</span>

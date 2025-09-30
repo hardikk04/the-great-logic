@@ -34,7 +34,7 @@ const Advantages = () => {
   ]);
 
   return (
-    <section className="max-sm:hidden max-md:hidden home-projects relative text-white pt-[6vw]">
+    <section className="home-projects relative text-white pt-[6vw]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="project-title max-sm:py-[6vw] py-4">
           <div className="text-center mb-12">
@@ -49,8 +49,10 @@ const Advantages = () => {
             </p>
           </div>
         </div>
-        <div className="project-container w-full h-[80vh] my-[6vw] mt-0 relative flex max-sm:flex-wrap max-sm:gap-[2vw] max-md:flex-wrap max-md:gap-[2vw] justify-center">
-          <div className="project-imgs absolute top-0 left-0 w-full h-full flex max-md:flex-wrap overflow-hidden max-md:opacity-0 max-sm:opacity-0">
+
+        {/* Desktop Layout */}
+        <div className="project-container hidden md:flex w-full h-[80vh] my-[6vw] mt-0 relative justify-center">
+          <div className="project-imgs absolute top-0 left-0 w-full h-full flex overflow-hidden">
             <Image
               height={1000}
               width={1000}
@@ -86,6 +88,57 @@ const Advantages = () => {
               key={index}
               index={index}
             ></AdvantageCard>
+          ))}
+        </div>
+
+        {/* Mobile Layout */}
+        <div className="md:hidden space-y-6 my-[6vw] mt-0">
+          {projectCard.map((data, index) => (
+            <div
+              key={index}
+              className="relative bg-white rounded-lg shadow-lg overflow-hidden"
+            >
+              {/* Feature Image */}
+              <div className="relative h-48 sm:h-56">
+                <Image
+                  height={1000}
+                  width={1000}
+                  className="w-full h-full object-cover"
+                  src={
+                    index === 0
+                      ? "/img/logic label/Flexible Sizes & Mounting..png"
+                      : index === 1
+                      ? "/img/logic label/Next-Gen Warehouse Ready.png"
+                      : index === 2
+                      ? "/img/logic label/Ultra-Low Power.png"
+                      : "/img/logic label/Wireless & Smart.png"
+                  }
+                  alt={
+                    index === 0
+                      ? "Flexible Sizes & Mounting"
+                      : index === 1
+                      ? "Next-Gen Warehouse Ready"
+                      : index === 2
+                      ? "Ultra-Low Power"
+                      : "Wireless & Smart"
+                  }
+                />
+                <div className="absolute inset-0 bg-black/40"></div>
+                <div className="absolute top-4 left-4">
+                  <span className="bg-blue-600 hidden text-white text-sm font-bold px-3 py-1 rounded-full">
+                    {data.number}
+                  </span>
+                </div>
+              </div>
+
+              {/* Feature Content */}
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {data.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">{data.para}</p>
+              </div>
+            </div>
           ))}
         </div>
       </div>
