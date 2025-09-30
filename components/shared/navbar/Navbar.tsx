@@ -87,6 +87,7 @@ const Navbar = () => {
                 alt="logo"
                 width={150}
                 height={150}
+                className="object-contain"
               ></Image>
             </div>
           </Link>

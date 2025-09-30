@@ -20,25 +20,25 @@ const Workflow2 = () => {
       id: 1,
       title: "Warehouse",
       description: "Smart inventory management and supply chain optimization",
-      image: "/img/Warehouse.png",
+      image: "/img/Warehouse.svg",
     },
     {
       id: 2,
       title: "Retail Store",
       description: "Digital solutions for modern retail experiences",
-      image: "/img/supermarket.png",
+      image: "/img/supermarket.svg",
     },
     {
       id: 3,
       title: "Cooperate",
       description: "Connected workspace environments and automation",
-      image: "/img/Corporate.png",
+      image: "/img/Corporate.svg",
     },
     {
       id: 4,
       title: "Healthcare",
       description: "Advanced monitoring and patient care systems",
-      image: "/img/Hospitals.png",
+      image: "/img/Hospitals.svg",
     },
   ];
 

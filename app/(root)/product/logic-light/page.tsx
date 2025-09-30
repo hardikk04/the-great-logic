@@ -15,24 +15,34 @@ const WarehousePage = () => {
   const uptimeRef = useRef(null);
   const advantages = [
     {
-      title: "Smart Visual Guidance",
-      para: "Intelligent LED indicators guide workers to exact locations, reducing picking errors by up to 90% and improving efficiency",
-      image: "/img/Logic Lights In Stores.png",
+      title: "Bluetooth Transmission",
+      para: "Enables wireless, real-time data communication between the light and the central system or picking labels, allowing for instantaneous command updates and status feedback without the clutter of wires.",
+      image: "/img/Bluetooth Transmission.png",
     },
     {
-      title: "Real-time Inventory",
-      para: "Dynamic digital Labels automatically update stock levels and product information synchronized with your WMS",
-      image: "/img/Warehouse.png",
+      title: "Flexible Installations",
+      para: "Versatile mounting options for rapid deployment and effortless relocation to meet evolving operational layouts and needs. Can be secured to various shelving types, racks, or machinery throughout the area without requiring specialized tools or complex modifications.",
+      image: "/img/Flexible Installation.png",
     },
     {
-      title: "Flexible Configuration",
-      para: "Customizable light patterns, colors, and intensities adapt to different warehouse zones and operational requirements",
-      image: "/img/supermarket.png",
+      title: "Solves Operational Difficulty",
+      para: "Logic Lights provide clear visual cues at the point of action, instantly highlighting the correct location for picking or movement, which drastically reduces the time and effort spent searching in complex racking.",
+      image: "/img/Solves Operational Difficulty_.png",
     },
     {
-      title: "Industrial Durability",
-      para: "IP65-rated components withstand harsh warehouse conditions with temperature extremes and dust resistance",
-      image: "/img/Light in Warehouse.png",
+      title: "Smart Information Early Warning",
+      para: "Logic Lights act as a dynamic visual communication hub, instantly flagging critical information or status changes not just in a warehouse, but across various environments. It provides immediate, clear visual alerts for situations like low stock in Retail stores, emergency lockdown in corporate spaces, or urgent patient needs in a Hospital, transcending its use beyond traditional warehousing.",
+      image: "/img/Smart Information Early Warning_.png",
+    },
+    {
+      title: "Multiple Color Options",
+      para: "Available with multiple display colors including Red, Yellow, Green, Blue, White, and Pink that allows for sophisticated color-coding systems that visually differentiate urgent warnings, operational statuses, specific tasks, and zone allocations at a glance. This improves visual communication clarity and task efficiency across the workspace.",
+      image: "/img/Multiple Color option.png",
+    },
+    {
+      title: "Remote Management",
+      para: "Enables supervisors to monitor, update, and change the Logic Lights' status or color instantly from a central control hub, while System Linkage ensures the devices integrate seamlessly with existing Warehouse Management Systems (WMS) or other corporate software. This allows for centralized control and automated, real-time responses to operational changes or warnings across the entire facility.",
+      image: "/img/Remote Management.png",
     },
   ];
 
@@ -136,33 +146,33 @@ const WarehousePage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 mx-auto">
             {advantages.map((advantage, index) => (
-              <div key={index} className="relative group">
+              <div key={index} className="relative group h-full">
                 <GlowingEffect
                   borderWidth={2}
                   disabled={false}
                   className="rounded-3xl"
                 />
-                <div className="p-0 rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div className="p-0 rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 overflow-hidden h-full flex flex-col">
                   {/* Image Section */}
-                  <div className="relative h-72 w-full overflow-hidden rounded-t-3xl">
+                  <div className="relative h-72 w-full overflow-hidden rounded-t-3xl flex-shrink-0">
                     <Image
                       src={advantage.image}
                       alt={advantage.title}
                       height={500}
                       width={500}
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                   </div>
 
                   {/* Content Section */}
-                  <div className="p-6">
+                  <div className="p-6 flex-grow flex flex-col">
                     <div className="flex items-center mb-3">
                       <h3 className="text-xl font-semibold text-gray-800">
                         {advantage.title}
                       </h3>
                     </div>
-                    <p className="text-gray-600 leading-relaxed text-sm">
+                    <p className="text-gray-600 leading-relaxed text-sm flex-grow">
                       {advantage.para}
                     </p>
                   </div>
