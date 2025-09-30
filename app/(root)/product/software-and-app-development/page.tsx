@@ -246,7 +246,7 @@ const SoftwarePage = () => {
                   return (
                     <div
                       key={index}
-                      className="min-w-[320px] max-w-[320px] h-[400px] bg-white rounded-3xl border border-gray-300 group transition-all duration-300 relative"
+                      className="min-w-[320px] max-w-[320px]  bg-white rounded-3xl border border-gray-300 group transition-all duration-300 relative"
                     >
                       <GlowingEffect
                         borderWidth={2}
@@ -255,9 +255,6 @@ const SoftwarePage = () => {
                       />
                       <div className="p-8 h-full flex flex-col">
                         {/* Number at top */}
-                        <div className="text-4xl font-bold text-gray-400 mb-6">
-                          {advantage.number}
-                        </div>
 
                         {/* Title */}
                         <h3 className="text-2xl font-bold text-black mb-4">

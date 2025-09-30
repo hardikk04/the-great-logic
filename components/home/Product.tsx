@@ -115,14 +115,14 @@ const Product = () => {
           </svg>
         )}
       </div>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-6">
+        <div className="container mx-auto ">
           <div className="h-[85vh] max-sm:py-[4vw] w-full flex justify-between items-center relative z-[1]">
             <ProcessCard
               title="Software and App"
               para="Tailored digital solutions built to automate and optimize your operations. From workflow management to device control, our custom software and apps are designed to integrate seamlessly with your systems and meet your unique automation needs."
             />
-            <div className="rounded-lg overflow-hidden w-[40%]">
+            <div className="rounded-lg overflow-hidden w-[45%]">
               <Image
                 src={
                   "https://images.unsplash.com/photo-1622127922075-fb1d21fbacbf?q=80&w=1333&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -136,7 +136,7 @@ const Product = () => {
           </div>
         </div>
         <div className="h-[80vh] max-sm:py-[4vw] w-full flex justify-between items-center relative z-[1]">
-          <div className="rounded-lg overflow-hidden w-[40%]">
+          <div className="rounded-lg overflow-hidden w-[45%]">
             <Image
               src={"/img/logic-label.jpeg"}
               alt="light"
@@ -155,7 +155,7 @@ const Product = () => {
             title="Logic Light"
             para="A 7-color configurable light system designed to signal alerts, statuses, or process conditions. Controlled via our software, Logic Light enhances visibility, safety, and workflow efficiency across industrial, retail, and warehouse environments."
           />
-          <div className="rounded-lg overflow-hidden w-[40%]">
+          <div className="rounded-lg overflow-hidden w-[45%]">
             <Image
               src={"/img/logic-ligth.png"}
               alt="light"
