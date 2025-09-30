@@ -2,11 +2,18 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { useRef } from "react";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Workflow2 = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const mediaQuery =
+    typeof window !== "undefined"
+      ? window.matchMedia("(min-width: 1024px)")
+      : null;
 
   const workflowSteps = [
     {
@@ -36,35 +43,80 @@ const Workflow2 = () => {
   ];
 
   useGSAP(() => {
-    gsap.from(".workflow-all", {
-      y: 100,
-      opacity: 0,
-      stagger: 0.1,
-      scrollTrigger: {
-        trigger: ".workflow-all",
-        start: "top 100%",
-        end: "top 40%",
-        scrub: 1,
-      },
-    });
+    // Ensure cards are visible first
+    gsap.set(".workflow-all", { opacity: 1, y: 0 });
 
-    // Horizontal scroll animation
-    if (scrollContainerRef.current) {
-      const scrollWidth = scrollContainerRef.current.scrollWidth / 1.9;
-
-      gsap.to(scrollContainerRef.current, {
-        x: -scrollWidth,
-        ease: "none",
+    // Fade-in animation
+    gsap.fromTo(
+      ".workflow-all",
+      { y: 100, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.1,
         scrollTrigger: {
-          trigger: ".workflow-scroll-section",
-          start: "top 20%",
-          end: "top -80%",
+          trigger: ".workflow-all",
+          start: "top 100%",
+          end: "top 40%",
           scrub: 1,
-          pin: true,
-          // markers: true,
         },
+      }
+    );
+
+    // Horizontal scroll animation for desktop only
+    const initHorizontalAnimation = () => {
+      if (mediaQuery && mediaQuery.matches && scrollContainerRef.current) {
+        const scrollWidth = scrollContainerRef.current.scrollWidth / 1.9;
+
+        gsap.to(scrollContainerRef.current, {
+          x: -scrollWidth,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".workflow-scroll-section",
+            start: "top 20%",
+            end: "top -80%",
+            scrub: 1,
+            pin: true,
+            id: "horizontal-workflow",
+          },
+        });
+      }
+    };
+
+    initHorizontalAnimation();
+
+    // Handle window resize
+    const handleResize = () => {
+      // Kill only the horizontal scroll animation
+      ScrollTrigger.getAll().forEach((trigger) => {
+        if (trigger.vars.id === "horizontal-workflow") {
+          trigger.kill();
+        }
       });
+
+      // Reset container position
+      if (scrollContainerRef.current) {
+        gsap.set(scrollContainerRef.current, { x: 0 });
+      }
+
+      // Ensure cards remain visible
+      gsap.set(".workflow-all", { opacity: 1, y: 0 });
+
+      // Re-initialize horizontal animation after a delay
+      setTimeout(() => {
+        initHorizontalAnimation();
+      }, 100);
+    };
+
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
     }
+
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", handleResize);
+      }
+    };
   }, []);
 
   return (
@@ -85,41 +137,46 @@ const Workflow2 = () => {
         </div>
 
         {/* Horizontal Scrolling Workflow Grid */}
-        <div className="overflow-hidden workflow-scroll-section">
-          <div ref={scrollContainerRef} className="flex gap-8 w-max">
-            {workflowSteps.map((step) => (
-              <div
-                key={step.id}
-                className={`group relative workflow-all w-[calc(50vw-2rem)] md:w-[calc(50vw-2rem)] lg:w-[calc(50vw-2rem)] flex-shrink-0`}
-              >
-                {/* Card */}
-                <div className="relative bg-white overflow-hidden transition-all duration-300 flex flex-col">
-                  {/* Image */}
-                  <div className="relative h-[60vh] flex-shrink-0 rounded-xl overflow-hidden">
-                    <Image
-                      src={step.image}
-                      alt={step.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div className="py-4 flex-1 flex flex-col">
-                    <div className="flex items-start justify-between pb-1">
-                      <div className="flex items-center space-x-3">
-                        <h3 className="text-xl font-medium text-gray-900">
-                          {step.title}
-                        </h3>
-                      </div>
+        <div className="workflow-scroll-section">
+          <div className="overflow-hidden lg:overflow-visible workflow-container-wrapper">
+            <div
+              ref={scrollContainerRef}
+              className="flex gap-8 w-max overflow-x-auto lg:overflow-x-visible scrollbar-hide pb-6 lg:pb-0"
+            >
+              {workflowSteps.map((step) => (
+                <div
+                  key={step.id}
+                  className={`group relative workflow-all w-[calc(50vw-2rem)] md:w-[calc(50vw-2rem)] lg:w-[calc(50vw-2rem)] flex-shrink-0`}
+                >
+                  {/* Card */}
+                  <div className="relative bg-white overflow-hidden transition-all duration-300 flex flex-col">
+                    {/* Image */}
+                    <div className="relative h-[60vh] flex-shrink-0 rounded-xl overflow-hidden">
+                      <Image
+                        src={step.image}
+                        alt={step.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
                     </div>
-                    <p className="text-gray-600 text-sm leading-relaxed flex-1">
-                      {step.description}
-                    </p>
+
+                    {/* Content */}
+                    <div className="py-4 flex-1 flex flex-col">
+                      <div className="flex items-start justify-between pb-1">
+                        <div className="flex items-center space-x-3">
+                          <h3 className="text-xl font-medium text-gray-900">
+                            {step.title}
+                          </h3>
+                        </div>
+                      </div>
+                      <p className="text-gray-600 text-sm leading-relaxed flex-1">
+                        {step.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

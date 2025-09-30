@@ -439,3 +439,51 @@
     width: 100%;
   }
 }
+
+/* Responsive behavior for advantages container */
+@media (max-width: 1023px) {
+  .advantages-container {
+    transform: none !important;
+  }
+
+  .advantages-container-wrapper {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .advantages-container > div {
+    scroll-snap-align: start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .advantages-container-wrapper {
+    overflow: hidden;
+  }
+}
+
+/* Responsive behavior for workflow container */
+@media (max-width: 1023px) {
+  .workflow-container-wrapper {
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .workflow-container-wrapper > div {
+    transform: none !important;
+  }
+
+  .workflow-all {
+    scroll-snap-align: start;
+    min-width: calc(50vw - 2rem) !important;
+    width: calc(50vw - 2rem) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .workflow-container-wrapper {
+    overflow: hidden !important;
+  }
+}

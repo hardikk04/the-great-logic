@@ -84,15 +84,21 @@ const SoftwarePage = () => {
   };
 
   useGSAP(() => {
-    gsap.to(".advantages-container", {
-      transform: "translateX(-30%)",
-      scrollTrigger: {
-        trigger: ".advantages-container",
-        start: "top 40%",
-        end: "top 0%",
-        scrub: true,
-      },
-    });
+    // Responsive advantages container animation
+    if (mediaQuery.matches) {
+      // Desktop: Horizontal scroll animation (≥1024px)
+      gsap.to(".advantages-container", {
+        transform: "translateX(-30%)",
+        scrollTrigger: {
+          trigger: ".advantages-container",
+          start: "top 40%",
+          end: "top 0%",
+          scrub: true,
+        },
+      });
+    }
+    // Mobile: No animation, just rely on CSS overflow scrolling
+
     gsap.from(".industry-card", {
       opacity: 0,
       y: 80,
@@ -111,7 +117,22 @@ const SoftwarePage = () => {
     // Handle window resize
     const handleResize = () => {
       ScrollTrigger.killAll();
+
+      // Re-initialize animations based on screen size
+      if (mediaQuery.matches) {
+        gsap.to(".advantages-container", {
+          transform: "translateX(-30%)",
+          scrollTrigger: {
+            trigger: ".advantages-container",
+            start: "top 40%",
+            end: "top 0%",
+            scrub: true,
+          },
+        });
+      }
+
       page7Animation();
+
       // Re-initialize counter animations after resize
       setTimeout(() => {
         initCounterAnimations();
@@ -218,7 +239,7 @@ const SoftwarePage = () => {
 
           {/* Horizontal Scrollable Cards */}
           <div className="relative">
-            <div className="overflow-x-auto pb-6 scrollbar-hide">
+            <div className="overflow-x-auto pb-6 scrollbar-hide advantages-container-wrapper">
               <div className="flex gap-6 w-max advantages-container">
                 {/* App Development Card */}
                 {advantages.map((advantage, index) => {
@@ -514,31 +535,6 @@ const SoftwarePage = () => {
             </p>
           </div>
 
-          {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {advantages.map((advantage, index) => (
-              <div
-                key={index}
-                className="group advantages-card relative bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg"
-              >
-                <GlowingEffect disabled={false} className="rounded-xl" />
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center text-2xl font-bold text-black group-hover:bg-black group-hover:text-white transition-all duration-300">
-                      {advantage.number}
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-black mb-4 group-hover:text-gray-700 transition-colors duration-300">
-                      {advantage.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed mb-6">
-                      {advantage.para}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div> */}
           <div className="page7-container overflow-x-hidden">
             <div className="page7-container-elems">
               <div className="page7-elem1 page7-elem">
