@@ -164,12 +164,12 @@ const Workflow2 = () => {
                     <div className="py-4 flex-1 flex flex-col">
                       <div className="flex items-start justify-between pb-1">
                         <div className="flex items-center space-x-3">
-                          <h3 className="text-xl font-medium text-gray-900">
+                          <h3 className="text-2xl font-medium text-gray-900">
                             {step.title}
                           </h3>
                         </div>
                       </div>
-                      <p className="text-gray-600 text-sm leading-relaxed flex-1">
+                      <p className="text-gray-600 text-lg leading-relaxed flex-1">
                         {step.description}
                       </p>
                     </div>
