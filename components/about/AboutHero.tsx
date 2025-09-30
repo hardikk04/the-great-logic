@@ -13,7 +13,7 @@ const AboutHero = () => {
             </h1>
 
             <p className="text-md md:text-xl text-black md:my-12 max-w-3xl mx-auto font-body ">
-              About - From manual to digital, The Great Logic helps enterprises
+              From manual to digital, The Great Logic helps enterprises
               transform operations with intelligent, future-ready solutions.
             </p>
           </div>
