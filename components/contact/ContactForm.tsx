@@ -74,7 +74,7 @@ const ContactForm = () => {
         data-netlify="true"
         netlify-honeypot="bot-field"
         onSubmit={handleSubmit(onSubmit)}
-        className="space-y-6"
+        className="space-y-6 px-4"
       >
         {/* Hidden input so Netlify identifies the form */}
         <input type="hidden" name="form-name" value="contact" />
