@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Warehouse Management icon">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="gRoof" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#FFB86B"/>
+      <stop offset="1" stop-color="#FF6B6B"/>
+    </linearGradient>
+    <linearGradient id="gWall" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#6EE7B7"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="gBoxA" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#FFD86B"/>
+      <stop offset="1" stop-color="#FF9F43"/>
+    </linearGradient>
+    <linearGradient id="gBoxB" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#C7A2FF"/>
+      <stop offset="1" stop-color="#7C4DFF"/>
+    </linearGradient>
+    <linearGradient id="gPallet" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#F4E285"/>
+      <stop offset="1" stop-color="#E2B87C"/>
+    </linearGradient>
+
+    <!-- Soft shadow filter -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+
+    <!-- Small inner shadow for depth -->
+    <filter id="inner" x="-20%" y="-20%" width="140%" height="140%">
+      <feOffset dx="0" dy="2" result="off"/>
+      <feGaussianBlur in="off" stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Outline stroke style -->
+    <style>
+      .stroke { stroke: rgba(0,0,0,0.08); stroke-width:1.2; stroke-linejoin:round; stroke-linecap:round; }
+    </style>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect x="12" y="12" width="232" height="232" rx="32" fill="url(#gWall)" filter="url(#shadow)"/>
+
+  <!-- Roof -->
+  <path d="M40 84 L128 44 L216 84 L216 112 L40 112 Z" fill="url(#gRoof)" class="stroke" />
+
+  <!-- Building front -->
+  <rect x="56" y="104" width="144" height="96" rx="10" fill="rgba(255,255,255,0.08)" class="stroke"/>
+
+  <!-- Open door (warehouse opening) -->
+  <rect x="84" y="120" width="88" height="64" rx="6" fill="rgba(255,255,255,0.14)" />
+  <!-- Door inner shadow -->
+  <rect x="84" y="120" width="88" height="64" rx="6" fill="none" stroke="rgba(0,0,0,0.07)" stroke-width="1.2"/>
+
+  <!-- Stacked boxes inside - left stack -->
+  <g transform="translate(92,132)">
+    <rect x="0" y="0" width="28" height="18" rx="2" fill="url(#gBoxA)" class="stroke"/>
+    <rect x="0" y="20" width="28" height="18" rx="2" fill="url(#gBoxB)" class="stroke"/>
+    <rect x="0" y="40" width="28" height="18" rx="2" fill="url(#gBoxA)" class="stroke"/>
+  </g>
+
+  <!-- Stacked boxes inside - right stack -->
+  <g transform="translate(156,132)">
+    <rect x="-28" y="0" width="28" height="18" rx="2" fill="url(#gBoxB)" class="stroke"/>
+    <rect x="-28" y="20" width="28" height="18" rx="2" fill="url(#gBoxA)" class="stroke"/>
+  </g>
+
+  <!-- Pallet in front -->
+  <g transform="translate(92,188)">
+    <rect x="0" y="0" width="72" height="10" rx="2" fill="url(#gPallet)" class="stroke"/>
+    <rect x="6" y="-6" width="12" height="6" rx="1" fill="rgba(0,0,0,0.06)"/>
+    <rect x="30" y="-6" width="12" height="6" rx="1" fill="rgba(0,0,0,0.06)"/>
+    <rect x="54" y="-6" width="12" height="6" rx="1" fill="rgba(0,0,0,0.06)"/>
+  </g>
+
+  <!-- Gear icon overlay - represents management/automation -->
+  <g transform="translate(176,64) scale(0.9)">
+    <circle cx="0" cy="0" r="24" fill="rgba(255,255,255,0.12)" />
+    <g transform="translate(-12,-12)">
+      <path d="M24 12a12 12 0 1 0 0.001 0Z" fill="rgba(255,255,255,0.02)"/>
+      <g transform="translate(12,12)">
+        <!-- gear teeth -->
+        <g fill="#FFF" fill-opacity="0.92" opacity="0.98">
+          <path d="M14 9v6l4 2 2-4 4-1-1-4 2-4-4-2-2-4-4 1v6l-4 2v0l4 2z" transform="scale(0.08) translate(120,120)"/>
+        </g>
+        <!-- center circle -->
+        <circle cx="0" cy="0" r="6" fill="#7C4DFF" opacity="0.95"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Small status dots / indicators - implies real-time status -->
+  <circle cx="200" cy="196" r="6" fill="#10B981" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+  <circle cx="186" cy="196" r="4" fill="#F59E0B" stroke="rgba(0,0,0,0.05)" stroke-width="0.8"/>
+
+  <!-- Light gloss highlight -->
+  <path d="M32 56 C80 24 176 24 224 56 L224 68 C176 40 80 40 32 68 Z" fill="rgba(255,255,255,0.06)" />
+
+  <!-- Accessibility: invisible rect for click area -->
+  <rect x="0" y="0" width="256" height="256" fill="none" />
+</svg>

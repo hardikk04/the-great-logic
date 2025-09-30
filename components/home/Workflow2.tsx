@@ -66,7 +66,7 @@ const Workflow2 = () => {
     // Horizontal scroll animation for desktop only
     const initHorizontalAnimation = () => {
       if (mediaQuery && mediaQuery.matches && scrollContainerRef.current) {
-        const scrollWidth = scrollContainerRef.current.scrollWidth / 1.9;
+        const scrollWidth = scrollContainerRef.current.scrollWidth / 1.8;
 
         gsap.to(scrollContainerRef.current, {
           x: -scrollWidth,

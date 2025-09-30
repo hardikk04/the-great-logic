@@ -121,11 +121,9 @@ const ContactPage = () => {
                         </p>
                       </div>
                       <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                        <p className="text-sm text-muted-foreground">UK</p>
-                      </div>
-                      <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                         <p className="text-sm text-muted-foreground">
-                          Australia
+                          Australia: 320 Victoria Parade, East Melbourne VIC
+                          3002
                         </p>
                       </div>
                     </div>

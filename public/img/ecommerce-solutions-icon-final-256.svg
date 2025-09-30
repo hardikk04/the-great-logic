@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="E-commerce Solutions icon">
+  <defs>
+    <linearGradient id="gBg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#6EE7B7"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="gScreen" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#FFF7ED"/>
+      <stop offset="1" stop-color="#FFE3B8"/>
+    </linearGradient>
+    <linearGradient id="gCart" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#FFD86B"/>
+      <stop offset="1" stop-color="#FF9F43"/>
+    </linearGradient>
+    <linearGradient id="gBox1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#C7A2FF"/>
+      <stop offset="1" stop-color="#7C4DFF"/>
+    </linearGradient>
+    <linearGradient id="gBox2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#FFB86B"/>
+      <stop offset="1" stop-color="#FF6B6B"/>
+    </linearGradient>
+    <linearGradient id="gChart" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#10B981"/>
+    </linearGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .stroke { stroke: rgba(0,0,0,0.06); stroke-width:1; stroke-linejoin:round; stroke-linecap:round; }
+    </style>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect x="12" y="12" width="232" height="232" rx="32" fill="url(#gBg)" filter="url(#softShadow)" />
+
+  <!-- Website interface panel -->
+  <rect x="36" y="44" width="184" height="120" rx="12" fill="url(#gScreen)" class="stroke"/>
+  <rect x="48" y="56" width="160" height="16" rx="6" fill="rgba(255,255,255,0.18)"/>
+  <rect x="48" y="80" width="160" height="12" rx="4" fill="rgba(255,255,255,0.14)"/>
+  <rect x="48" y="96" width="160" height="12" rx="4" fill="rgba(255,255,255,0.12)"/>
+  <rect x="48" y="112" width="160" height="12" rx="4" fill="rgba(255,255,255,0.12)"/>
+
+  <!-- Realistic shopping cart icon -->
+  <g transform="translate(88,144) scale(1.1)">
+    <path d="M0 0 L12 0 L18 24 L72 24 L84 8 L18 8" fill="url(#gCart)" stroke="rgba(0,0,0,0.06)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Wheels -->
+    <circle cx="18" cy="28" r="4" fill="#FFF" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+    <circle cx="66" cy="28" r="4" fill="#FFF" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+    <!-- Handle -->
+    <line x1="0" y1="0" x2="-8" y2="-6" stroke="rgba(0,0,0,0.06)" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Packages inside cart -->
+  <rect x="50" y="136" width="14" height="12" rx="2" fill="url(#gBox1)" class="stroke"/>
+  <rect x="68" y="136" width="14" height="12" rx="2" fill="url(#gBox2)" class="stroke"/>
+  <rect x="86" y="136" width="14" height="12" rx="2" fill="url(#gBox1)" class="stroke"/>
+
+  <!-- Small analytics/chart overlay (top-right corner) -->
+  <g transform="translate(184,40)">
+    <rect x="-22" y="-18" width="44" height="36" rx="8" fill="rgba(255,255,255,0.10)" class="stroke"/>
+    <rect x="-14" y="-4" width="6" height="16" rx="1.5" fill="rgba(255,255,255,0.95)"/>
+    <rect x="-6" y="-10" width="6" height="22" rx="1.5" fill="rgba(255,255,255,0.95)"/>
+    <rect x="2" y="-12" width="6" height="24" rx="1.5" fill="url(#gChart)"/>
+    <path d="M -18 6 L -12 2 L -6 4 L 0 0 L 6 3" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Status indicator dot -->
+  <circle cx="200" cy="196" r="6" fill="#10B981" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+
+  <!-- Gloss highlight -->
+  <path d="M32 56 C80 24 176 24 224 56 L224 68 C176 40 80 40 32 68 Z" fill="rgba(255,255,255,0.06)" />
+
+  <!-- Invisible rect for click area -->
+  <rect x="0" y="0" width="256" height="256" fill="none"/>
+</svg>

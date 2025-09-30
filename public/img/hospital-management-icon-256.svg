@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hospital Management icon">
+  <defs>
+    <linearGradient id="gBg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#6EE7B7"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+
+    <linearGradient id="gFacade" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#FFF7ED"/>
+      <stop offset="1" stop-color="#FFE3B8"/>
+    </linearGradient>
+
+    <linearGradient id="gCross" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#FFB86B"/>
+      <stop offset="1" stop-color="#FF6B6B"/>
+    </linearGradient>
+
+    <linearGradient id="gAccent1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#FFD86B"/>
+      <stop offset="1" stop-color="#FF9F43"/>
+    </linearGradient>
+
+    <linearGradient id="gAccent2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#C7A2FF"/>
+      <stop offset="1" stop-color="#7C4DFF"/>
+    </linearGradient>
+
+    <linearGradient id="gChart" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#10B981"/>
+    </linearGradient>
+
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+
+    <style>
+      .stroke { stroke: rgba(0,0,0,0.06); stroke-width:1; stroke-linejoin:round; stroke-linecap:round; }
+    </style>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect x="12" y="12" width="232" height="232" rx="32" fill="url(#gBg)" filter="url(#softShadow)"/>
+
+  <!-- Hospital building -->
+  <rect x="48" y="60" width="160" height="120" rx="12" fill="rgba(255,255,255,0.10)" class="stroke"/>
+
+  <!-- Hospital roof / sign area -->
+  <rect x="72" y="44" width="112" height="28" rx="8" fill="url(#gFacade)" class="stroke"/>
+  <text x="128" y="64" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="rgba(0,0,0,0.35)" text-anchor="middle" alignment-baseline="central">HOSPITAL</text>
+
+  <!-- Main entrance -->
+  <rect x="112" y="112" width="32" height="48" rx="6" fill="rgba(255,255,255,0.2)" class="stroke"/>
+  <rect x="112" y="112" width="32" height="48" rx="6" fill="none" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+
+  <!-- Windows -->
+  <g fill="rgba(255,255,255,0.9)">
+    <rect x="64" y="84" width="20" height="18" rx="3" fill="rgba(255,255,255,0.14)" class="stroke"/>
+    <rect x="172" y="84" width="20" height="18" rx="3" fill="rgba(255,255,255,0.14)" class="stroke"/>
+    <rect x="64" y="108" width="20" height="18" rx="3" fill="rgba(255,255,255,0.12)" class="stroke"/>
+    <rect x="172" y="108" width="20" height="18" rx="3" fill="rgba(255,255,255,0.12)" class="stroke"/>
+  </g>
+
+  <!-- Medical cross emblem over entrance -->
+  <g transform="translate(128,92)">
+    <circle cx="0" cy="0" r="18" fill="rgba(255,255,255,0.12)" class="stroke"/>
+    <rect x="-6" y="-10" width="12" height="20" rx="2" fill="url(#gCross)"/>
+    <rect x="-10" y="-6" width="20" height="12" rx="2" fill="url(#gCross)"/>
+    <circle cx="0" cy="0" r="4" fill="rgba(255,255,255,0.92)"/>
+  </g>
+
+  <!-- Clipboard / dashboard panel on left inside building -->
+  <rect x="64" y="136" width="56" height="40" rx="6" fill="rgba(255,255,255,0.08)" class="stroke"/>
+  <rect x="70" y="142" width="40" height="8" rx="3" fill="rgba(255,255,255,0.14)"/>
+  <rect x="70" y="154" width="28" height="6" rx="3" fill="rgba(255,255,255,0.12)"/>
+  <rect x="70" y="164" width="36" height="6" rx="3" fill="rgba(255,255,255,0.12)"/>
+
+  <!-- Patient bed icon on right inside building -->
+  <g transform="translate(156,140)">
+    <rect x="-18" y="-6" width="36" height="12" rx="3" fill="url(#gAccent1)" class="stroke"/>
+    <rect x="-14" y="-10" width="10" height="8" rx="2" fill="url(#gAccent2)" class="stroke"/>
+    <rect x="4" y="-10" width="10" height="8" rx="2" fill="url(#gAccent2)" class="stroke"/>
+  </g>
+
+  <!-- Small analytics/chart overlay (top-right corner) -->
+  <g transform="translate(184,40)">
+    <rect x="-22" y="-18" width="44" height="36" rx="8" fill="rgba(255,255,255,0.10)" class="stroke"/>
+    <!-- Bar chart -->
+    <rect x="-14" y="-4" width="6" height="16" rx="1.5" fill="rgba(255,255,255,0.95)"/>
+    <rect x="-6" y="-10" width="6" height="22" rx="1.5" fill="rgba(255,255,255,0.95)"/>
+    <rect x="2" y="-12" width="6" height="24" rx="1.5" fill="url(#gChart)"/>
+    <!-- Tiny sparkline -->
+    <path d="M -18 6 L -12 2 L -6 4 L 0 0 L 6 3" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Status indicator dot -->
+  <circle cx="200" cy="196" r="6" fill="#10B981" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+
+  <!-- Gloss highlight -->
+  <path d="M32 56 C80 24 176 24 224 56 L224 68 C176 40 80 40 32 68 Z" fill="rgba(255,255,255,0.06)" />
+
+  <!-- Invisible rect for click area -->
+  <rect x="0" y="0" width="256" height="256" fill="none"/>
+</svg>

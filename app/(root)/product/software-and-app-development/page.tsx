@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CTABannerSection from "@/components/home/CtaBanner";
 import { useGSAP } from "@gsap/react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,22 +18,27 @@ const SoftwarePage = () => {
     {
       title: "Warehouse Management",
       para: "Optimize storage, track inventory, and improve logistics efficiency.",
+      icon: "/img/warehouse-management-icon.svg",
     },
     {
       title: "Inventory Management",
       para: "Maintain accurate stock levels and streamline procurement and replenishment.",
+      icon: "/img/inventory-management-icon-256.svg",
     },
     {
       title: "Hospital Management",
       para: "Manage patient records, appointments, billing, and clinical workflows efficiently.",
+      icon: "/img/hospital-management-icon-256.svg",
     },
     {
       title: "E-commerce Solutions",
       para: "Power online stores with seamless order, payment, and customer management.",
+      icon: "/img/ecommerce-solutions-icon-final-256.svg",
     },
     {
       title: "POS & Billing Systems",
       para: "Fast, accurate, and integrated billing for retail and hospitality businesses.",
+      icon: "/img/pos billing.svg",
     },
   ];
 
@@ -74,21 +80,38 @@ const SoftwarePage = () => {
   };
 
   useGSAP(() => {
-    // Responsive advantages container animation
-    if (mediaQuery.matches) {
-      // Desktop: Horizontal scroll animation (≥1024px)
-      // Calculate scroll to show only the last card (4 cards worth of scroll)
-      gsap.to(".advantages-container", {
-        transform: "translateX(-20%)",
-        scrollTrigger: {
-          trigger: ".advantages-container",
-          start: "top 40%",
-          end: "top 0%",
-          scrub: true,
-        },
-      });
-    }
-    // Mobile: No animation, just rely on CSS overflow scrolling
+    // Small delay to ensure DOM is fully rendered and measured
+    setTimeout(() => {
+      // Responsive advantages container animation
+      if (mediaQuery.matches) {
+        // Desktop: Horizontal scroll animation (≥1024px)
+        // Calculate scroll distance to show the last card fully
+        const container = document.querySelector(
+          ".advantages-container"
+        ) as HTMLElement;
+        const containerWrapper = document.querySelector(
+          ".advantages-container-wrapper"
+        ) as HTMLElement;
+
+        if (container && containerWrapper) {
+          const containerWidth = container.scrollWidth;
+          const wrapperWidth = containerWrapper.clientWidth;
+          const maxScroll = containerWidth - wrapperWidth;
+          const scrollPercentage = (maxScroll / containerWidth) * 100;
+
+          gsap.to(".advantages-container", {
+            transform: `translateX(-${scrollPercentage}%)`,
+            scrollTrigger: {
+              trigger: ".advantages-container",
+              start: "top 40%",
+              end: "top 0%",
+              scrub: true,
+            },
+          });
+        }
+      }
+      // Mobile: No animation, just rely on CSS overflow scrolling
+    }, 100);
 
     gsap.from(".industry-card", {
       opacity: 0,
@@ -109,24 +132,42 @@ const SoftwarePage = () => {
     const handleResize = () => {
       ScrollTrigger.killAll();
 
-      // Re-initialize animations based on screen size
-      if (mediaQuery.matches) {
-        gsap.to(".advantages-container", {
-          transform: "translateX(-20%)",
-          scrollTrigger: {
-            trigger: ".advantages-container",
-            start: "top 40%",
-            end: "top 0%",
-            scrub: true,
-          },
-        });
-      }
-
-      page7Animation();
-
-      // Re-initialize counter animations after resize
+      // Small delay to ensure DOM is properly measured after resize
       setTimeout(() => {
-        initCounterAnimations();
+        // Re-initialize animations based on screen size
+        if (mediaQuery.matches) {
+          // Calculate scroll distance to show the last card fully
+          const container = document.querySelector(
+            ".advantages-container"
+          ) as HTMLElement;
+          const containerWrapper = document.querySelector(
+            ".advantages-container-wrapper"
+          ) as HTMLElement;
+
+          if (container && containerWrapper) {
+            const containerWidth = container.scrollWidth;
+            const wrapperWidth = containerWrapper.clientWidth;
+            const maxScroll = containerWidth - wrapperWidth;
+            const scrollPercentage = (maxScroll / containerWidth) * 100;
+
+            gsap.to(".advantages-container", {
+              transform: `translateX(-${scrollPercentage}%)`,
+              scrollTrigger: {
+                trigger: ".advantages-container",
+                start: "top 40%",
+                end: "top 0%",
+                scrub: true,
+              },
+            });
+          }
+        }
+
+        page7Animation();
+
+        // Re-initialize counter animations after resize
+        setTimeout(() => {
+          initCounterAnimations();
+        }, 100);
       }, 100);
     };
 
@@ -260,19 +301,13 @@ const SoftwarePage = () => {
                         {/* Icon at bottom */}
                         <div className="mt-auto pt-6">
                           <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center">
-                            <svg
-                              className="w-8 h-8 text-blue-600"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
-                              />
-                            </svg>
+                            <Image
+                              src={advantage.icon}
+                              alt="inventory-management-icon-256.svg"
+                              width={32}
+                              height={32}
+                              className="object-contain"
+                            ></Image>
                           </div>
                         </div>
                       </div>
