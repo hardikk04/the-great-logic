@@ -300,12 +300,12 @@ const SoftwarePage = () => {
 
                         {/* Icon at bottom */}
                         <div className="mt-auto pt-6">
-                          <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center">
+                          <div className="w-16 h-10 rounded-2xl flex items-center justify-center">
                             <Image
                               src={advantage.icon}
                               alt="inventory-management-icon-256.svg"
-                              width={32}
-                              height={32}
+                              width={70}
+                              height={70}
                               className="object-contain"
                             ></Image>
                           </div>
@@ -561,12 +561,30 @@ const SoftwarePage = () => {
           <div className="page7-container overflow-x-hidden">
             <div className="page7-container-elems">
               <div className="page7-elem1 page7-elem">
+                <div className="w-16 h-10 rounded-2xl flex items-center justify-center">
+                  <Image
+                    src={"/img/automation.png"}
+                    alt="inventory-management-icon-256.svg"
+                    width={70}
+                    height={70}
+                    className="object-contain"
+                  ></Image>
+                </div>
                 <h2>Workflow Automation</h2>
                 <p>
                   {`Simplify processes and reduce manual effort for faster, error-free operations.`}
                 </p>
               </div>
               <div className="page7-elem2 page7-elem">
+                <div className="w-16 h-10 rounded-2xl flex items-center justify-center">
+                  <Image
+                    src={"/img/building.png"}
+                    alt="inventory-management-icon-256.svg"
+                    width={70}
+                    height={70}
+                    className="object-contain"
+                  ></Image>
+                </div>
                 <h2>Enterprise Security</h2>
                 <p>
                   Protect sensitive data with advanced security features and
@@ -574,6 +592,15 @@ const SoftwarePage = () => {
                 </p>
               </div>
               <div className="page7-elem3 page7-elem">
+                <div className="w-16 h-10 rounded-2xl flex items-center justify-center">
+                  <Image
+                    src={"/img/concept.png"}
+                    alt="inventory-management-icon-256.svg"
+                    width={70}
+                    height={70}
+                    className="object-contain"
+                  ></Image>
+                </div>
                 <h2>Seamless Integration</h2>
                 <p>
                   Connect your software with existing tools and systems
@@ -581,6 +608,15 @@ const SoftwarePage = () => {
                 </p>
               </div>
               <div className="page7-elem4 page7-elem">
+                <div className="w-16 h-10 rounded-2xl flex items-center justify-center">
+                  <Image
+                    src={"/img/analytics.png"}
+                    alt="inventory-management-icon-256.svg"
+                    width={70}
+                    height={70}
+                    className="object-contain"
+                  ></Image>
+                </div>
                 <h2>Analytics & Business Intelligence</h2>
                 <p>Gain actionable insights to make smarter decisions.</p>
               </div>

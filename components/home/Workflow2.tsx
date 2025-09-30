@@ -30,7 +30,7 @@ const Workflow2 = () => {
     },
     {
       id: 3,
-      title: "Cooperate",
+      title: "Corporate",
       description: "Connected workspace environments and automation",
       image: "/img/Corporate.svg",
     },
