@@ -1,14 +1,10 @@
 "use client";
 
-import Wrapper from "@/components/shared/Wrapper";
 import React from "react";
 
 const AboutHero = () => {
   return (
     <>
-      <div className="absolute top-0 inset-0 z-[1] overflow-hidden">
-        <Wrapper />
-      </div>
       <section className="relative pointer-events-none pt-[10rem] pb-[4rem] flex items-center justify-center overflow-hidden bg-gradient-hero">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative z-10 text-center max-w-7xl mx-auto">

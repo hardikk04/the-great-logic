@@ -1,6 +1,5 @@
 import React from "react";
 import ContactForm from "@/components/contact/ContactForm";
-import Wrapper from "@/components/shared/Wrapper";
 import ContactHero from "@/components/contact/ContactHero";
 import {
   Card,
@@ -16,9 +15,6 @@ import Link from "next/link";
 const ContactPage = () => {
   return (
     <main className="min-h-screen">
-      <div className="absolute top-0 inset-0 z-10 overflow-hidden">
-        <Wrapper />
-      </div>
       <ContactHero />
 
       <section className="py-20">
@@ -98,37 +94,29 @@ const ContactPage = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                       <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                        <h4 className="font-semibold text-sm text-foreground mb-2">
-                          Head Office
-                        </h4>
                         <p className="text-sm text-muted-foreground">
                           Jaipur, Rajasthan
                         </p>
                       </div>
                       <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                        <h4 className="font-semibold text-sm text-foreground mb-2">
-                          Branch Office
-                        </h4>
-                        <p className="text-sm text-muted-foreground">
-                          Delhi, India
-                        </p>
-                      </div>
-                      <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                        <h4 className="font-semibold text-sm text-foreground mb-2">
-                          Regional Office
-                        </h4>
                         <p className="text-sm text-muted-foreground">
                           Mumbai, Maharashtra
                         </p>
                       </div>
                       <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                        <h4 className="font-semibold text-sm text-foreground mb-2">
-                          Sales Office
-                        </h4>
+                        <p className="text-sm text-muted-foreground">Dubai</p>
+                      </div>
+                      <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <p className="text-sm text-muted-foreground">Canada</p>
+                      </div>
+                      <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <p className="text-sm text-muted-foreground">UK</p>
+                      </div>
+                      <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                         <p className="text-sm text-muted-foreground">
-                          Bangalore, Karnataka
+                          Australia
                         </p>
                       </div>
                     </div>

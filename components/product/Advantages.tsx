@@ -13,7 +13,7 @@ const Advantages = () => {
   const [projectCard] = useState<ProjectCard[]>([
     {
       number: "01",
-      title: "Flexible Sizes &amp; Mounting",
+      title: "Flexible Sizes Mounting",
       para: "Available in multiple dimensions and shapes to fit retail, warehouse, and industrial needs.",
     },
     {

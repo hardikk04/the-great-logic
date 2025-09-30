@@ -3,9 +3,11 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
+import { useRef } from "react";
 
 const Workflow2 = () => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
   const workflowSteps = [
     {
       id: 1,
@@ -15,13 +17,13 @@ const Workflow2 = () => {
     },
     {
       id: 2,
-      title: "Supermarket ",
+      title: "Retail Store",
       description: "Digital solutions for modern retail experiences",
       image: "/img/supermarket.png",
     },
     {
       id: 3,
-      title: "Office",
+      title: "Cooperate",
       description: "Connected workspace environments and automation",
       image: "/img/Corporate.png",
     },
@@ -45,7 +47,25 @@ const Workflow2 = () => {
         scrub: 1,
       },
     });
-  });
+
+    // Horizontal scroll animation
+    if (scrollContainerRef.current) {
+      const scrollWidth = scrollContainerRef.current.scrollWidth / 1.9;
+
+      gsap.to(scrollContainerRef.current, {
+        x: -scrollWidth,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".workflow-scroll-section",
+          start: "top 20%",
+          end: "top -80%",
+          scrub: 1,
+          pin: true,
+          // markers: true,
+        },
+      });
+    }
+  }, []);
 
   return (
     <section className="w-full bg-white pt-24">
@@ -64,42 +84,43 @@ const Workflow2 = () => {
           </p>
         </div>
 
-        {/* Workflow Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {workflowSteps.map((step) => (
-            <div key={step.id} className={`group relative workflow-all`}>
-              <GlowingEffect disabled={false} className="rounded-lg" />
-              {/* Card */}
-              <div className="relative bg-white border border-gray-200 rounded-lg overflow-hidden transition-all duration-300 hover:border-gray-300 hover:shadow-lg h-80 flex flex-col">
-                {/* Image */}
-                <div className="relative h-48 bg-gray-100 flex-shrink-0">
-                  <Image
-                    src={step.image}
-                    alt={step.title}
-                    fill
-                    className="object-contain transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-
-                {/* Content */}
-                <div className="p-6 flex-1 flex flex-col">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center text-sm font-medium">
-                        {step.id}
-                      </div>
-                      <h3 className="text-xl font-medium text-gray-900">
-                        {step.title}
-                      </h3>
-                    </div>
+        {/* Horizontal Scrolling Workflow Grid */}
+        <div className="overflow-hidden workflow-scroll-section">
+          <div ref={scrollContainerRef} className="flex gap-8 w-max">
+            {workflowSteps.map((step) => (
+              <div
+                key={step.id}
+                className={`group relative workflow-all w-[calc(50vw-2rem)] md:w-[calc(50vw-2rem)] lg:w-[calc(50vw-2rem)] flex-shrink-0`}
+              >
+                {/* Card */}
+                <div className="relative bg-white overflow-hidden transition-all duration-300 flex flex-col">
+                  {/* Image */}
+                  <div className="relative h-[60vh] flex-shrink-0 rounded-xl overflow-hidden">
+                    <Image
+                      src={step.image}
+                      alt={step.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
-                  <p className="text-gray-600 text-sm leading-relaxed flex-1">
-                    {step.description}
-                  </p>
+
+                  {/* Content */}
+                  <div className="py-4 flex-1 flex flex-col">
+                    <div className="flex items-start justify-between pb-1">
+                      <div className="flex items-center space-x-3">
+                        <h3 className="text-xl font-medium text-gray-900">
+                          {step.title}
+                        </h3>
+                      </div>
+                    </div>
+                    <p className="text-gray-600 text-sm leading-relaxed flex-1">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

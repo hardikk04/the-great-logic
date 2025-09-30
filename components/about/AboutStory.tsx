@@ -104,7 +104,7 @@ const AboutStory = () => {
   ];
 
   return (
-    <section className="py-20">
+    <section className="pt-20">
       <div className="mx-auto md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">

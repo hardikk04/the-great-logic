@@ -259,3 +259,183 @@
 .bg-section {
   background-image: url("https://www.minewtag.com/upload/ztyImg/2025-03/67e24f9150516.jpg");
 }
+
+.underline-btn {
+  position: relative;
+  cursor: pointer;
+}
+
+.underline-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: #12b2f8;
+  transition: width 0.3s ease;
+}
+
+.underline-btn:hover::after {
+  width: 100%;
+}
+
+.page7-container {
+  position: relative;
+  width: 100%;
+  margin-top: 4vw;
+  padding: 2vw 0;
+}
+
+.page7-container > h3 {
+  position: relative;
+  font-weight: 500;
+}
+
+.page7-container > p {
+  position: relative;
+  font-size: 1.2vw;
+  margin-top: 0.5vw;
+  font-weight: 600;
+}
+
+.page7-container-elems {
+  position: relative;
+  width: 100%;
+  display: flex;
+  gap: 1vw;
+  height: 45vh;
+  margin-top: 2vw;
+}
+
+/* Responsive horizontal scroll for screens < 1024px */
+@media (max-width: 1023px) {
+  .page7-container-elems {
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .page7-elem {
+    min-width: 280px !important;
+    width: 280px !important;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 768px) {
+  .page7-container-elems {
+    gap: 0.8rem;
+  }
+
+  .page7-elem {
+    min-width: 250px !important;
+    width: 250px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .page7-container-elems {
+    gap: 0.6rem;
+  }
+
+  .page7-elem {
+    min-width: 220px !important;
+    width: 220px !important;
+  }
+}
+
+.page7-elem {
+  position: relative;
+  padding: 2vw;
+
+  color: #fff;
+  border-radius: 1vw;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.page7-elem > h1 {
+  font-size: 2vw;
+}
+
+.page7-elem > p {
+  font-size: 1vw;
+  width: 14vw;
+  margin-top: 1vw;
+}
+
+.page7-elem1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #10aff4;
+}
+
+.page7-elem2 {
+  position: relative;
+  width: 50%;
+  background-color: #10aff4;
+}
+
+.page7-elem3 {
+  position: relative;
+  width: 50%;
+  background-color: #10aff4;
+}
+
+.page7-elem4 {
+  position: relative;
+  width: 50%;
+  background-color: #10aff4;
+}
+
+@media (min-width: 2000px) {
+  .page7-container-elems {
+    height: 80vh;
+  }
+}
+
+@media (max-width: 992px) {
+  .page7-elem > h1 {
+    font-size: 2.5vw;
+    line-height: 1.2;
+  }
+
+  .page7-elem > p {
+    font-size: 1.6vw;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .page7-elem > h1 {
+    font-size: 3.5vw;
+    line-height: 1.3;
+  }
+
+  .page7-elem > p {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .page7-elem {
+    height: 35vh;
+  }
+
+  .page7-elem > h1 {
+    font-size: 5vw;
+  }
+
+  .page7-elem > p {
+    font-size: 3vw;
+    width: 100%;
+  }
+}

@@ -16,44 +16,80 @@ interface StickyCardsProps {
 }
 
 const StickyCards = () => {
+  // Helper function to render color boxes
+  const renderColorBoxes = (colorsString: string) => {
+    const colorMappings: { [key: string]: string } = {
+      Black: "#000000",
+      White: "#FFFFFF",
+      Red: "#FF0000",
+      Yellow: "#FFFF00",
+      Blue: "#0000FF",
+      Green: "#008000",
+    };
+
+    return colorsString.split(", ").map((colorCombo, comboIndex) => {
+      const colors = colorCombo.split("/");
+      return (
+        <div key={comboIndex} className="flex items-center gap-2 pb-2">
+          <div className="flex">
+            {colors.map((color, colorIndex) => (
+              <div
+                key={colorIndex}
+                className="w-4 h-5"
+                style={{
+                  backgroundColor: colorMappings[color] || "#CCCCCC",
+                  border:
+                    color === "White"
+                      ? "1px solid #CCCCCC"
+                      : "1px solid #666666",
+                }}
+                title={color}
+              />
+            ))}
+          </div>
+        </div>
+      );
+    });
+  };
+
   const stickyCardsData: StickyCardsProps[] = [
     {
-      title: "Great Logic Thin Series (GLT)",
+      title: "GLT Series",
       video: "/video/Logic Labels.mp4",
       description:
-        "Ultra-thin and lightweight, perfect for shelves, bins, and compact spaces. Designed for efficiency and endurance with up to 5 years battery life.",
+        "Great Logic Thin Series is ultra-thin and lightweight, perfect for shelves, bins, and compact spaces. Designed for efficiency and endurance with up to 5 years battery life.",
       sizes: `2.1, 2.9, 3.5, 4.2, 5.8, 7.5, 11.6`,
       colors: "Black/White, Black/White/Red, Black/White/Red/Yellow",
     },
     {
-      title: "Great Logic Button Series (GLB)",
+      title: "GLB Series",
       video: "/video/GLB Series Video.mp4",
       description:
-        "Equipped with the latest e-ink display technology and programmable button functionality, these Logic Labels go beyond simple displays. They are purpose-built for smart warehouses, enabling precise goods’ tracking and offering seamless integration with Manufacturing Execution Systems to streamline operations and boost efficiency.",
+        "Great Logic Button Series is equipped with the latest e-ink display technology and programmable button functionality, these Logic Labels go beyond simple displays. They are purpose-built for smart warehouses, enabling precise goods’ tracking and offering seamless integration with Manufacturing Execution Systems to streamline operations and boost efficiency.",
       sizes: "2.9",
       colors: "Black/White, Black/White/Red/Yellow",
     },
     {
-      title: "Great Logic Prismatic Series(GLP)",
+      title: "GLP Series",
       video: "/video/GLP Series Main Video.mp4",
       description:
-        "High-impact multi-color displays (up to 6 colors) for branding, promotions, and dynamic visibility.",
+        "Great Logic Prismatic Series is high-impact multi-color displays (up to 6 colors) for branding, promotions, and dynamic visibility.",
       sizes: "7.5, 13.3",
       colors: "Black/White/Red/Yellow/Blue/Green",
     },
     {
-      title: "Great Logic General Series(GLG)",
+      title: "GLG Series",
       video: "/video/GLG Series Main Video.mp4",
       description:
-        "Versatile, All-purpose Logic Labels — durable, reliable, and available in the widest range of sizes. A balance of cost and performance.",
+        "Great Logic General Series is versatile, all-purpose Logic Labels — durable, reliable, and available in the widest range of sizes. A balance of cost and performance.",
       sizes: "1.5, 2.1, 2.9, 4.2, 5.8, 7.5",
       colors: "Black/White, Black/White/Red, Black/White/Red/Yellow",
     },
     {
-      title: "Great Logic Meeting Series(GLM)",
+      title: "GLM Series",
       video: "/video/GLM Series Main Video.mp4",
       description:
-        "Specially designed for Conference Tables and Meetings, with Unique shapes (V-Shape, L-Shape, T-Shape). Enhance way of new age professionalism with multi-color nameplates and signage.",
+        "Great Logic Meeting Series is specially designed for Conference Tables and Meetings, with Unique shapes (V-Shape, L-Shape, T-Shape). Enhance way of new age professionalism with multi-color nameplates and signage.",
       sizes: "7.5",
       colors: "Black/White/Red, Black/White/Red/Yellow/Blue/Green",
     },
@@ -114,18 +150,20 @@ const StickyCards = () => {
                   </div>
                   <div className="sticky-card-copy-title">
                     <p>
-                      <b>Available Sizes: </b>{cardData.sizes}
+                      <b>Available Sizes: </b>
+                      {cardData.sizes}
                     </p>
                   </div>
                   <div className="sticky-card-copy-title">
-                    <p>
-                      <b>Available Colors: </b>{cardData.colors}
+                    <p className="mb-2">
+                      <b>Available Colors: </b>
                     </p>
+                    <div>{renderColorBoxes(cardData.colors)}</div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="sticky-card-index h-full">
+            <div className="sticky-card-index h-full flex items-center">
               <div className="sticky-card-img h-auto">
                 {/* <Image
                   src={cardData.image}

@@ -5,14 +5,14 @@ import Link from "next/link";
 const Footer = () => {
   const footerLinks = {
     products: [
+      {
+        label: "Software and App",
+        href: "/product/software-and-app-development",
+      },
       { label: "Logic Labels", href: "/product/logic-label" },
       {
         label: "Logic Light",
         href: "/product/logic-light",
-      },
-      {
-        label: "Software and App",
-        href: "/product/software-and-app-development",
       },
     ],
     support: [

@@ -3,7 +3,6 @@
 import CTABannerSection from "@/components/home/CtaBanner";
 import Hero from "@/components/home/Hero";
 import Testimonial from "@/components/home/Testimonial";
-import Wrapper from "@/components/shared/Wrapper";
 
 import Product from "@/components/home/Product";
 
@@ -13,9 +12,6 @@ import DashboardAnimation from "@/components/home/DashboardAnimation";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
-      <div className="absolute top-0 inset-0 z-[1] overflow-hidden">
-        {<Wrapper />}
-      </div>
       <Hero />
       <DashboardAnimation />
       <Product />
