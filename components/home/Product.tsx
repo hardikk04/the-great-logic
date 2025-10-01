@@ -137,7 +137,7 @@ const Product = () => {
         <div className="h-[80vh] max-sm:flex-col-reverse max-sm:h-auto max-sm:py-8 max-sm:gap-6 w-full flex justify-between items-center relative z-[1]">
           <div className="rounded-lg overflow-hidden max-sm:w-full w-[45%] ">
             <Image
-              src={"/img/logic-label.jpeg"}
+              src={"/img/Logic Label Homepage Image.png"}
               alt="light"
               width={1000}
               height={1000}
@@ -158,7 +158,7 @@ const Product = () => {
           />
           <div className="rounded-lg overflow-hidden max-sm:w-full w-[45%]">
             <Image
-              src={"/img/logic-ligth.png"}
+              src={"/img/Logic Light Homepage.png"}
               alt="light"
               width={1000}
               height={1000}
