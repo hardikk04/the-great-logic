@@ -21,7 +21,7 @@ const ESLPage = () => {
                 "url('/img/logic label/Next-Gen Warehouse Ready.png')",
             }}
           />
-          {/* Gradient overlay for text readability */}
+
           <div
             className="absolute inset-0"
             style={{
@@ -43,7 +43,6 @@ const ESLPage = () => {
                 essential for speed and accuracy.
               </p>
             </div>
-           
           </div>
         </div>
       </section>
