@@ -38,7 +38,7 @@ const DashboardAnimation = () => {
               height={1000}
               className="w-full dashboard-img h-full rounded-t-xl relative z-[1]"
             ></Image> */}
-            <video src="/video/main.mp4" muted loop autoPlay playsInline className="dashboard-img rounded-xl relative z-[1] h-full w-full object-cover"></video>
+            <video src="/video/main.mp4" muted loop autoPlay playsInline className="dashboard-img rounded-xl relative z-[1] h-full w-full object-contain"></video>
           </div>
         </div>
       </div>
